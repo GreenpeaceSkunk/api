@@ -4,6 +4,9 @@
   "description": "Greanpeace - Skunk API",
   "author": "https://github.com/dantovbein",
   "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  },
   "bugs": {
     "url": "https://github.com/GreenpeaceSkunk/api/issues"
   },
@@ -27,15 +30,15 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.15",
+    "mongoose": "^6.1.8",
     "nodemon": "^2.0.7",
-    "pm2": "^4.5.6",
+    "pm2": "^5.1.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.9",
-    "@types/express": "^4.17.11",
+    "@types/express": "^4.17.13",
     "@types/mongoose": "^5.10.3",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
