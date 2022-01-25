@@ -1,82 +1,27 @@
-# FROM node:14 as api
-# WORKDIR /usr/src/app
-# COPY . /usr/src/app
-
-# RUN npm install -g typescript
-# RUN npm install
-# RUN npm run types
-
-# RUN chmod -R 777 /usr/src/app/node_modules
-# RUN sudo chown -R $USER /usr/local/lib/node_modules
-# COPY package.json ./
-# COPY . ./
-# RUN npm run types
-# RUN npm install pm2 -g
-# COPY ./dist .
-
-# EXPOSE 8080
-# CMD ["npm","run", "server:start:watch"]
-
-
-
-# FROM node:14 as adn_greenpeace_app
-# WORKDIR /usr/src/app
-# COPY . /usr/src/app/
-
-# RUN npm install --silent
-# RUN npm install react-scripts@3.0.1 -g --silent 
-# RUN npm run types
-# RUN npm run build 
-
-# FROM nginx:1.16.0-alpine
-# COPY --from=api /app/build /usr/share/nginx/html
-# RUN rm /etc/nginx/conf.d/default.conf
-# COPY nginx.conf /etc/nginx/conf.d
-# EXPOSE 80
-# CMD ["nginx","-g","daemon off;"]
-
-
-
-
-# FROM node:14 as app
-# WORKDIR /usr/app/build
-
-# COPY . /usr/app/
-# RUN npm install -g typescript
-# RUN npm install -g react-scripts
-# RUN npm install
-# RUN npm run types
-# RUN cp /usr/app/.htaccess /usr/app/public/.htaccess
-# RUN cp /usr/app/.env.production.sample /usr/app/.env.production
-# RUN npm run client:build:production
-
-# COPY ./build /usr/app/build
-
-# FROM nginx:1.16.0-alpine
-# COPY --from=app /usr/app/build /usr/share/nginx/html
-# RUN rm /etc/nginx/conf.d/default.conf
-# COPY nginx.conf /etc/nginx/conf.d
-# EXPOSE 80 
-# CMD ["nginx","-g","daemon off;"]
-
-
-
 FROM node:14
-RUN mkdir -p /usr/src/app
+
+#RUN apk update
+#RUN mkdir -p /user/app/app
+
+# Create root application folder
 WORKDIR /usr/src/app
 
-ARG NODE_ENV
-ENV NODE_ENV $NODE_ENV
+#ARG NODE_ENV
+#ENV NODE_ENV $NODE_ENV
+
+COPY package*.json ./
+
+# Copy source code to /app/src folder
 
 RUN npm install -g nodemon
 RUN npm install -g typescript
 RUN npm install
+
+COPY . .
+
 RUN npm run types
 
-COPY ./package.json /usr/src/app/
-COPY ./ /usr/src/app
+EXPOSE 5000
+#RUN npm run server:start:watch
 
-# CMD [ "npm", "run" ,  "start-daemon-docker" ]
 CMD [ "npm", "run" ,  "server:start:watch" ]
-
-EXPOSE 8080

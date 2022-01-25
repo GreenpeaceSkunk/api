@@ -1,17 +1,19 @@
 version: '3'
 services:
   api:
-    container_name: greenpeace__skunk_api_api
-    image: greenpeace__skunk_api_api:dev
+    container_name: greenpeace_skunk_api
+    image: greenpeace_skunk_api:dev
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile-dev
     depends_on:
       - mongo
     ports:
-      - "5050:80"
+      - 5053:5000
+    environment:
+      - PORT=5000
   mongo:
-    container_name: greenpeace__skunk_api_mongo
+    container_name: greenpeace_skunk_mongo
     image: mongo:4
     restart: always
     volumes:

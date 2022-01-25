@@ -3,14 +3,16 @@ import express, {Request, Response, NextFunction, ErrorRequestHandler} from 'exp
 import cors from 'cors';
 
 // import connectDatabase from './database/connection';
-// import apiRoutes from './routes';
+import apiRoutes from './routes';
 // import Scripts from './database/scripts/syncData';
 
 import dotenv from 'dotenv';
 dotenv.config();
 
 const server: express.Application = express();
-const SERVER_PORT = process.env.PORT || 5053
+console.log("Port", process.env.PORT)
+const SERVER_PORT = process.env.PORT || 5000;
+// const SERVER_PORT = 8080;
 
 server.use(cors());
 server.use((req: Request, res: Response, next: NextFunction) => {
@@ -18,7 +20,7 @@ server.use((req: Request, res: Response, next: NextFunction) => {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'DELETE,GET,PATCH,POST,PUT',
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-    'Access-Control-Expose-Headers': 'X-Auth-Token, X-Auth-User'
+    // 'Access-Control-Expose-Headers': 'X-Auth-Token, X-Auth-User'
   });
   next();
 });
@@ -63,11 +65,11 @@ server.use((req: Request, res: Response, next: NextFunction) => {
 //   graphiql: true,
 // }));
 
-// server.use('/api', apiRoutes);
-
 server.get('/test', (req: Request, res: Response) => {
-  res.send("OK");
+  res.send("Test OK.");
 });
+
+server.use('/api', apiRoutes);
 
 server.listen(SERVER_PORT, async () => {
   console.log(`Server running at ${SERVER_PORT}`);
@@ -75,5 +77,5 @@ server.listen(SERVER_PORT, async () => {
 });
 
 export {
-  server
+  server,
 };

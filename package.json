@@ -14,7 +14,7 @@
     "server:create:collections": "ts-node src/database/scripts.ts",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "lint": "eslint . --ext .ts --fix",
-    "build": "tsc --build tsconfig.json",
+    "server:build": "tsc --build tsconfig.json",
     "types": "ln -s $PWD/src/types $PWD/node_modules/@types/greenpeace"
   },
   "repository": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/GreenpeaceSkunk/api#readme",
   "dependencies": {
+    "@hubspot/api-client": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
