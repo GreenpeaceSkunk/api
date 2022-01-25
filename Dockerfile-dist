@@ -7,8 +7,6 @@ COPY dist .
 RUN pwd
 RUN ls -la
 
-RUN cat server.js
-
 EXPOSE 8080
 
 CMD ["node","server.js"]

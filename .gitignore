@@ -1,2 +1,5 @@
 node_modules
 .DS_Store
+_shared_volume/
+.env
+./dist
