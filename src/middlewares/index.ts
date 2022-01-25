@@ -11,20 +11,25 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   try {
     const fnReturn = await fn(req, res, next);
     return fnReturn;
-  } catch(e) {
+    // if(fnReturn) {
+    // } else {
+    //   throw new Error( 'Error!!' )
+    // }
+  } catch(e: any) {
+    console.log(e.response.data);
     const error = getErrorByCode(e.code || e.message);
     res
       .status(500)
       .json({
         status: error.status,
-        message: error.message,
-        errorMessage: (error.status === 500 && e.message !== '')
-          ? e.message
-          : error.errorMessage,
+        // message: e.response.data.errors.length ? e.response.data.errors[0].message : '',
+        errorMessage: e.response.data.message,
+        // errorMessage: (error.status === 500 && e.message !== '')
+        //   ? e.message
+        //   : error.errorMessage,
       } as IRequestError);
   }
 }
-
 
 export {
   requestWrapper,
