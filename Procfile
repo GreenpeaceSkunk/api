@@ -1,1 +1,1 @@
-web: npm install && npm run types && npm run server:build && npm run server:start
+web: ls -la && npm install && npm run types
