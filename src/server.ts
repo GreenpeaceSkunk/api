@@ -1,5 +1,5 @@
 import express, {Request, Response, NextFunction, ErrorRequestHandler} from 'express';
-// import bodyParser from 'body-parser';
+import bodyParser from 'body-parser';
 import cors from 'cors';
 
 // import connectDatabase from './database/connection';
@@ -25,11 +25,11 @@ server.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-// server.use(bodyParser.json({limit: '4mb'}));
-// server.use(bodyParser.urlencoded({
-//   limit: '4mb',
-//   extended: true,
-// }));
+server.use(bodyParser.json({limit: '4mb'}));
+server.use(bodyParser.urlencoded({
+  limit: '4mb',
+  extended: true,
+}));
 // server.use(express.static('public'));
 
 // server.use(session({
