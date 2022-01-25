@@ -1,1 +1,1 @@
-web: ls -la && npm install && npm run types && npm run server:build
+web: node --version && npm install && npm i --save-dev @types/express && npm run types && tsc ./src/server.ts
