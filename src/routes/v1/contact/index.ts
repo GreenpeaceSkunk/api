@@ -1,28 +1,25 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { requestWrapper } from '../../../middlewares';
-// import { create, findAll } from '../user/controller';
-import { Client } from '@hubspot/api-client';
 import axios from 'axios';
 
 const router = Router();
-const hubspotClient = new Client({ apiKey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97' })
 
-router.get('/', [requestWrapper(async (req: Request, res: Response) => {
-  const contacts = await axios({
-    baseURL: 'https://api.hubapi.com/contacts/v1/lists/all/contacts/all',
+router.get('/', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+  const response = await axios({
+    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/lists/all/contacts/all`,
     params: {
       hapikey: process.env.HUBSPOT_API_KEY,
     },
   })
   res
     .status(200)
-    .json(contacts.data.contacts.map((c: any) => c.properties));
+    .json(response.data.contacts.map((contact: any) => contact.properties));
   
 })]);
 
-router.get('/email/:email', [requestWrapper(async (req: Request, res: Response) => {
+router.get('/email/:email', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const contact = await axios({
-    baseURL: `https://api.hubapi.com/contacts/v1/contact/email/${req.params.email}/profile`,
+    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${req.params.email}/profile`,
     params: {
       hapikey: process.env.HUBSPOT_API_KEY,
     },
@@ -33,9 +30,9 @@ router.get('/email/:email', [requestWrapper(async (req: Request, res: Response) 
     .json(contact.data.properties);
 })]);
 
-router.post('/', [requestWrapper(async (req: Request, res: Response) => {
+router.post('/', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const contact = await axios({
-    baseURL: `https://api.hubapi.com/contacts/v1/contact`,
+    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
     method: 'POST',
     params: {
       hapikey: process.env.HUBSPOT_API_KEY,
