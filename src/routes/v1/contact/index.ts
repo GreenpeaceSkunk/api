@@ -5,20 +5,20 @@ import axios from 'axios';
 const router = Router();
 
 router.get('/', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const response = await axios({
+  const result = await axios({
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/lists/all/contacts/all`,
     params: {
       hapikey: process.env.HUBSPOT_API_KEY,
     },
-  })
+  });
+
   res
     .status(200)
-    .json(response.data.contacts.map((contact: any) => contact.properties));
-  
+    .json(result.data.contacts.map((contact: any) => contact.properties));  
 })]);
 
 router.get('/email/:email', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const contact = await axios({
+  const result = await axios({
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${req.params.email}/profile`,
     params: {
       hapikey: process.env.HUBSPOT_API_KEY,
@@ -27,11 +27,14 @@ router.get('/email/:email', [requestWrapper(async (req: Request, res: Response, 
 
   res
     .status(200)
-    .json(contact.data.properties);
+    .json(
+      Object
+        .keys(result.data.properties)
+        .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
 })]);
 
 router.post('/', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const contact = await axios({
+  const result = await axios({
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
     method: 'POST',
     params: {
@@ -44,10 +47,11 @@ router.post('/', [requestWrapper(async (req: Request, res: Response, next: NextF
       })),
     },
   });
+
   res
     .status(201)
     .json({
-      id: contact.data.vid,
+      id: result.data.vid,
       ...req.body,
     });
 })]);

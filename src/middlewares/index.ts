@@ -16,7 +16,6 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
     //   throw new Error( 'Error!!' )
     // }
   } catch(e: any) {
-    console.log(e.response.data);
     const error = getErrorByCode(e.code || e.message);
     res
       .status(500)
