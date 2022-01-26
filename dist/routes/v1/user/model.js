@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Model = void 0;
-const mongoose_1 = require("mongoose");
-const schema_1 = require("./schema");
-exports.Model = mongoose_1.model('user', schema_1.schema);
+// import {model} from 'mongoose';
+// import {schema} from './schema';
+// import {IUserDocument} from 'greenpeace';
+// export const Model = model<IUserDocument>('user', schema);
 //# sourceMappingURL=model.js.map

@@ -15,17 +15,23 @@ const requestWrapper = (fn) => (req, res, next) => __awaiter(void 0, void 0, voi
     try {
         const fnReturn = yield fn(req, res, next);
         return fnReturn;
+        // if(fnReturn) {
+        // } else {
+        //   throw new Error( 'Error!!' )
+        // }
     }
     catch (e) {
+        console.log(e.response.data);
         const error = serverErrors_1.getErrorByCode(e.code || e.message);
         res
             .status(500)
             .json({
             status: error.status,
-            message: error.message,
-            errorMessage: (error.status === 500 && e.message !== '')
-                ? e.message
-                : error.errorMessage,
+            // message: e.response.data.errors.length ? e.response.data.errors[0].message : '',
+            errorMessage: e.response.data.message,
+            // errorMessage: (error.status === 500 && e.message !== '')
+            //   ? e.message
+            //   : error.errorMessage,
         });
     }
 });

@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.server = void 0;
 const express_1 = __importDefault(require("express"));
-// import bodyParser from 'body-parser';
+const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 // import connectDatabase from './database/connection';
 const routes_1 = __importDefault(require("./routes"));
@@ -23,9 +23,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const server = express_1.default();
 exports.server = server;
-console.log("Port", process.env.PORT);
 const SERVER_PORT = process.env.PORT || 5000;
-// const SERVER_PORT = 8080;
 server.use(cors_1.default());
 server.use((req, res, next) => {
     res.set({
@@ -36,11 +34,11 @@ server.use((req, res, next) => {
     });
     next();
 });
-// server.use(bodyParser.json({limit: '4mb'}));
-// server.use(bodyParser.urlencoded({
-//   limit: '4mb',
-//   extended: true,
-// }));
+server.use(body_parser_1.default.json({ limit: '4mb' }));
+server.use(body_parser_1.default.urlencoded({
+    limit: '4mb',
+    extended: true,
+}));
 // server.use(express.static('public'));
 // server.use(session({
 //   secret: process.env.SECRET_KEY,

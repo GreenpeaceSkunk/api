@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose = require("mongoose");
 exports.default = module.exports = () => __awaiter(void 0, void 0, void 0, function* () {
     // const URI = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?retryWrites=true&w=majority&ssl=true`
     const URI = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?retryWrites=true&w=majority&ssl=false`;
@@ -22,12 +21,12 @@ exports.default = module.exports = () => __awaiter(void 0, void 0, void 0, funct
     // SECRET_KEY=Gr33np34ce
     // const mongoose = require('mongoose')
     try {
-        const db = yield mongoose.connect(`${URI}`, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
-        });
+        // const db = await mongoose.connect(`${URI}`, {
+        //   useNewUrlParser: true,
+        //   useUnifiedTopology: true,
+        //   useFindAndModify: false,
+        //   useCreateIndex: true
+        // });
         // const noteSchema = new mongoose.Schema({
         //   content: String,
         //   date: Date,
@@ -43,12 +42,12 @@ exports.default = module.exports = () => __awaiter(void 0, void 0, void 0, funct
         //   console.log('note saved!')
         //   mongoose.connection.close()
         // });
-        db.connection.on('error', (error) => {
-            console.log("Error", error);
-        });
-        db.connection.once('open', (error) => {
-            console.log('Database connected');
-        });
+        // db.connection.on('error', (error: any) => {
+        //   console.log("Error", error);
+        // });
+        // db.connection.once('open', (error: any) => {
+        //   console.log('Database connected');
+        // });
     }
     catch (error) {
         console.log(error);
