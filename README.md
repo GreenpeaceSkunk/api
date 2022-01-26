@@ -8,3 +8,7 @@ Version 1
 
 ## Integrated with Hubspot API
 URL: https://legacydocs.hubspot.com/docs/methods/contacts/contacts-overview
+
+### TODO
+- Run build command directly from the server
+- Create pipelines
