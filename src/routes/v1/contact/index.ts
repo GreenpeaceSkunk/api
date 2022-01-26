@@ -1,10 +1,8 @@
 import { Router, Request, Response, NextFunction } from 'express';
-// import { IUser } from 'greenpeace';
 import { requestWrapper } from '../../../middlewares';
 // import { create, findAll } from '../user/controller';
 import { Client } from '@hubspot/api-client';
 import axios from 'axios';
-// const hubspotClient = new hubspot.Client({ apiKey: YOUR_API_KEY })
 
 const router = Router();
 const hubspotClient = new Client({ apiKey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97' })
@@ -13,7 +11,7 @@ router.get('/', [requestWrapper(async (req: Request, res: Response) => {
   const contacts = await axios({
     baseURL: 'https://api.hubapi.com/contacts/v1/lists/all/contacts/all',
     params: {
-      hapikey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97',
+      hapikey: process.env.HUBSPOT_API_KEY,
     },
   })
   res
@@ -26,7 +24,7 @@ router.get('/email/:email', [requestWrapper(async (req: Request, res: Response) 
   const contact = await axios({
     baseURL: `https://api.hubapi.com/contacts/v1/contact/email/${req.params.email}/profile`,
     params: {
-      hapikey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97'
+      hapikey: process.env.HUBSPOT_API_KEY,
     },
   });
 
@@ -35,17 +33,12 @@ router.get('/email/:email', [requestWrapper(async (req: Request, res: Response) 
     .json(contact.data.properties);
 })]);
 
-// https://legacydocs.hubspot.com/docs/methods/contacts/update_contact
 router.post('/', [requestWrapper(async (req: Request, res: Response) => {
-  // const body = req.body as any;
-  // const contact = await hubspotClient.crm.contacts.basicApi.create({
-  //   properties: req.body as any,
-  // });
   const contact = await axios({
     baseURL: `https://api.hubapi.com/contacts/v1/contact`,
     method: 'POST',
     params: {
-      hapikey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97'
+      hapikey: process.env.HUBSPOT_API_KEY,
     },
     data: {
       properties: Object.keys(req.body).map((key: string) => ({
