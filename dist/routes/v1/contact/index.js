@@ -14,36 +14,35 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const middlewares_1 = require("../../../middlewares");
-// import { create, findAll } from '../user/controller';
-const api_client_1 = require("@hubspot/api-client");
 const axios_1 = __importDefault(require("axios"));
 const router = express_1.Router();
-const hubspotClient = new api_client_1.Client({ apiKey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97' });
-router.get('/', [middlewares_1.requestWrapper((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        const contacts = yield axios_1.default({
-            baseURL: 'https://api.hubapi.com/contacts/v1/lists/all/contacts/all',
+router.get('/', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+        const result = yield axios_1.default({
+            baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/lists/all/contacts/all`,
             params: {
                 hapikey: process.env.HUBSPOT_API_KEY,
             },
         });
         res
             .status(200)
-            .json(contacts.data.contacts.map((c) => c.properties));
+            .json(result.data.contacts.map((contact) => contact.properties));
     }))]);
-router.get('/email/:email', [middlewares_1.requestWrapper((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        const contact = yield axios_1.default({
-            baseURL: `https://api.hubapi.com/contacts/v1/contact/email/${req.params.email}/profile`,
+router.get('/email/:email', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+        const result = yield axios_1.default({
+            baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${req.params.email}/profile`,
             params: {
                 hapikey: process.env.HUBSPOT_API_KEY,
             },
         });
         res
             .status(200)
-            .json(contact.data.properties);
+            .json(Object
+            .keys(result.data.properties)
+            .reduce((a, b) => (Object.assign(Object.assign({}, a), { [`${b}`]: result.data.properties[b].value })), {}));
     }))]);
-router.post('/', [middlewares_1.requestWrapper((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        const contact = yield axios_1.default({
-            baseURL: `https://api.hubapi.com/contacts/v1/contact`,
+router.post('/', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+        const result = yield axios_1.default({
+            baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
             method: 'POST',
             params: {
                 hapikey: process.env.HUBSPOT_API_KEY,
@@ -57,7 +56,7 @@ router.post('/', [middlewares_1.requestWrapper((req, res) => __awaiter(void 0, v
         });
         res
             .status(201)
-            .json(Object.assign({ id: contact.data.vid }, req.body));
+            .json(Object.assign({ id: result.data.vid }, req.body));
     }))]);
 exports.default = router;
 //# sourceMappingURL=index.js.map

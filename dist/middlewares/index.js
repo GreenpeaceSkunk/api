@@ -21,7 +21,6 @@ const requestWrapper = (fn) => (req, res, next) => __awaiter(void 0, void 0, voi
         // }
     }
     catch (e) {
-        console.log(e.response.data);
         const error = serverErrors_1.getErrorByCode(e.code || e.message);
         res
             .status(500)
