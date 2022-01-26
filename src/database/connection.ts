@@ -16,12 +16,12 @@ export default module.exports = async () => {
 
   
   try {
-    const db = await mongoose.connect(`${URI}`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-      useCreateIndex: true
-    });
+    // const db = await mongoose.connect(`${URI}`, {
+    //   useNewUrlParser: true,
+    //   useUnifiedTopology: true,
+    //   useFindAndModify: false,
+    //   useCreateIndex: true
+    // });
 
     // const noteSchema = new mongoose.Schema({
     //   content: String,
@@ -42,13 +42,13 @@ export default module.exports = async () => {
     //   mongoose.connection.close()
     // });
 
-    db.connection.on('error', (error: any) => {
-      console.log("Error", error);
-    });
+    // db.connection.on('error', (error: any) => {
+    //   console.log("Error", error);
+    // });
 
-    db.connection.once('open', (error: any) => {
-      console.log('Database connected');
-    });
+    // db.connection.once('open', (error: any) => {
+    //   console.log('Database connected');
+    // });
 
   } catch(error) {
     console.log(error);

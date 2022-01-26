@@ -5,7 +5,7 @@ import { requestWrapper } from '../../../middlewares';
 import { Client } from '@hubspot/api-client';
 import axios from 'axios';
 // const hubspotClient = new hubspot.Client({ apiKey: YOUR_API_KEY })
-console.log('COntacts')
+
 const router = Router();
 const hubspotClient = new Client({ apiKey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97' })
 

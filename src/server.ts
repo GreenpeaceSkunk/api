@@ -10,9 +10,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const server: express.Application = express();
-console.log("Port", process.env.PORT)
 const SERVER_PORT = process.env.PORT || 5000;
-// const SERVER_PORT = 8080;
 
 server.use(cors());
 server.use((req: Request, res: Response, next: NextFunction) => {
@@ -24,7 +22,6 @@ server.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-
 server.use(bodyParser.json({limit: '4mb'}));
 server.use(bodyParser.urlencoded({
   limit: '4mb',
