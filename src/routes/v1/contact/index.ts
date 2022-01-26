@@ -9,7 +9,6 @@ import axios from 'axios';
 const router = Router();
 const hubspotClient = new Client({ apiKey: 'fcffbf78-18c5-40f0-a06f-5efd732f4b97' })
 
-// https://legacydocs.hubspot.com/docs/methods/contacts/update_contact
 router.get('/', [requestWrapper(async (req: Request, res: Response) => {
   const contacts = await axios({
     baseURL: 'https://api.hubapi.com/contacts/v1/lists/all/contacts/all',
@@ -36,6 +35,7 @@ router.get('/email/:email', [requestWrapper(async (req: Request, res: Response) 
     .json(contact.data.properties);
 })]);
 
+// https://legacydocs.hubspot.com/docs/methods/contacts/update_contact
 router.post('/', [requestWrapper(async (req: Request, res: Response) => {
   // const body = req.body as any;
   // const contact = await hubspotClient.crm.contacts.basicApi.create({
