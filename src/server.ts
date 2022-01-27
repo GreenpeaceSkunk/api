@@ -18,7 +18,7 @@ server.use((req: Request, res: Response, next: NextFunction) => {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'DELETE,GET,PATCH,POST,PUT',
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-    // 'Access-Control-Expose-Headers': 'X-Auth-Token, X-Auth-User'
+    'Access-Control-Expose-Headers': 'X-Greenlab-App',
   });
   next();
 });
