@@ -9,26 +9,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.requestWrapper = void 0;
-const serverErrors_1 = require("../helpers/serverErrors");
-const requestWrapper = (fn) => (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const fnReturn = yield fn(req, res, next);
-        return fnReturn;
-    }
-    catch (e) {
-        const error = serverErrors_1.getErrorByCode(e.code || e.message);
+exports.authWrapper = void 0;
+const middlewares_1 = require("./middlewares");
+exports.authWrapper = middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    if (!req.headers['x-greenlab-app']) {
         res
-            .status(500)
+            .status(403)
             .json({
-            status: error.status,
-            // message: e.response.data.errors.length ? e.response.data.errors[0].message : '',
-            errorMessage: e.response.data.message,
-            // errorMessage: (error.status === 500 && e.message !== '')
-            //   ? e.message
-            //   : error.errorMessage,
+            status: 403,
+            errorMessage: 'Forbbiden',
         });
     }
-});
-exports.requestWrapper = requestWrapper;
-//# sourceMappingURL=index.js.map
+    else {
+        next();
+    }
+}));
+//# sourceMappingURL=auth.js.map
