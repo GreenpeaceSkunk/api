@@ -11,10 +11,6 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   try {
     const fnReturn = await fn(req, res, next);
     return fnReturn;
-    // if(fnReturn) {
-    // } else {
-    //   throw new Error( 'Error!!' )
-    // }
   } catch(e: any) {
     const error = getErrorByCode(e.code || e.message);
     res
