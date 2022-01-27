@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import contactRoutes from './contact';
+import hubspotRoutes from './hubspot';
+import landingRoutes from './landing';
 
 const router = Router();
 
-router.use('/contact', contactRoutes);
+router.use('/hubspot', hubspotRoutes);
+router.use('/landing', landingRoutes);
 
 export default router;
