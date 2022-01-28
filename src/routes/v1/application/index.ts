@@ -5,7 +5,7 @@ import { getByName } from './controller';
 
 const router = Router();
 
-router.get('/:name', [authWrapper, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.get('/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const result = await getByName(req.params.name);
 
   if(result) {
