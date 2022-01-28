@@ -27,7 +27,9 @@ server.use(bodyParser.urlencoded({
   limit: '4mb',
   extended: true,
 }));
-// server.use(express.static('public'));
+
+server.use(express.static('public')); 
+server.use('/images', express.static('images'));
 
 // server.use(session({
 //   secret: process.env.SECRET_KEY,
