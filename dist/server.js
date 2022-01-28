@@ -39,7 +39,8 @@ server.use(body_parser_1.default.urlencoded({
     limit: '4mb',
     extended: true,
 }));
-// server.use(express.static('public'));
+server.use(express_1.default.static('public'));
+server.use('/images', express_1.default.static('images'));
 // server.use(session({
 //   secret: process.env.SECRET_KEY,
 //   signed: false,
