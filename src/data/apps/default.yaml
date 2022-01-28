@@ -1,0 +1,32 @@
+name: "default"
+layout:
+  texts:
+    picture: ""
+    title: ""
+  home:
+    title: ""
+    text: ""
+    highlighted_text: ""
+  forms:
+    subscription:
+      title: ""
+      text: ""
+      button_text: ""
+    checkout:
+      title: ""
+      text: ""
+      button_text: ""
+    thank_you:
+      title: ""
+      social_media_text: ""
+tracking:
+  google:
+    analytics:
+      tracking_id: "UA-175817761-1"
+    tag_manager:
+      id: "GTM-TZB6GQ3"
+  facebok:
+    pixel_id: 713455948697688
+  hotjar:
+    id: 2797198
+    sv: 6

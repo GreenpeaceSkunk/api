@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import hubspotRoutes from './hubspot';
-import landingRoutes from './landing';
+import applicationRoutes from './application';
 
 const router = Router();
 
 router.use('/hubspot', hubspotRoutes);
-router.use('/landing', landingRoutes);
+router.use('/application', applicationRoutes);
 
 export default router;
