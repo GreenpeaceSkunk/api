@@ -29,7 +29,7 @@ tracking:
       tracking_id: "UA-175817761-1"
     tag_manager:
       id: "GTM-TZB6GQ3"
-  facebok:
+  facebook:
     pixel_id: 713455948697688
   hotjar:
     id: 2797198
