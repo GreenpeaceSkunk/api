@@ -1,24 +1,28 @@
 name: "default"
 layout:
-  texts:
-    picture: ""
-    title: ""
+  header:
+    picture: "somos-puentes.jpg"
+    title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
   home:
-    title: ""
-    text: ""
-    highlighted_text: ""
-  forms:
+    title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
+    text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
+    highlighted_text: "¡Sumate ahora, seamos muchos más!"
+  form:
     subscription:
-      title: ""
-      text: ""
-      button_text: ""
+      title: "DONÁ AHORA"
+      text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
+      button_text: "Continuar"
     checkout:
-      title: ""
-      text: ""
-      button_text: ""
-    thank_you:
-      title: ""
-      social_media_text: ""
+      title: "DONÁ AHORA"
+      text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
+      button_text: "Doná"
+  modal_form:
+    title: "Doná ahora"
+    text: "Sumate y conocé nuestras causas"
+    button_text: "¡Sumate!"
+  thankyou:
+    title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+    social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
 tracking:
   google:
     analytics:

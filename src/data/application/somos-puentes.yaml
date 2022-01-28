@@ -1,20 +1,36 @@
 name: "somos-puentes"
-texts:
-  picture: ""
-  title: ""
-home:
-  title: ""
-  text: ""
-  highlighted_text: ""
-forms:
-  subscription:
-    title: ""
-    text: ""
-    button_text: ""
-  checkout:
-    title: ""
-    text: ""
-    button_text: ""
-  thank_you:
+layout:
+  header:
+    picture: "somos-puentes.jpg"
+    title: "¡Ayudá a ganar más campañas en Somos Puentes!"
+  home:
+    title: "¡Ayudá a ganar más campañas en Somos Puentes!"
+    text: "<p><strong>Somos Puentes es una plataforma creada por Greenpeace para acercar herramientas de acción digital a las personas</strong>. En Greenpeace no aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Cada donación mensual que aportan nuestros socios y socias se convierten en acción para nuestras campañas, pero además para la mantención de plataformas como la nuestra, haciendo posible que más personas de todo Argentina ganen sus campañas y sean agentes de cambios positivos para nuestro planeta.</p>"
+    highlighted_text: "¡Sumate ahora, seamos muchos más!"
+  form:
+    subscription:
+      title: "Title"
+      text: "Text"
+      button_text: "Button text"
+    checkout:
+      title: ""
+      text: ""
+      button_text: ""
+  modal_form:
+    title: "Doná ahora"
+    text: "Sumate y conocé nuestras causas"
+    button_text: "¡Sumate!"
+  thankyou:
     title: ""
     social_media_text: ""
+tracking:
+  google:
+    analytics:
+      tracking_id: "UA-175817761-1"
+    tag_manager:
+      id: "GTM-TZB6GQ3"
+  facebok:
+    pixel_id: 713455948697688
+  hotjar:
+    id: 2797198
+    sv: 6
