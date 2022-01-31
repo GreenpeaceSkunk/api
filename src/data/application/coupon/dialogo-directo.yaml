@@ -1,12 +1,12 @@
-name: "somos-puentes"
+name: "dialogo-directo"
 settings:
-  title: "Greenpeace Argentina"
+  title: "Asociate a Greenpeace Argentina"
   amounts:
-    values: [ 699, 799, 1500 ] 
-    default: 699
+    values: [ 900, 1200, 1500 ] 
+    default: 900
   tracking:
     salesforce:
-      campaign_id: "7017X000000Mle6"
+      campaign_id: "7015c000000yjEA"
     google:
       analytics:
         tracking_id: "UA-175817761-1"
@@ -29,11 +29,11 @@ settings:
       body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
 layout:
   header:
-    picture: "somos-puentes.jpg"
+    picture: "dialogo-directo.jpg"
     title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
   home:
-    title: "Somos Puentes es una plataforma creada por Greenpeace para acercar herramientas de acción digital a las personas."
-    text: "<p>En Greenpeace no aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Cada donación mensual que aportan nuestros socios y socias se convierten en acción para nuestras campañas, pero además para la mantención de plataformas como la nuestra, haciendo posible que más personas de todo Argentina ganen sus campañas y sean agentes de cambios positivos para nuestro planeta.</p>"
+    title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
+    text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
     highlighted_text: "¡Sumate ahora, seamos muchos más!"
   form:
     subscription:

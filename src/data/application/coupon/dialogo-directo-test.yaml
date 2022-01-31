@@ -1,9 +1,9 @@
-name: "default"
+name: "dialogo-directo"
 settings:
-  title: "Greenpeace Argentina"
+  title: "Asociate a Greenpeace Argentina"
   amounts:
-    values: [ 699, 799, 1500 ] 
-    default: 699
+    values: [ 900, 1200, 1500 ] 
+    default: 900
   tracking:
     salesforce:
       campaign_id: "7017X000000Mle6"
@@ -29,7 +29,7 @@ settings:
       body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
 layout:
   header:
-    picture: "default.jpg"
+    picture: "dialogo-directo.jpg"
     title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
   home:
     title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."

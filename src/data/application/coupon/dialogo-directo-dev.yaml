@@ -1,9 +1,9 @@
-name: "default"
+name: "dialogo-directo"
 settings:
-  title: "Greenpeace Argentina"
+  title: "Asociate a Greenpeace Argentina"
   amounts:
-    values: [ 699, 799, 1500 ] 
-    default: 699
+    values: [ 900, 1200, 1500 ] 
+    default: 900
   tracking:
     salesforce:
       campaign_id: "7017X000000Mle6"
