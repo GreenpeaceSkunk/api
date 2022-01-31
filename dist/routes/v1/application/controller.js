@@ -12,18 +12,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getByName = void 0;
+exports.getCouponByName = void 0;
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const yaml_1 = __importDefault(require("yaml"));
-const getByName = (name) => __awaiter(void 0, void 0, void 0, function* () {
+const getCouponByName = (name) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const result = yield yaml_1.default.parse(fs_1.default.readFileSync(`${path_1.default.resolve('src')}/data/application/${name}.yaml`, 'utf-8'));
+        const result = yield yaml_1.default.parse(fs_1.default.readFileSync(`${path_1.default.resolve('src')}/data/application/coupon/${name}.yaml`, 'utf-8'));
         return Promise.resolve(result);
     }
     catch (error) {
         return Promise.resolve(null);
     }
 });
-exports.getByName = getByName;
+exports.getCouponByName = getCouponByName;
 //# sourceMappingURL=controller.js.map

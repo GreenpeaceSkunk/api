@@ -13,8 +13,8 @@ const express_1 = require("express");
 const middlewares_1 = require("../../../middlewares");
 const controller_1 = require("./controller");
 const router = express_1.Router();
-router.get('/:name', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-        const result = yield controller_1.getByName(req.params.name);
+router.get('/coupon/:name', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+        const result = yield controller_1.getCouponByName(req.params.name);
         if (result) {
             res
                 .status(200)
