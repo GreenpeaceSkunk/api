@@ -1,0 +1,43 @@
+data:
+  development:
+    tracking:
+      salesforce:
+        campaign_id: "7017X000000Mle6"
+      google:
+        analytics:
+          tracking_id: "UA-175817761-1"
+        tag_manager:
+          id: "GTM-TZB6GQ3"
+      facebook:
+        pixel_id: 713455948697688
+      hotjar:
+        id: 2797198
+        sv: 6
+  test:
+    tracking:
+      salesforce:
+        campaign_id: "7017X000000Mle6"
+      google:
+        analytics:
+          tracking_id: "UA-175817761-1"
+        tag_manager:
+          id: "GTM-TZB6GQ3"
+      facebook:
+        pixel_id: 713455948697688
+      hotjar:
+        id: 2797198
+        sv: 6
+  production:
+    tracking:
+      salesforce:
+        campaign_id: "7017X000000Mle6"
+      google:
+        analytics:
+          tracking_id: "UA-175817761-1"
+        tag_manager:
+          id: "GTM-TZB6GQ3"
+      facebook:
+        pixel_id: 713455948697688
+      hotjar:
+        id: 2797198
+        sv: 6

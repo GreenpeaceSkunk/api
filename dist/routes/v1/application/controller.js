@@ -16,10 +16,11 @@ exports.getCouponByName = void 0;
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const yaml_1 = __importDefault(require("yaml"));
-const getCouponByName = (name) => __awaiter(void 0, void 0, void 0, function* () {
+const getCouponByName = (name, environment) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const result = yield yaml_1.default.parse(fs_1.default.readFileSync(`${path_1.default.resolve('src')}/data/application/coupon/${name}.yaml`, 'utf-8'));
-        return Promise.resolve(result);
+        const content = yield yaml_1.default.parse(fs_1.default.readFileSync(`${path_1.default.resolve('src')}/data/application/coupon/${name}/content.yaml`, 'utf-8'));
+        const settings = yield yaml_1.default.parse(fs_1.default.readFileSync(`${path_1.default.resolve('src')}/data/application/coupon/${name}/settings.yaml`, 'utf-8'));
+        return Promise.resolve(Object.assign({ content: content.data }, { settings: settings.data[environment] }));
     }
     catch (error) {
         return Promise.resolve(null);
