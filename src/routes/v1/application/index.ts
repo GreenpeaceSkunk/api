@@ -4,8 +4,9 @@ import { getCouponByName } from './controller';
 
 const router = Router();
 
-router.get('/coupon/:name/:environment', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const result = await getCouponByName(req.params.name, req.params.environment);
+router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+  console.log(req.query.env)
+  const result = await getCouponByName(req.params.name, `${req.query.env}`);
 
   if(result) {
     res

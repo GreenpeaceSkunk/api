@@ -1,0 +1,83 @@
+data:
+  name: "general"
+  content:
+    title: "Asociate a Greenpeace Argentina"
+    amounts:
+      values: [ 699, 799, 1500 ] 
+      default: 699
+    social_share:
+      facebook:
+        text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
+      twitter:
+        text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
+      whatsapp:
+        text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
+      email:
+        subject: "Colaborá vos también con el medio ambiente"
+        body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
+    header:
+      picture: "general.jpg"
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+    home:
+      title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
+      text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
+      highlighted_text: "¡Sumate ahora, seamos muchos más!"
+    form:
+      subscription:
+        title: "DONÁ AHORA"
+        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
+        button_text: "Continuar"
+      checkout:
+        title: "DONÁ AHORA"
+        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
+        button_text: "Doná"
+    modal_form:
+      title: "Doná ahora"
+      text: "Sumate y conocé nuestras causas"
+      button_text: "¡Sumate!"
+    thankyou:
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
+  settings:
+    development:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+    test:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+    production:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
