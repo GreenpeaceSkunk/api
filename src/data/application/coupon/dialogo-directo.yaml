@@ -22,6 +22,7 @@ data:
       title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
       text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
       highlighted_text: "¡Sumate ahora, seamos muchos más!"
+      button_text: "Sumate!"
     form:
       subscription:
         title: "DONÁ AHORA"

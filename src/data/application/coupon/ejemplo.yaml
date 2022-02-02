@@ -20,8 +20,9 @@ data:
       title: "Texto del Header"
     home:
       title: "Titulo principal para la Home page"
-      text: "Texto principal para la Home page"
-      highlighted_text: "Texto reslatado para la Home Page"
+      text: "<p>Texto <strong>principal</strong<p>"
+      highlighted_text: "Texto resaltado"
+      button_text: "Texto botón"
     form:
       subscription:
         title: "Título para el formulario de suscripción"
