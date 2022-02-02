@@ -14,7 +14,6 @@ const middlewares_1 = require("../../../middlewares");
 const controller_1 = require("./controller");
 const router = express_1.Router();
 router.get('/coupon/:name', [middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-        console.log(req.query.env);
         const result = yield controller_1.getCouponByName(req.params.name, `${req.query.env}`);
         if (result) {
             res
