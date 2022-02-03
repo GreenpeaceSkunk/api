@@ -39,7 +39,6 @@ router.get('/email/:email', [auth_1.authWrapper, (req, res, next) => __awaiter(v
         }
     })]);
 router.post('/', [auth_1.authWrapper, (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-        console.log("x-greenlab-app", req.headers['x-greenlab-app']);
         const result = yield controller_1.createOne(req.body);
         if (result) {
             res
@@ -57,7 +56,6 @@ router.post('/', [auth_1.authWrapper, (req, res, next) => __awaiter(void 0, void
     })]);
 router.post('/email/:email', [auth_1.authWrapper, (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         const result = yield controller_1.updateOne(req.params.email, req.body);
-        console.log(result);
         if (result) {
             res
                 .status(201)

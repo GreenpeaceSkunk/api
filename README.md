@@ -12,3 +12,4 @@ URL: https://legacydocs.hubspot.com/docs/methods/contacts/contacts-overview
 ### TODO
 - Run build command directly from the server
 - Create pipelines
+- Default amounts

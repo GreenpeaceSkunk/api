@@ -1,27 +1,21 @@
 FROM node:14
 
-#RUN apk update
-#RUN mkdir -p /user/app/app
+# RUN mkdir -p /usr/src/api
+WORKDIR /usr/src/api
 
-# Create root application folder
-WORKDIR /usr/src/app
-
-#ARG NODE_ENV
-#ENV NODE_ENV $NODE_ENV
+ARG NODE_ENV
+ENV NODE_ENV $NODE_ENV
 
 COPY package*.json ./
-
-# Copy source code to /app/src folder
 
 RUN npm install -g nodemon
 RUN npm install -g typescript
 RUN npm install
-
-COPY . .
-
 RUN npm run types
 
-EXPOSE 5000
-#RUN npm run server:start:watch
-
+# Copy source code to /app/src folder
+# COPY . .
+ENV NODE_ENV=development
 CMD [ "npm", "run" ,  "server:start:watch" ]
+
+EXPOSE 5000

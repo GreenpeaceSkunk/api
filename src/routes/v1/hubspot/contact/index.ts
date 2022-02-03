@@ -33,7 +33,6 @@ router.get('/email/:email', [authWrapper, async (req: Request, res: Response, ne
 }]);
 
 router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
-  console.log("x-greenlab-app", req.headers['x-greenlab-app']);
   const result = await createOne(req.body);
   if(result) {
     res
@@ -54,7 +53,6 @@ router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFun
 
 router.post('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
   const result = await updateOne(req.params.email, req.body);
-  console.log(result)
   if(result) {
     res
       .status(201)

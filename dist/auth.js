@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.authWrapper = void 0;
 const middlewares_1 = require("./middlewares");
 exports.authWrapper = middlewares_1.requestWrapper((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req.headers['x-greenlab-app']);
     if (!req.headers['x-greenlab-app'] && req.headers['x-greenlab-app'] !== null) {
         res
             .status(403)
