@@ -1,0 +1,84 @@
+data:
+  name: "ejemplo"
+  content:
+    title: "Título de ejemolo"
+    amounts:
+      values: [ 699, 799, 899, 1099, 1500 ] 
+      default: 1099
+    social_share:
+      facebook:
+        text: "Texto para compartir en Facebook"
+      twitter:
+        text: "Texto para compartir en Twitter"
+      whatsapp:
+        text: "Texto para compartir en Whatsapp"
+      email:
+        subject: "Asunto del email"
+        body: "Cuerpo del email"
+    header:
+      picture: "dialogo-directo.jpg"
+      title: "Texto del Header para Nino"
+    home:
+      title: "Titulo principal para la Home page"
+      text: "<p>Texto <strong>principal</strong<p>"
+      highlighted_text: "Texto resaltado"
+      button_text: "Texto botón"
+    form:
+      subscription:
+        title: "Título para el formulario de suscripción"
+        text: "Texto para el formulario de suscripción"
+        button_text: "Texto botón suscripción"
+      checkout:
+        title: "Título para el formulario de checkout"
+        text: "Texto para el formulario de checkout"
+        button_text: "Texto botón checkout"
+    modal_form:
+      title: "Título para el popup del formulario"
+      text: "Texto para el popup del formulario"
+      button_text: "Texto botón popup"
+    thankyou:
+      title: "Título para la pantalla de agradecimiento"
+      social_media_text: "Texto relacionado a compartir para la pantalla de agradecimiento"
+  settings:
+    development:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+    test:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+    production:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
