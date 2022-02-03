@@ -3,8 +3,8 @@ data:
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
-      values: [ 900, 1200, 1500 ] 
-      default: 900
+      values: [ 699, 799, 1500 ]
+      default: 699
     social_share:
       facebook:
         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
