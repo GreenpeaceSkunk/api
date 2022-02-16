@@ -54,6 +54,8 @@ data:
         hotjar:
           id: 2797198
           sv: 6
+        hubspot:
+          id: 20432059
     test:
       tracking:
         salesforce:
@@ -68,6 +70,8 @@ data:
         hotjar:
           id: 2797198
           sv: 6
+        hubspot:
+          id: 20432059
     production:
       tracking:
         salesforce:
@@ -82,3 +86,5 @@ data:
         hotjar:
           id: 2797198
           sv: 6
+        hubspot:
+          id: 20432059
