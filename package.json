@@ -12,13 +12,16 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "start:dev": "nodemon src/index.ts",
-    "start:production": "NODE_PATH=./build node build/index.js",
-    "build:dev": "tsc -p .",
+    "server:start": "ts-node .",
+    "server:start:watch": "nodemon -x ts-node src/index.ts",
+    "server:create:collections": "ts-node src/database/scripts.ts",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "lint": "eslint . --ext .ts --fix",
+    "server:build": "tsc --build tsconfig.json",
     "types": "ln -s $PWD/src/types $PWD/node_modules/@types/greenpeace",
-    "server:create:collections": "ts-node src/database/scripts.ts"
+    "start:production": "NODE_PATH=./build node build/index.js",
+    "start:dev": "nodemon src/index.ts",
+    "build:dev": "tsc -p ."
   },
   "repository": {
     "type": "git",
