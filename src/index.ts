@@ -10,8 +10,6 @@ dotenv.config();
 
 const SERVER_PORT = process.env.PORT || 5000;
 
-
-
 // server.use(session({
 //   secret: process.env.SECRET_KEY,
 //   signed: false,
@@ -46,12 +44,12 @@ const SERVER_PORT = process.env.PORT || 5000;
 // }));
 
 app.get('/test', (req: Request, res: Response) => {
-  res.send("Test OK.");
+  res.send("OK");
 });
 
 app.use('/api', apiRoutes);
 
 app.listen(SERVER_PORT, async () => {
-  console.log(`Server running on port ->  ${SERVER_PORT}`);
+  console.log(`Server running on port ${SERVER_PORT}`);
   // connectDatabase();
 });
