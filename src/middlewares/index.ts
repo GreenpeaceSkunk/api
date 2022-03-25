@@ -1,6 +1,5 @@
 import { IRequestError } from "greenpeace";
 import { Request, Response, NextFunction, RequestHandler } from "express";
-import { getErrorByCode } from "../helpers/serverErrors";
 
 type RequestWrapperType = (fn: RequestHandler) => RequestHandler;
 const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
@@ -9,19 +8,17 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   next: NextFunction,
 ) => {
   try {
+    console.log('Try..')
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(e: any) {
-    const error = getErrorByCode(e.code || e.message);
+    const status = (e.response.status) ? e.response.status : 500;
+    const errorMessage = (e.response.statusText) ? e.response.statusText : 'Internal Server Error';
     res
-      .status(500)
+      .status(status)
       .json({
-        status: error.status,
-        // message: e.response.data.errors.length ? e.response.data.errors[0].message : '',
-        errorMessage: e.response.data.message,
-        // errorMessage: (error.status === 500 && e.message !== '')
-        //   ? e.message
-        //   : error.errorMessage,
+        status,
+        errorMessage,
       } as IRequestError);
   }
 }
