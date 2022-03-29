@@ -3,7 +3,7 @@ data:
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
-      values: [ 699, 799, 1500 ] 
+      values: [ 699, 1000, 1300 ] 
       default: 699
     social_share:
       facebook:
@@ -56,6 +56,9 @@ data:
           sv: 6
         hubspot:
           id: 20432059
+      service:
+        forma:
+          transactions_form: 54
     test:
       tracking:
         salesforce:
@@ -72,6 +75,9 @@ data:
           sv: 6
         hubspot:
           id: 20432059
+      service:
+        forma:
+          transactions_form: 54
     production:
       tracking:
         salesforce:
@@ -88,3 +94,6 @@ data:
           sv: 6
         hubspot:
           id: 20432059
+      service:
+        forma:
+          transactions_form: 54

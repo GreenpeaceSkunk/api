@@ -2,7 +2,7 @@ data:
   content:
     title: "Greenpeace Argentina"
     amounts:
-      values: [ 699, 799, 1500 ] 
+      values: [ 699, 799, 1501 ] 
       default: 699
   settings:
       development:
