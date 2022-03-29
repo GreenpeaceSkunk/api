@@ -15,7 +15,7 @@ export const postRecord = async (formId: number, body = {}): Promise<any> => {
     data: {
       form_id: formId,
       ...body,
-    }
+    },
   });
   return response;
 }
@@ -26,7 +26,7 @@ export const getForm = async (formId: number|null = null): Promise<any> => {
     method: 'GET',
     params: {},
   });
-  console.log(response.data)
+  
   if(formId) {
     return Object.values(response.data as FormType[]).find((form: FormType) => form.formId === formId);
   }

@@ -4,13 +4,17 @@ import { postRecord, getForm } from './controller';
 
 const router = Router();
 
-router.post('/:formId', [async (req: Request, res: Response, next: NextFunction) => {
-  const result = await postRecord(parseInt(req.params.formId), req.body);
-  if(result.status === 200) {
-    res.status(result.status).json(req.body);  
-  } else {
-    res.status(result.status);  
-  }
+router.post('/form/:formId/record', [async (req: Request, res: Response, next: NextFunction) => {
+  // const result = await postRecord(parseInt(req.params.formId), req.body);
+
+  // if(result.status === 200) {
+  //   res.status(result.status).json(req.body);  
+  // } else {
+  //   res.status(result.status);  
+  // }
+  console.log(req.params.formId, req.body);
+  
+  return res.status(200).json({})
 }]);
 
 router.get('/form/:formId?', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
