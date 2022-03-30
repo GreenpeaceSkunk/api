@@ -17,7 +17,7 @@ services:
       - '5001:5001'
     environment:
       - PORT=5001
-    command: npm run start:dev
+    command: npm run server:start:watch
     # depends_on:
     #   - mongo
   # mongo:
