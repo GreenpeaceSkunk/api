@@ -24,7 +24,7 @@ data:
       highlighted_text: "¡Sumate ahora, seamos muchos más!"
       button_text: "Sumate!"
     form:
-      subscription:
+      registration:
         title: "DONÁ AHORA"
         text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
         button_text: "Continuar"

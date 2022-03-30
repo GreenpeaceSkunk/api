@@ -24,7 +24,7 @@ data:
       highlighted_text: "Texto resaltado"
       button_text: "Texto botón"
     form:
-      subscription:
+      registration:
         title: "Título para el formulario de suscripción"
         text: "Texto para el formulario de suscripción"
         button_text: "Texto botón suscripción"
