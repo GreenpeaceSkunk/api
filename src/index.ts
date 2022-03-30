@@ -8,7 +8,7 @@ import apiRoutes from './routes';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const SERVER_PORT = process.env.PORT || 5000;
+const SERVER_PORT = process.env.PORT || 5001;
 
 // server.use(session({
 //   secret: process.env.SECRET_KEY,
