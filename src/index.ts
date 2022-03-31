@@ -43,8 +43,8 @@ const SERVER_PORT = process.env.PORT || 5001;
 //   graphiql: true,
 // }));
 
-app.get('/test', (req: Request, res: Response) => {
-  res.send("OK");
+app.get('/api-test', (req: Request, res: Response) => {
+  res.send("OK.");
 });
 
 app.use('/api', apiRoutes);
