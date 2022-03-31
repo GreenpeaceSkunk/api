@@ -43,12 +43,11 @@ const SERVER_PORT = process.env.PORT || 5001;
 //   graphiql: true,
 // }));
 
-app.get('/api-test', (req: Request, res: Response) => {
+app.get('/api-status', (req: Request, res: Response) => {
   res.send("OK.");
 });
 
-app.use('/api', apiRoutes);
-
+app.use(`/api${process.env.NODE_ENV ? `-${process.env.NODE_ENV}` : ''}`, apiRoutes);
 app.listen(SERVER_PORT, async () => {
   console.log(`Server running on port ${SERVER_PORT}`);
   // connectDatabase();

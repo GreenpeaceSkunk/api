@@ -13,7 +13,7 @@
   "main": "dist/index.js",
   "scripts": {
     "server:start:development": "npm run server:env:development && nodemon -x ts-node src/index.ts",
-    "server:start:test": "npm run server:env:test && npm run server:build && NODE_PATH=./build node --trace-deprecation build/index.js",
+    "server:start:test": "npm run server:env:test && npm run server:build && NODE_ENV=test NODE_PATH=./build node --trace-deprecation build/index.js",
     "server:start:production": "npm run server:env:production && npm run server:build && NODE_PATH=./build node --trace-deprecation build/index.js",
     "server:env:development": "npm run server:remove:env && cp .env.development.sample .env",
     "server:env:test": "npm run server:remove:env && cp .env.test.sample .env",
