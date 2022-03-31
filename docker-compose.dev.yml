@@ -12,12 +12,12 @@ services:
       - ./src:/home/app/api/src
       - ./nodemon.json:/home/app/api/nodemon.json
     expose:
-      - '5001'
+      - '5003'
     ports:
-      - '5001:5001'
+      - '5003:5003'
     environment:
-      - PORT=5001
-    command: npm run server:start:watch
+      - PORT=5003
+    command: npm run server:start:development
     # depends_on:
     #   - mongo
   # mongo:

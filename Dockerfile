@@ -13,10 +13,9 @@ FROM base as test
 
 # Used in the package json file
 ENV NODE_PATH=./build
-RUN npm run server:build
+CMD [ "npm", "run", "server:start:test" ]
 
 FROM base as production
-
 # Used in the package json file
 ENV NODE_PATH=./build
-RUN npm run server:build
+CMD [ "npm", "run", "server:start:production" ]

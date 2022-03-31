@@ -2,9 +2,28 @@ version: "3.8"
 
 services:
   api:
-    container_name: greenpeace_greenlab_api
     image: greenpeace_greenlab_api:test
+    container_name: greenpeace_greenlab_api
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
       target: test
+    volumes:
+      - ./src:/home/app/api/src
+      - ./nodemon.json:/home/app/api/nodemon.json
+    expose:
+      - '5002'
+    ports:
+      - '5002:5002'
+    environment:
+      - PORT=5002
+    # depends_on:
+    #   - mongo
+  # mongo:
+  #   container_name: greenpeace_greenlab_mongo
+  #   image: mongo:4
+  #   restart: always
+  #   volumes:
+  #     - ./shared_volume/db/:/data/db/
+  #   ports:
+  #     - "27016:27017"
