@@ -5,16 +5,13 @@ import { postRecord, getForm } from './controller';
 const router = Router();
 
 router.post('/form/:formId/record', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  console.log(req.params.formId, req.body);
   const result = await postRecord(parseInt(req.params.formId), req.body);
 
   if(result.status === 200) {
     res.status(result.status).json(req.body);  
   } else {
     res.status(result.status);  
-  }
-  
-  // return res.status(200).json({})
+  }  
 })]);
 
 router.get('/form/:formId?', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
