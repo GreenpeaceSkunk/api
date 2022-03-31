@@ -3,8 +3,8 @@ version: "3.8"
 services:
   api:
     container_name: greenpeace_greenlab_api
-    image: greenpeace_greenlab_api:prod
+    image: greenpeace_greenlab_api:test
     build:
       context: ./
       dockerfile: Dockerfile
-      target: production
+      target: test

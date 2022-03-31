@@ -22,6 +22,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static('public')); 
-app.use('/images', express.static('images'));
+app.use('/assets/images', express.static('images'));
 
 export default app;
