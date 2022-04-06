@@ -3,7 +3,7 @@ data:
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
-      values: [ 699, 1000, 1300 ] 
+      values: [ 699, 999, 1299 ]
       default: 699
     social_share:
       facebook:
@@ -19,7 +19,7 @@ data:
       picture: "general.jpg"
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
     home:
-      title: "Todos nuestros aportes provienen de donaciones particulares de persona cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
+      title: "Todos nuestros aportes provienen de donaciones particulares de personas cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
       text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
       highlighted_text: "¡Sumate ahora, seamos muchos más!"
       button_text: "Sumate!"
