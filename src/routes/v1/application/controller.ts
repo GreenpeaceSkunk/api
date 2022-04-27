@@ -12,9 +12,9 @@ export const getCouponByName = async (name: string, environment: string): Promis
     }
     
     const coupon = await YAML.parse(fs.readFileSync(`${path.resolve('src')}/data/application/coupon/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
-    console.log(coupon.data.features);
     
     return Promise.resolve({
+      name: coupon.data.name,
       content: coupon.data.content,
       settings: coupon.data.settings[environment],
       features: coupon.data.features ? coupon.data.features[environment] : {},

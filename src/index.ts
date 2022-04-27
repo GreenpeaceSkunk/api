@@ -47,7 +47,7 @@ app.get('/api-status', (req: Request, res: Response) => {
   res.send("OK.");
 });
 
-app.use(`/api${process.env.NODE_ENV ? `-${process.env.NODE_ENV}` : ''}`, apiRoutes);
+app.use(`/api`, apiRoutes);
 app.listen(SERVER_PORT, async () => {
   console.log(`Server running on port ${SERVER_PORT}`);
   // connectDatabase();

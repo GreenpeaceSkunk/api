@@ -16,28 +16,28 @@ data:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
-      picture: "general.jpg"
+      picture: "skunk.png"
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
     home:
-      title: "Todos nuestros aportes provienen de donaciones particulares de personas cómo vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta."
-      text: "<p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. Recordá que no recibimos aportes de empresas privadas, <strong>no recibimos aportes de partidos políticos ni estamos vinculados con ellos.</strong></p>"
+      title: "El cuidado de lo que nos rodea, depende de nosotros"
+      text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
       highlighted_text: "¡Sumate ahora, seamos muchos más!"
       button_text: "Sumate!"
     form:
       registration:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
+        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
+        text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
         button_text: "Continuar"
       checkout:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
-        button_text: "Doná"
+        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
+        text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
+        button_text: "Confirmar"
     modal_form:
       title: "Doná ahora"
       text: "Sumate y conocé nuestras causas"
       button_text: "¡Sumate!"
     thankyou:
-      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      title: "<p>¡Gracias por unirte!<br/>Ya sos parte del cambio y la comunidad de Greenpeace</p>"
       social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
     development:
@@ -97,3 +97,35 @@ data:
       service:
         forma:
           transactions_form: 60
+  features:
+    development:
+      use_design_version: 2
+      enable_google_google_analytics: false
+      enable_google_tag_manager: false
+      enable_mercadopago: false
+      enable_facebook_pixel: false
+      enable_hotjar: false
+      enable_hubspot: false
+      enable_hubspot_sync: false
+      enable_transactions_sync: false
+    test:
+      use_design_version: 1
+      enable_google_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+      enable_transactions_sync: true
+      use_new_design: true
+    production:
+      use_design_version: 1
+      enable_google_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+      enable_transactions_sync: true
