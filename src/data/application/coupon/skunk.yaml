@@ -109,7 +109,7 @@ data:
       enable_hubspot_sync: false
       enable_transactions_sync: false
     test:
-      use_design_version: 1
+      use_design_version: 2
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true
