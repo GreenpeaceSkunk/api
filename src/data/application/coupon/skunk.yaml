@@ -33,11 +33,12 @@ data:
         text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
         button_text: "Confirmar"
     modal_form:
-      title: "Doná ahora"
-      text: "Sumate y conocé nuestras causas"
-      button_text: "¡Sumate!"
+      title: "Sumate ahora"
+      text: "Completá tus datos y empezá a contribuir con el planeta"
+      button_text: "Unirme"
     thankyou:
-      title: "<p>¡Gracias por unirte!<br/>Ya sos parte del cambio y la comunidad de Greenpeace</p>"
+      title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
       social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
     development:
@@ -118,7 +119,6 @@ data:
       enable_hubspot: true
       enable_hubspot_sync: true
       enable_transactions_sync: true
-      use_new_design: true
     production:
       use_design_version: 1
       enable_google_google_analytics: true
