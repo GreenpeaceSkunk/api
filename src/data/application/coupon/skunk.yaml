@@ -26,11 +26,11 @@ data:
     form:
       registration:
         title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
+        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
         button_text: "Continuar"
       checkout:
         title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
+        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
         button_text: "Confirmar"
     modal_form:
       title: "Sumate ahora"
