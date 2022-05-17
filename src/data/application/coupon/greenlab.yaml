@@ -39,7 +39,11 @@ data:
     thankyou:
       title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
       text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
-      social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
+      button_cta:
+        text: "Volver al inicio"
+        link: "https://greenpeace.org.ar"
+        is_external: true
+      social_media_text: "Compartí y seamos más quienes ayudamos al planeta"
   settings:
     development:
       tracking:

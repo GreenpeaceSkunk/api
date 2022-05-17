@@ -1,36 +1,11 @@
 data:
-  name: "general"
+  name: "ejemplo-it2" # No editar
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
-      values: [ 699, 999, 1299 ]
-      default: 699
-    header:
-      picture: "open-boat.png"
-      title: "Acercate a conocer el barco que recorre nuestro mar argentino"
-    home:
-      title: "Este 16 y 17 de abril, vení a conocer el Arctic Sunrise. Cecilia Grierson 400, Puerto Madero, CABA"
-      text: "<p>Gracias a tu aporte la investigación del mar argentino y las denuncias de prácticas ilegales de pesca y exploración sísmica son posibles.</p>"
-      highlighted_text: "¡Sumate ahora, seamos muchos más!"
-      button_text: "Sumate!"
-    form:
-      registration:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
-        button_text: "Continuar"
-      checkout:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
-        button_text: "Doná"
-    modal_form:
-      title: "Doná ahora"
-      text: "Sumate y conocé nuestras causas"
-      button_text: "¡Sumate!"
-    thankyou:
-      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
-      text: ""
-      social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
-    social_share:
+      values: [ 100, 200, 300, 500, 1000 ]
+      default: 300
+    social_share:  # No editar
       facebook:
         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
       twitter:
@@ -40,7 +15,36 @@ data:
       email:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
-  settings:
+    header:
+      picture: "greenlab.png"
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+    home:
+      title: "El cuidado de lo que nos rodea, depende de nosotros" # Título principal en la home
+      text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>" # Texto principal en la home
+      highlighted_text: "¡Sumate ahora, seamos muchos más!" # Texto en verde
+      button_text: "Sumate!" # Botón
+    form:
+      registration:
+        title: "Título" 
+        text: "Texto"
+        button_text: "Texto botón"
+      checkout:
+        title: "Título"
+        text: "Texto"
+        button_text: "Texto botón"
+    modal_form:
+      title: "Título"
+      text: "Texto"
+      button_text: "Texto botón"
+    thankyou:
+      title: "Título"
+      text: "Texto"
+      button_cta:
+        text: "Volver al inicio"
+        link: "https://greenpeace.org.ar"
+        is_external: true
+      social_media_text: "Texto compartir"
+  settings: # No editar
     development:
       tracking:
         salesforce:
@@ -82,7 +86,7 @@ data:
     production:
       tracking:
         salesforce:
-          campaign_id: "7015c000000yjEA"
+          campaign_id: "7015c000000yjEF"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -98,8 +102,9 @@ data:
       service:
         forma:
           transactions_form: 60
-  features:
+  features: # No editar
     development:
+      use_design_version: 2
       enable_google_google_analytics: false
       enable_google_tag_manager: false
       enable_mercadopago: false
@@ -109,6 +114,7 @@ data:
       enable_hubspot_sync: false
       enable_transactions_sync: false
     test:
+      use_design_version: 2
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true
@@ -118,6 +124,7 @@ data:
       enable_hubspot_sync: true
       enable_transactions_sync: true
     production:
+      use_design_version: 1
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true

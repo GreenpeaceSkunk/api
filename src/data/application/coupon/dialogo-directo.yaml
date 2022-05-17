@@ -97,3 +97,28 @@ data:
       service:
         forma:
           transactions_form: 60
+  features:
+    development:
+      enable_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+    test:
+      enable_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+    production:
+      enable_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true

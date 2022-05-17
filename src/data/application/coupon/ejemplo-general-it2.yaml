@@ -17,7 +17,7 @@ data:
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
       picture: "greenlab.png"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # No es requerido en la versión 2 del cupón
     home:
       title: "El cuidado de lo que nos rodea, depende de nosotros"
       text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
