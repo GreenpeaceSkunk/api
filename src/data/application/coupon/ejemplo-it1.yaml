@@ -1,39 +1,10 @@
 data:
-  name: "greenlab"
+  name: "ejemplo-it1"
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
-      values: [ 699, 999, 1299 ]
-      default: 699
-    header:
-      picture: "greenlab.png"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
-    home:
-      title: "El cuidado de lo que nos rodea, depende de nosotros"
-      text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
-      highlighted_text: "¡Sumate ahora, seamos muchos más!"
-      button_text: "Sumate!"
-    form:
-      registration:
-        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
-        button_text: "Continuar"
-      checkout:
-        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
-        button_text: "Confirmar"
-    modal_form:
-      title: "Sumate ahora"
-      text: "Completá tus datos y empezá a contribuir con el planeta"
-      button_text: "Unirme"
-    thankyou:
-      title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
-      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
-      button_cta:
-        text: "VOLVER AL INICIO"
-        link: "/"
-        is_external: true
-      social_media_text: "Compartí y seamos más quienes ayudamos al planeta"
+      values: [ 100, 200, 300, 5000 ]
+      default: 300
     social_share:
       facebook:
         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
@@ -44,6 +15,35 @@ data:
       email:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
+    header:
+      picture: "greenlab.png"
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+    home:
+      title: "El cuidado de lo que nos rodea, depende de nosotros"
+      text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
+      highlighted_text: "¡Sumate ahora, seamos muchos más!"
+      button_text: "Sumate!"
+    form:
+      registration:
+        title: "Título"
+        text: "Texto"
+        button_text: "Texto botón"
+      checkout:
+        title: "Título"
+        text: "Texto"
+        button_text: "Texto botón"
+    modal_form:
+      title: "Título"
+      text: "Texto"
+      button_text: "Texto botón"
+    thankyou:
+      title: "Título"
+      text: "Texto"
+      button_cta:
+        text: "Volver al inicio"
+        link: "https://greenpeace.org.ar"
+        is_external: true
+      social_media_text: "Texto compartir"
   settings:
     development:
       tracking:
@@ -104,7 +104,7 @@ data:
           transactions_form: 60
   features:
     development:
-      use_design_version: 2
+      use_design_version: 1
       enable_google_google_analytics: false
       enable_google_tag_manager: false
       enable_mercadopago: false
@@ -114,7 +114,7 @@ data:
       enable_hubspot_sync: false
       enable_transactions_sync: false
     test:
-      use_design_version: 2
+      use_design_version: 1
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true
