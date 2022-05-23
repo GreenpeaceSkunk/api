@@ -18,20 +18,20 @@ data:
     header:
       picture: "Yaguarete-Greenlab356x860.png"
       backgroundColor: "orange"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # No es requerido en la versión 2 del cupón
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # Not required in version 2
     home:
-      title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
-      text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>"
-      highlighted_text: "¡Sumate ahora, seamos muchos más!"
-      button_text: "¡Sumate!"
+      title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino" # Not required in version 2
+      text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>" # Not required in version 2
+      highlighted_text: "¡Sumate ahora, seamos muchos más!" # Not required in version 2
+      button_text: "¡Sumate!" 
     form:
       registration:
-        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
+        title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
+        text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
         button_text: "Continuar"
       checkout:
-        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
-        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
+        title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
+        text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
         button_text: "Confirmar"
     modal_form:
       title: "Título"

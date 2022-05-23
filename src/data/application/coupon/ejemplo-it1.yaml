@@ -1,49 +1,50 @@
 data:
   name: "ejemplo-it1"
   content:
-    title: "Asociate a Greenpeace Argentina"
+    title: "site_title"
     amounts:
-      values: [ 100, 200, 300, 5000 ]
+      values: [ 100, 200, 300, 500, 1000 ]
       default: 300
-    social_share:
-      facebook:
-        text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
-      twitter:
-        text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
-      whatsapp:
-        text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
-      email:
-        subject: "Colaborá vos también con el medio ambiente"
-        body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
       picture: "greenlab.png"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+      title: "header_title"
     home:
-      title: "El cuidado de lo que nos rodea, depende de nosotros"
-      text: "<p>Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta.</p><p>Unite para que podamos seguir trabajando de manera independiente y con libertad de acción.</p>"
-      highlighted_text: "¡Sumate ahora, seamos muchos más!"
-      button_text: "Sumate!"
+      title: "home_title"
+      text: "<p>home_text</p>"
+      highlighted_text: "home_highlighted_text"
+      button_text: "home_button_text"
     form:
       registration:
-        title: "Título"
-        text: "Texto"
-        button_text: "Texto botón"
+        title: "form_registration_title"
+        text: "form_registration_text"
+        button_text: "form_registration_button_text"
       checkout:
-        title: "Título"
-        text: "Texto"
-        button_text: "Texto botón"
-    modal_form:
-      title: "Título"
-      text: "Texto"
-      button_text: "Texto botón"
-    thankyou:
-      title: "Título"
-      text: "Texto"
+        title: "form_checkout_title"
+        text: "form_checkout_text"
+        button_text: "form_checkout_button_text"
+    thank_you:
+      title: "thank_you_title"
+      text: "thank_you_text"
       button_cta:
-        text: "Volver al inicio"
+        text: "thank_you_button_cta_text"
         link: "https://greenpeace.org.ar"
         is_external: true
-      social_media_text: "Texto compartir"
+    modal_form:
+      title: "modal_form_title"
+      text: "modal_form_text"
+      button_text: "modal_form_button_text"
+    social_media:
+      text: "social_media_text"
+    social_share:
+      facebook:
+        text: "social_share_facebook_text"
+      twitter:
+        text: "social_share_twitter_text"
+      whatsapp:
+        text: "social_share_whatsapp_text"
+      email:
+        subject: "social_share_email_subject"
+        body: "social_share_email_body"
   settings:
     development:
       tracking:
