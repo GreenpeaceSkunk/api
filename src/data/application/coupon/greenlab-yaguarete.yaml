@@ -1,5 +1,5 @@
 data:
-  name: "ejemplo-it2"
+  name: "greenlab-yaguarete"
   content:
     title: "Asociate a Greenpeace Argentina"
     amounts:
@@ -16,7 +16,7 @@ data:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
-      picture: "greenlab.png"
+      picture: "Yaguarete-Greenlab356x860.png"
       backgroundColor: "orange"
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # No es requerido en la versión 2 del cupón
     home:
