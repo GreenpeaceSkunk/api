@@ -1,5 +1,5 @@
 data:
-  name: "greenlab-yaguarete"
+  name: "yaguarete"
   site_title: "Asociate a Greenpeace Argentina"
   content:
     amounts:
@@ -16,9 +16,12 @@ data:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
-      picture: "yaguarete-banner.png"
-      background_color: "black"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
+      title: "" # Only used in v1
+      picture: "greenlab-yaguarete.png"
+      background_color: "#000000"
+      logo:
+        show: true
+        color: "#6ACA25"
     home:
       title: ""
       text: ""
@@ -26,12 +29,12 @@ data:
       button_text: "" 
     form:
       registration:
-        title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
-        text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>"
+        title: "Sumate a Greenpeace y salvemos al yaguareté del Gran Chaco Argentino"
+        text: "<p>El desmonte está destruyendo el hogar de los yaguaretés, y juntos podemos frenarlo y salvar a la especie en la región. Con tu donación hacés posibles todas las acciones que se necesitan para protegerlo:</p><ul><li>Monitoreo de deforestación para realizar estadísticas mensuales.</li><li>Captura de imágenes satelitales que nos permiten verificar y documentar la deforestación.</li><li>equipos para monitoreo, fotografía y filmación (GPS, equipos satelitales, cámaras, drones, etc.).</li><li>Coordinación del equipo de investigadores.</li><li>Vuelos (avionetas, helicópteros) para reconocimiento, investigación y documentación.</li><li>Contratación biólogos especialistas en yaguaretés.</li><li>Equipo de asesores legales</li></ul><p><strong>¡Doná ahora y defendamos juntos al yaguareté!</strong></p>"
         button_text: "Continuar"
       checkout:
-        title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
-        text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
+        title: "Sumate a Greenpeace y salvemos al yaguareté del Gran Chaco Argentino"
+        text: "<p>El desmonte está destruyendo el hogar de los yaguaretés, y juntos podemos frenarlo y salvar a la especie en la región. Con tu donación hacés posibles todas las acciones que se necesitan para protegerlo:</p><ul><li>Monitoreo de deforestación para realizar estadísticas mensuales.</li><li>Captura de imágenes satelitales que nos permiten verificar y documentar la deforestación.</li><li>equipos para monitoreo, fotografía y filmación (GPS, equipos satelitales, cámaras, drones, etc.).</li><li>Coordinación del equipo de investigadores.</li><li>Vuelos (avionetas, helicópteros) para reconocimiento, investigación y documentación.</li><li>Contratación biólogos especialistas en yaguaretés.</li><li>Equipo de asesores legales</li></ul><p><strong>¡Doná ahora y defendamos juntos al yaguareté!</strong></p>"
         button_text: "Confirmar"
     thank_you:
       title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
