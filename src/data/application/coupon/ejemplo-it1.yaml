@@ -1,7 +1,7 @@
 data:
   name: "ejemplo-it1"
+  site_title: "site_title"
   content:
-    title: "site_title"
     amounts:
       values: [ 399, 699, 1299 ]
       default: 699

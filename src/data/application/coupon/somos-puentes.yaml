@@ -1,7 +1,7 @@
 data:
   name: "somos-puentes"
+  site_title: "Asociate a Greenpeace Argentina"
   content:
-    title: "Asociate a Greenpeace Argentina"
     amounts:
       values: [ 699, 799, 1500 ]
       default: 699
