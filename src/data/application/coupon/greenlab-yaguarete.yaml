@@ -16,35 +16,32 @@ data:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
-      picture: "Yaguarete-Greenlab356x860.png"
-      backgroundColor: "orange"
-      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # Not required in version 2
+      picture: "yaguarete-banner.png"
+      background_color: "black"
+      title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
     home:
-      title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino" # Not required in version 2
-      text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>" # Not required in version 2
-      highlighted_text: "¡Sumate ahora, seamos muchos más!" # Not required in version 2
-      button_text: "¡Sumate!" 
+      title: ""
+      text: ""
+      highlighted_text: ""
+      button_text: "" 
     form:
       registration:
         title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
-        text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
+        text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>"
         button_text: "Continuar"
       checkout:
         title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
         text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
         button_text: "Confirmar"
+    thank_you:
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
     modal_form:
-      title: "Título"
-      text: "Texto"
-      button_text: "Texto botón"
-    thankyou:
-      title: "Título"
-      text: "Texto"
-      button_cta:
-        text: "Volver al inicio"
-        link: "https://greenpeace.org.ar"
-        is_external: true
-      social_media_text: "Texto compartir"
+      title: "DONÁ AHORA"
+      text: "Sumate y conocé nuestras causas"
+      button_text: "¡Sumate!"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
     development:
       tracking:

@@ -32,13 +32,15 @@ data:
         title: "DONÁ AHORA"
         text: "Te enviaremos información sobre nuestras acciones y la forma en que puedes ayudarnos a lograrlo."
         button_text: "Doná"
+    thank_you:
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
     modal_form:
-      title: "Doná ahora"
+      title: "DONÁ AHORA"
       text: "Sumate y conocé nuestras causas"
       button_text: "¡Sumate!"
-    thankyou:
-      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
-      social_media_text: "¡Seamos muchos más los que ayudamos al planeta!"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
     development:
       tracking:

@@ -1,0 +1,278 @@
+# data:
+#   name: "yaguarete-it2"
+#   content:
+#     title: "Asociate a Greenpeace Argentina"
+#     amounts:
+#       values: [ 699, 999, 1299 ]
+#       default: 699
+#     social_share:
+#       facebook:
+#         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
+#       twitter:
+#         text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
+#       whatsapp:
+#         text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
+#       email:
+#         subject: "Colaborá vos también con el medio ambiente"
+#         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
+#     header:
+#       picture: "yaguare-banner.png"
+#       backgroundColor: "orange"
+#       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan" # Not required in version 2
+#     home:
+#       title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino" # Not required in version 2
+#       text: "<p>Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad.</p>" # Not required in version 2
+#       highlighted_text: "¡Sumate ahora, seamos muchos más!" # Not required in version 2
+#       button_text: "¡Sumate!" 
+#     form:
+#       registration:
+#         title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
+#         text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
+#         button_text: "Continuar"
+#       checkout:
+#         title: "Solo quedan 20 Yaguaretés en el Gran Chaco Argentino"
+#         text: " Sumate a Greenpeace para que juntos podamos ayudar a salvar los ecosistemas de estas grandes especies y cuidar nuestra biodiversidad."
+#         button_text: "Confirmar"
+#     modal_form:
+#       title: "Título"
+#       text: "Texto"
+#       button_text: "Texto botón"
+#     thankyou:
+#       title: "Título"
+#       text: "Texto"
+#       button_cta:
+#         text: "Volver al inicio"
+#         link: "https://greenpeace.org.ar"
+#         is_external: true
+#       social_media_text: "Texto compartir"
+#   settings:
+#     development:
+#       tracking:
+#         salesforce:
+#           campaign_id: "7017X000000Mle6"
+#         google:
+#           analytics:
+#             tracking_id: "UA-175817761-1"
+#           tag_manager:
+#             id: "GTM-TZB6GQ3"
+#         facebook:
+#           pixel_id: 713455948697688
+#         hotjar:
+#           id: 2797198
+#           sv: 6
+#         hubspot:
+#           id: 20432059
+#       service:
+#         forma:
+#           transactions_form: 59
+#     test:
+#       tracking:
+#         salesforce:
+#           campaign_id: "7017X000000Mle6"
+#         google:
+#           analytics:
+#             tracking_id: "UA-175817761-1"
+#           tag_manager:
+#             id: "GTM-TZB6GQ3"
+#         facebook:
+#           pixel_id: 713455948697688
+#         hotjar:
+#           id: 2797198
+#           sv: 6
+#         hubspot:
+#           id: 20432059
+#       service:
+#         forma:
+#           transactions_form: 59
+#     production:
+#       tracking:
+#         salesforce:
+#           campaign_id: "7015c000000yjEF"
+#         google:
+#           analytics:
+#             tracking_id: "UA-175817761-1"
+#           tag_manager:
+#             id: "GTM-TZB6GQ3"
+#         facebook:
+#           pixel_id: 713455948697688
+#         hotjar:
+#           id: 2797198
+#           sv: 6
+#         hubspot:
+#           id: 20432059
+#       service:
+#         forma:
+#           transactions_form: 60
+#   features:
+#     development:
+#       use_design_version: 2
+#       enable_google_google_analytics: false
+#       enable_google_tag_manager: false
+#       enable_mercadopago: false
+#       enable_facebook_pixel: false
+#       enable_hotjar: false
+#       enable_hubspot: false
+#       enable_hubspot_sync: false
+#       enable_transactions_sync: false
+#     test:
+#       use_design_version: 2
+#       enable_google_google_analytics: true
+#       enable_google_tag_manager: true
+#       enable_mercadopago: true
+#       enable_facebook_pixel: true
+#       enable_hotjar: true
+#       enable_hubspot: true
+#       enable_hubspot_sync: true
+#       enable_transactions_sync: true
+#     production:
+#       use_design_version: 2
+#       enable_google_google_analytics: true
+#       enable_google_tag_manager: true
+#       enable_mercadopago: true
+#       enable_facebook_pixel: true
+#       enable_hotjar: true
+#       enable_hubspot: true
+#       enable_hubspot_sync: true
+#       enable_transactions_sync: true
+
+
+data:
+  name: "ejemplo-it2"
+  content:
+    title: "Asociate a Greenpeace Argentina"
+    amounts:
+      values: [ 699, 999, 1299 ]
+      default: 699
+    header:
+      title: "header_title"
+      picture: "banner-dona-860x300.jpg"
+      background_color: "white"
+      logo:
+        show: true
+        color: "#6ACA25"
+    home:
+      title: "home_title"
+      text: "<p>home_text</p>"
+      highlighted_text: "home_highlighted_text"
+      button_text: "home_button_text"
+    form:
+      registration:
+        title: "form_registration_title"
+        text: "form_registration_text"
+        button_text: "form_registration_button_text"
+      checkout:
+        title: "form_checkout_title"
+        text: "form_checkout_text"
+        button_text: "form_checkout_button_text"
+    thank_you:
+      title: "thank_you_title"
+      text: "thank_you_text"
+      button_cta:
+        text: "thank_you_button_cta_text"
+        link: "https://greenpeace.org.ar"
+        is_external: true
+    modal_form:
+      title: "modal_form_title"
+      text: "modal_form_text"
+      button_text: "modal_form_button_text"
+    social_media:
+      text: "social_media_text"
+    social_share:
+      facebook:
+        text: "social_share_facebook_text"
+      twitter:
+        text: "social_share_twitter_text"
+      whatsapp:
+        text: "social_share_whatsapp_text"
+      email:
+        subject: "social_share_email_subject"
+        body: "social_share_email_body"
+  settings:
+    development:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    test:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    production:
+      tracking:
+        salesforce:
+          campaign_id: "7015c000000yjEF"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 60
+  features:
+    development:
+      use_design_version: 2
+      enable_google_google_analytics: false
+      enable_google_tag_manager: false
+      enable_mercadopago: false
+      enable_facebook_pixel: false
+      enable_hotjar: false
+      enable_hubspot: false
+      enable_hubspot_sync: false
+      enable_transactions_sync: false
+    test:
+      use_design_version: 2
+      enable_google_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+      enable_transactions_sync: true
+    production:
+      use_design_version: 2
+      enable_google_google_analytics: true
+      enable_google_tag_manager: true
+      enable_mercadopago: true
+      enable_facebook_pixel: true
+      enable_hotjar: true
+      enable_hubspot: true
+      enable_hubspot_sync: true
+      enable_transactions_sync: true

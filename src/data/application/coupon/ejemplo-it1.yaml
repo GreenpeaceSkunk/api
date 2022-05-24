@@ -3,11 +3,15 @@ data:
   content:
     title: "site_title"
     amounts:
-      values: [ 100, 200, 300, 500, 1000 ]
-      default: 300
+      values: [ 399, 699, 1299 ]
+      default: 699
     header:
-      picture: "greenlab.png"
       title: "header_title"
+      picture: "greenlab.png"
+      background_color: "white"
+      logo:
+        show: true
+        color: "#6ACA25"
     home:
       title: "home_title"
       text: "<p>home_text</p>"
@@ -27,8 +31,7 @@ data:
       text: "thank_you_text"
       button_cta:
         text: "thank_you_button_cta_text"
-        link: "https://greenpeace.org.ar"
-        is_external: true
+        link: "https://www.greenpeace.org.ar"
     modal_form:
       title: "modal_form_title"
       text: "modal_form_text"
@@ -106,31 +109,31 @@ data:
   features:
     development:
       use_design_version: 1
-      enable_google_google_analytics: false
-      enable_google_tag_manager: false
-      enable_mercadopago: false
-      enable_facebook_pixel: false
-      enable_hotjar: false
-      enable_hubspot: false
-      enable_hubspot_sync: false
-      enable_transactions_sync: false
+      # enable_google_google_analytics: false
+      # enable_google_tag_manager: false
+      # enable_mercadopago: false
+      # enable_facebook_pixel: false
+      # enable_hotjar: false
+      # enable_hubspot: false
+      # enable_hubspot_sync: false
+      # enable_transactions_sync: false
     test:
       use_design_version: 1
-      enable_google_google_analytics: true
-      enable_google_tag_manager: true
-      enable_mercadopago: true
-      enable_facebook_pixel: true
-      enable_hotjar: true
-      enable_hubspot: true
-      enable_hubspot_sync: true
-      enable_transactions_sync: true
+      # enable_google_google_analytics: true
+      # enable_google_tag_manager: true
+      # enable_mercadopago: true
+      # enable_facebook_pixel: true
+      # enable_hotjar: true
+      # enable_hubspot: true
+      # enable_hubspot_sync: true
+      # enable_transactions_sync: true
     production:
       use_design_version: 1
-      enable_google_google_analytics: true
-      enable_google_tag_manager: true
-      enable_mercadopago: true
-      enable_facebook_pixel: true
-      enable_hotjar: true
-      enable_hubspot: true
-      enable_hubspot_sync: true
-      enable_transactions_sync: true
+      # enable_google_google_analytics: true
+      # enable_google_tag_manager: true
+      # enable_mercadopago: true
+      # enable_facebook_pixel: true
+      # enable_hotjar: true
+      # enable_hubspot: true
+      # enable_hubspot_sync: true
+      # enable_transactions_sync: true
