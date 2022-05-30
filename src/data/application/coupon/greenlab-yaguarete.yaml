@@ -5,16 +5,6 @@ data:
     amounts:
       values: [ 699, 999, 1299 ]
       default: 699
-    social_share:
-      facebook:
-        text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
-      twitter:
-        text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
-      whatsapp:
-        text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
-      email:
-        subject: "Colaborá vos también con el medio ambiente"
-        body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
       picture: "yaguarete.png"
@@ -48,6 +38,16 @@ data:
       button_text: "¡Sumate!"
     social_media:
       text: "¡Seamos muchos más los que ayudamos al planeta!"
+    social_share:
+      facebook:
+        text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
+      twitter:
+        text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
+      whatsapp:
+        text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
+      email:
+        subject: "Colaborá vos también con el medio ambiente"
+        body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
   settings:
     development:
       tracking:

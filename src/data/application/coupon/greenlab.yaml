@@ -22,18 +22,19 @@ data:
         title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
         text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción. "
         button_text: "Confirmar"
+    thank_you:
+      title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+      button_cta:
+        text: "IR A GREENPEACE"
+        link: "https://www.greenpeace.org.ar"
     modal_form:
       title: "Sumate ahora"
       text: "Completá tus datos y empezá a contribuir con el planeta"
       button_text: "Unirme"
-    thankyou:
-      title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
-      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
-      button_cta:
-        text: "VOLVER AL INICIO"
-        link: "/"
-        is_external: true
       social_media_text: "Compartí y seamos más quienes ayudamos al planeta"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
     social_share:
       facebook:
         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
