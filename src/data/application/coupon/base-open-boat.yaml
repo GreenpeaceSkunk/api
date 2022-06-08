@@ -1,0 +1,139 @@
+data:
+  name: "base-open-boat"
+  site_title: "site_title"
+  content:
+    amounts:
+      values: [ 399, 699, 1199 ]
+      default: 699
+    header:
+      title: "header_title" # Only used in v1
+      picture: "base-open-boat.jpg"
+      background_color: "#81818e"
+      logo:
+        show: true
+        color: "#ffffff"
+    home:
+      title: "home_title" # Only used in v1
+      text: "<p>home_text</p>" # Only used in v1
+      highlighted_text: "home_highlighted_text" # Only used in v1
+      button_text: "home_button_text" # Only used in v1
+    form:
+      registration:
+        title: "Sumate a Greenpeace y ayudanos a preservar el Mar Argentino"
+        text: "<p>La exploración petrolera y la sobrepesca está destruyendo el Mar Argentino, hogar de cientos de especies marinas y de una biodiversidad necesaria para la supervivencia de estas especies. Con tu donación hacés posibles todas las acciones que se necesitan para protegerlo:</p><ul><li>Presentar demandas contra acciones que dañen el medio ambiente.</li><li>Investigar el daño irreparable que generan estas actividades.</li><li>Acechar buques pesqueros que ilegalmente explotan nuestras aguas.</li></ul>"
+        button_text: "Continuar"
+      checkout:
+        title: "Llena los campos a continuación"
+        text: ""
+        button_text: "Finalizar"
+    thank_you:
+      title: "Gracias por sumarte a Greenpeace"
+      text: ""
+      button_cta:
+        text: "Conocé nuestras campañas"
+        link: "https://www.greenpeace.org.ar"
+    modal_form:
+      title: "DONÁ AHORA"
+      text: "Sumate y conocé nuestras causas"
+      button_text: "¡Sumate!"
+    social_media:
+      text: "Seguinos en nuestras redes sociales"
+    social_share:
+      facebook:
+        text: "social_share_facebook_text"
+      twitter:
+        text: "social_share_twitter_text"
+      whatsapp:
+        text: "social_share_whatsapp_text"
+      email:
+        subject: "social_share_email_subject"
+        body: "social_share_email_body"
+  settings:
+    development:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    test:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    production:
+      tracking:
+        salesforce:
+          campaign_id: "7015c000000yjEF"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 60
+  features:
+    development:
+      use_design_version: 2
+      # enable_google_google_analytics: false
+      # enable_google_tag_manager: false
+      # enable_mercadopago: false
+      # enable_facebook_pixel: false
+      # enable_hotjar: false
+      # enable_hubspot: false
+      # enable_hubspot_sync: false
+      # enable_transactions_sync: false
+    test:
+      use_design_version: 2
+      # enable_google_google_analytics: true
+      # enable_google_tag_manager: true
+      # enable_mercadopago: true
+      # enable_facebook_pixel: true
+      # enable_hotjar: true
+      # enable_hubspot: true
+      # enable_hubspot_sync: true
+      # enable_transactions_sync: true
+    production:
+      use_design_version: 2
+      # enable_google_google_analytics: true
+      # enable_google_tag_manager: true
+      # enable_mercadopago: true
+      # enable_facebook_pixel: true
+      # enable_hotjar: true
+      # enable_hubspot: true
+      # enable_hubspot_sync: true
+      # enable_transactions_sync: true
