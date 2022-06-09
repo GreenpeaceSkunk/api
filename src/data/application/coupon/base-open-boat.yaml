@@ -7,7 +7,7 @@ data:
       default: 699
     header:
       title: "header_title" # Only used in v1
-      picture: "base-open-boat.jpg"
+      picture: "base-open-boat.png"
       background_color: "#81818e"
       logo:
         show: true
@@ -20,7 +20,7 @@ data:
     form:
       registration:
         title: "Sumate a Greenpeace y ayudanos a preservar el Mar Argentino"
-        text: "<p>La exploración petrolera y la sobrepesca está destruyendo el Mar Argentino, hogar de cientos de especies marinas y de una biodiversidad necesaria para la supervivencia de estas especies. Con tu donación hacés posibles todas las acciones que se necesitan para protegerlo:</p><ul><li>Presentar demandas contra acciones que dañen el medio ambiente.</li><li>Investigar el daño irreparable que generan estas actividades.</li><li>Acechar buques pesqueros que ilegalmente explotan nuestras aguas.</li></ul>"
+        text: "<p>La exploración petrolera y la sobrepesca está destruyendo el Mar Argentino, hogar de cientos de especies marinas y de una biodiversidad necesaria para la supervivencia de estas especies. Con tu donación hacés posible todas las acciones que se necesitan para protegerlo:</p><ul><li>Presentar demandas contra acciones que dañen el medio ambiente.</li><li>Investigar el daño irreparable que generan estas actividades.</li><li>Acechar buques pesqueros que ilegalmente explotan nuestras aguas.</li></ul>"
         button_text: "Continuar"
       checkout:
         title: "Llena los campos a continuación"
