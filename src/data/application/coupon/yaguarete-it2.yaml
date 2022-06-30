@@ -37,8 +37,8 @@ data:
         text: ""
         button_text: "Finalizar"
     thank_you:
-      title: "Gracias por sumarte a Greenpeace"
-      text: ""
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA! "
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
       button_cta:
         text: "Conocé nuestras campañas"
         link: "https://www.greenpeace.org.ar"
