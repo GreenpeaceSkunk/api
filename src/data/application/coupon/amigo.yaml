@@ -7,8 +7,8 @@ data:
       default: 699
     header:
       title: "header_title" # Only used in v1
-      picture: "greenlab.png"
-      background_color: "#696969"
+      picture: "cupon-amigo-2.png"
+      background_color: "#fff"
       logo:
         show: true
         color: "#fff"
@@ -19,31 +19,31 @@ data:
       button_text: "home_button_text" # Only used in v1
     form:
       registration:
-        title: "form_registration_title"
-        text: "form_registration_text"
-        content_title: "form_registration_content_title"
-        content_text: "form_registration_content_text"
-        content_title_2: "form_registration_content_title_2"
-        content_text_2: "form_registration_content_text_2"
+        title: "SUMÁ UN AMIGO A GREENPEACE"
+        text: "<p>Ayudanos a proteger y defender activamente el medio ambiente de los atentados y crímenes que se cometen contra la Naturaleza.</p><p>Sumá a un amigo como socio para que sea parte de las más de 3 millones de personas que, en todo el mundo, comparten con vos la pasión por la protección de nuestro planeta.</p>"
+        content_title: ""
+        content_text: "Completá tus datos"
+        content_title_2: ""
+        content_text_2: "Completá los datos de tu referido"
         submit_button_text: "Continuar"
         search_text: "Podés incluso buscar tus datos ingresando tu email."
         search_button_text: "Buscar"
       checkout:
-        title: "form_checkout_title"
-        text: "form_checkout_text"
-        button_text: "form_checkout_button_text"
+        title: "SUMÁ UN AMIGO A GREENPEACE"
+        text: "<p>Ayudanos a proteger y defender activamente el medio ambiente de los atentados y crímenes que se cometen contra la Naturaleza.</p><p>Sumá a un amigo como socio para que sea parte de las más de 3 millones de personas que, en todo el mundo, comparten con vos la pasión por la protección de nuestro planeta.</p>"
+        button_text: "Confirmar"
     thank_you:
-      title: "thank_you_title"
-      text: "thank_you_text"
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
       button_cta:
-        text: "thank_you_button_cta_text"
+        text: "IR A GREENPEACE"
         link: "https://www.greenpeace.org.ar"
     modal_form:
-      title: "modal_form_title"
-      text: "modal_form_text"
-      button_text: "modal_form_button_text"
+      title: "DONÁ AHORA"
+      text: "Sumate y conocé nuestras causas"
+      button_text: "¡Sumate!"
     social_media:
-      text: "social_media_text"
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
     social_share:
       facebook:
         text: "social_share_facebook_text"
@@ -73,7 +73,7 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 59
+          transactions_form: 64
     test:
       tracking:
         salesforce:
@@ -92,7 +92,7 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 59
+          transactions_form: 64
     production:
       tracking:
         salesforce:
@@ -111,7 +111,7 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 60
+          transactions_form: 0
   features:
     development:
       use_design_version: 3

@@ -7,8 +7,8 @@ data:
       default: 699
     header:
       title: "header_title" # Only used in v1
-      picture: "greenlab.png"
-      background_color: "#696969"
+      picture: "cupon-amigo.png"
+      background_color: "#fff"
       logo:
         show: true
         color: "#fff"
