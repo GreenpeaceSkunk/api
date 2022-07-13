@@ -111,7 +111,7 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 0
+          transactions_form: 66
   features:
     development:
       use_design_version: 3
