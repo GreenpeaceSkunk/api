@@ -126,7 +126,7 @@ data:
       # enable_transactions_sync: false
     test:
       use_design_version: 3
-      enable_search_contact: true
+      enable_search_contact: false
       # enable_google_google_analytics: true
       # enable_google_tag_manager: true
       # enable_mercadopago: true
@@ -137,7 +137,7 @@ data:
       # enable_transactions_sync: true
     production:
       use_design_version: 3
-      enable_search_contact: true
+      enable_search_contact: false
       # enable_google_google_analytics: true
       # enable_google_tag_manager: true
       # enable_mercadopago: true
