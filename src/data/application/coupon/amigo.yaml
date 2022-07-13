@@ -57,8 +57,8 @@ data:
   settings:
     development:
       tracking:
-        salesforce:
-          campaign_id: "7017X000000Mle6"
+        # salesforce:
+        #   campaign_id: "7017X000000Mle6"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -73,11 +73,11 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 64
+          transactions_form: 65
     test:
       tracking:
-        salesforce:
-          campaign_id: "7017X000000Mle6"
+        # salesforce:
+        #   campaign_id: "7017X000000Mle6"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -92,11 +92,11 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 64
+          transactions_form: 65
     production:
       tracking:
-        salesforce:
-          campaign_id: "7015c000000yjEF"
+        # salesforce:
+        #   campaign_id: "7015c000000yjEF"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -115,7 +115,7 @@ data:
   features:
     development:
       use_design_version: 3
-      enable_search_contact: true
+      enable_search_contact: false
       # enable_google_google_analytics: false
       # enable_google_tag_manager: false
       # enable_mercadopago: false
