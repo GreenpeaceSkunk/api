@@ -7,7 +7,7 @@ data:
       default: 699
     header:
       picture: "yaguarete.png"
-      background_color: "white"
+      background_color: "#000000"
       logo:
         show: true
         color: "#6ACA25"
