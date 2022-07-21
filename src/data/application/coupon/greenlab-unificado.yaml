@@ -1,0 +1,112 @@
+data:
+  name: "greenlab-unificado"
+  site_title: "site_title"
+  content:
+    amounts:
+      values: [ 399, 699, 1299 ]
+      default: 699
+    header:
+      picture: "greenlab.png"
+      background_color: "white"
+      logo:
+        show: true
+        color: "#6ACA25"
+    form:
+      general:
+        coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
+      registration:
+        title: "Sumate a Greenpeace y trabajemos por las causas que más nos necesitan"
+        text: "Todos nuestros aportes provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras campañas para seguir defendiendo el planeta. Unite para que podamos seguir trabajando de manera independiente y con libertad de acción."
+        content_title: "Completá tus datos y empezá a contribuir con el planeta"
+        content_text: "Datos personales"
+        content_text_2: "Datos de contribución"
+        button_text: "Confirmar"
+    thank_you:
+      title: "¡Gracias por unirte! Ya sos parte del cambio y la comunidad de Greenpeace"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+      button_cta:
+        text: "IR A GREENPEACE"
+        link: "https://www.greenpeace.org.ar"
+    modal_form:
+      title: "Sumate ahora"
+      text: "Completá tus datos y empezá a contribuir con el planeta"
+      button_text: "Unirme"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
+    social_share:
+      facebook:
+        text: "social_share_facebook_text"
+      twitter:
+        text: "social_share_twitter_text"
+      whatsapp:
+        text: "social_share_whatsapp_text"
+      email:
+        subject: "social_share_email_subject"
+        body: "social_share_email_body"
+  settings:
+    development:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    test:
+      tracking:
+        salesforce:
+          campaign_id: "7017X000000Mle6"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 59
+    production:
+      tracking:
+        salesforce:
+          campaign_id: "7015c000000yjEF"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+        facebook:
+          pixel_id: 713455948697688
+        hotjar:
+          id: 2797198
+          sv: 6
+        hubspot:
+          id: 20432059
+      service:
+        forma:
+          transactions_form: 60
+  features:
+    development:
+      use_design_version: 4
+    test:
+      use_design_version: 4
+    production:
+      use_design_version: 4
+    
