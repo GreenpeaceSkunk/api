@@ -17,7 +17,7 @@ data:
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
       title: "" # Only used in v1
-      picture: "greenlab-yaguarete.png"
+      picture: "yaguarete.png"
       background_color: "#000000"
       logo:
         show: true

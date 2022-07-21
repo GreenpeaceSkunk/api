@@ -7,7 +7,7 @@ data:
       default: 699
     header:
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
-      picture: "yaguarete.png"
+      picture: "greenlab-yaguarete.png"
       background_color: "#C8B39C"
       logo:
         show: true
