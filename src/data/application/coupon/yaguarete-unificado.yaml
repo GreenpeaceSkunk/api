@@ -17,7 +17,7 @@ data:
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
       registration:
         title: "Sumate a Greenpeace y salvemos al yaguareté del Gran Chaco Argentino"
-        text: "<p>El desmonte está destruyendo el hogar de los yaguaretés, y juntos podemos frenarlo y salvar a la especie en la región. Con tu donación hacés posibles todas las acciones que se necesitan para protegerlo:</p><ul><li>Monitoreo de deforestación para realizar estadísticas mensuales.</li><li>Captura de imágenes satelitales que nos permiten verificar y documentar la deforestación.</li><li>equipos para monitoreo, fotografía y filmación (GPS, equipos satelitales, cámaras, drones, etc.).</li><li>Coordinación del equipo de investigadores.</li><li>Vuelos (avionetas, helicópteros) para reconocimiento, investigación y documentación.</li><li>Contratación biólogos especialistas en yaguaretés.</li><li>Equipo de asesores legales</li></ul><p><strong>¡Doná ahora y defendamos juntos al yaguareté!</strong></p>"
+        text: ""
         content_title: "Completá tus datos y empezá a contribuir con el planeta"
         content_text: "Datos personales"
         content_text_2: "Datos de contribución"
