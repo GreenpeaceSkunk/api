@@ -11,34 +11,28 @@ router.get('/', [authWrapper, requestWrapper(async (req: Request, res: Response,
   console.log(result.data.contacts);
   res
     .status(200)
-    // .json(result.data.contacts.map((contact: any) => contact.properties));
     .json(result.data.contacts);
 })]);
 
 router.get('/search', [async (req: Request, res: Response, next: NextFunction) => {
-  
   const result = await search(req.query);
-  console.log(req.query)
-  console.log(result.data.contacts);
-  // if(result) {
-  //   res
-  //     .status(200)
-  //     .json(
-  //       Object
-  //         .keys(result.data.contacts)
-  //         .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.contacts[b].value }), {}))
-  // } else {
-  //   res
-  //     .status(404)
-  //     .json({
-  //       status: 404,
-  //       errorMessage: 'User does not exist.',
-  //     } as IRequestError);
-  // }
-  res.status(200).json(result.data.contacts);
+  if(result) {
+    res
+      .status(200)
+      .json(
+        Object
+          .keys(result.data.contacts)
+          .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.contacts[b].value }), {}))
+  } else {
+    res
+      .status(404)
+      .json({
+        status: 404,
+        errorMessage: 'User does not exist.',
+      } as IRequestError);
+  }
 }]);
 
-// router.get('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
 router.get('/email/:email', [async (req: Request, res: Response, next: NextFunction) => {
   const result = await findByEmail(req.params.email);
   if(result) {
@@ -103,7 +97,9 @@ router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFun
 }]);
 
 router.post('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
+  console.log('Entra?')
   const result = await updateOne(req.params.email, req.body);
+  console.log(result);
   if(result) {
     res
       .status(201)

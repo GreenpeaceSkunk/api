@@ -33,14 +33,6 @@ export const findById = async (vid: string): Promise<any> => {
 }
 
 export const updateOne = async (email: string, body: any): Promise<any> => {
-  console.log(`${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`, process.env.HUBSPOT_API_KEY);
-  console.log(Object.keys(body).reduce((a: any, b: string) => ({
-    ...a,
-    properties: [
-      ...(a.properties) ? a.properties : [],
-      { property: b, value: body[b] }
-    ],
-  }), {}))
   return await axios({
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
     method: 'POST',
@@ -88,7 +80,6 @@ export const search = async (queryParams: any): Promise<any> => {
   console.log(queryParams)
   const queryString = Object.keys(queryParams).reduce((a, b, c) => {
     console.log("a", a, "b", b)
-    // return `param=${a}`
     if(a) {
       return `${a}&${b}=${queryParams[b]}`;
     } else {
@@ -104,7 +95,6 @@ export const search = async (queryParams: any): Promise<any> => {
       hapikey: process.env.HUBSPOT_API_KEY,
     },
   });
-  // console.log(result);
   return result;
 }
 
