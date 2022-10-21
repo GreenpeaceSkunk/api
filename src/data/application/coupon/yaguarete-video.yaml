@@ -1,5 +1,5 @@
 data:
-  name: "yaguarete"
+  name: "yaguarete-video"
   site_title: "Asociate a Greenpeace Argentina"
   content:
     amounts:
@@ -17,10 +17,10 @@ data:
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
       title: "" # Not used here
-      picture: "yaguarete.png"
+      picture: "" # yaguarete.png
       video:
-        id: ""
-        from_source: "youtube"
+        id: "OGgxvklOT9c"
+        from_source: ""
       background_color: "#000000"
       logo:
         show: true
