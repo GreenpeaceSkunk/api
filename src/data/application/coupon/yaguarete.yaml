@@ -16,8 +16,11 @@ data:
         subject: "Colaborá vos también con el medio ambiente"
         body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
     header:
-      title: "" # Only used in v1
-      picture: "yaguarete.png"
+      title: "" # Not used here
+      picture: "" # yaguarete.png
+      video:
+        id: "OGgxvklOT9c"
+        from_source: "youtube"
       background_color: "#000000"
       logo:
         show: true

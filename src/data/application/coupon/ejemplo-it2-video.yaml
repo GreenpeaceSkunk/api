@@ -7,14 +7,14 @@ data:
       default: 699
     header:
       title: "" # Not used here
-      picture: "greenlab.png"
+      picture: ""
       video:
-        id: ""
-        from_source: ""
-      background_color: "#69b6db"
+        id: "VZcMFZ1dv20"
+        from_source: "youtube"
+      background_color: "black"
       logo:
         show: true
-        color: "white"
+        color: "#6ACA25"
     home:
       title: "home_title" # Not used here
       text: "<p>home_text</p>" # Not used here
