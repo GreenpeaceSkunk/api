@@ -7,6 +7,9 @@ data:
       default: 699
     header:
       picture: "greenlab.png"
+      video:
+        id: ""
+        from_source: ""
       title: "Unite a Greenpeace y trabajemos por las causas que más nos necesitan"
     home:
       title: "El cuidado de lo que nos rodea, depende de nosotros"

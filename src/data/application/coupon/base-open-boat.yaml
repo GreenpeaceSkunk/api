@@ -8,6 +8,9 @@ data:
     header:
       title: "header_title" # Only used in v1
       picture: "base-open-boat.png"
+      video:
+        id: ""
+        from_source: ""
       background_color: "#81818e"
       logo:
         show: true
