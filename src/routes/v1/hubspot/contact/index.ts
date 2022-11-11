@@ -97,9 +97,7 @@ router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFun
 }]);
 
 router.post('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
-  console.log('Entra?')
   const result = await updateOne(req.params.email, req.body);
-  console.log(result);
   if(result) {
     res
       .status(201)

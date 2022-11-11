@@ -2,9 +2,11 @@ import axios from 'axios';
 
 export const getAll = async (): Promise<any> => {
   const result = await axios({
+    method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/lists/all/contacts/all`,
-    params: {
-      hapikey: process.env.HUBSPOT_API_KEY,
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      'Content-Type': 'application/json',
     },
   });
   return result;
@@ -12,9 +14,11 @@ export const getAll = async (): Promise<any> => {
 
 export const findByEmail = async (email: string): Promise<any> => {
   return await axios({
+    method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
-    params: {
-      hapikey: process.env.HUBSPOT_API_KEY,
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      'Content-Type': 'application/json',
     },
   })
   .then((result) => result)
@@ -23,9 +27,11 @@ export const findByEmail = async (email: string): Promise<any> => {
 
 export const findById = async (vid: string): Promise<any> => {
   return await axios({
+    method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/vid/${vid}/profile`,
-    params: {
-      hapikey: process.env.HUBSPOT_API_KEY,
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      'Content-Type': 'application/json',
     },
   })
   .then((result) => result)
@@ -34,10 +40,10 @@ export const findById = async (vid: string): Promise<any> => {
 
 export const updateOne = async (email: string, body: any): Promise<any> => {
   return await axios({
-    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
     method: 'POST',
-    params: {
-      hapikey: process.env.HUBSPOT_API_KEY,
+    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
     },
     data: Object.keys(body).reduce((a: any, b: string) => ({
       ...a,
@@ -58,10 +64,10 @@ export const createOne = async (body: any): Promise<any> => {
   const contact = await findByEmail(body.email);
   if(!contact) {
     const result = await axios({
-      baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
       method: 'POST',
-      params: {
-        hapikey: process.env.HUBSPOT_API_KEY,
+      baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
+      headers: {
+        'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
       },
       data: {
         properties: Object.keys(body).map((key: string) => ({
@@ -88,11 +94,11 @@ export const search = async (queryParams: any): Promise<any> => {
   }, "");
   console.log(queryString)
   const result = await axios({
+    method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/search/query?${queryString}`,
-    // baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/search/query?q=714159&property=constituent_id`,
-    // baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/search/query?q=714159&property=properties.constituent_id`,
-    params: {
-      hapikey: process.env.HUBSPOT_API_KEY,
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      'Content-Type': 'application/json',
     },
   });
   return result;
