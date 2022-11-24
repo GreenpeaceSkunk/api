@@ -78,6 +78,7 @@ router.get('/id/:id', [async (req: Request, res: Response, next: NextFunction) =
 
 
 router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
+  console.log('Create one')
   const result = await createOne(req.body);
   if(result) {
     res

@@ -13,6 +13,7 @@ export const getAll = async (): Promise<any> => {
 }
 
 export const findByEmail = async (email: string): Promise<any> => {
+  console.log('findByEmail');
   return await axios({
     method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
@@ -62,6 +63,7 @@ export const updateOne = async (email: string, body: any): Promise<any> => {
 
 export const createOne = async (body: any): Promise<any> => {
   const contact = await findByEmail(body.email);
+  console.log('Contact...');
   if(!contact) {
     const result = await axios({
       method: 'POST',
