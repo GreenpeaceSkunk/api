@@ -46,6 +46,7 @@ export const updateOne = async (email: string, body: any): Promise<any> => {
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
     headers: {
       'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      'Content-Type': 'application/json',
     },
     data: Object.keys(body).reduce((a: any, b: string) => ({
       ...a,
@@ -67,11 +68,13 @@ export const createOne = async (body: any): Promise<any> => {
   console.log('Contact...');
   if(!contact) {
     console.log('Contact does not exist');
+    console.log(`${process.env.HUBSPOT_API_URL}/contacts/v1/contact`);
     const result = await axios({
       method: 'POST',
       baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
       headers: {
         'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+        'Content-Type': 'application/json',
       },
       data: {
         properties: Object.keys(body).map((key: string) => ({
