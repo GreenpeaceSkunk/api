@@ -69,6 +69,12 @@ export const createOne = async (body: any): Promise<any> => {
   if(!contact) {
     console.log('Contact does not exist');
     console.log(`${process.env.HUBSPOT_API_URL}/contacts/v1/contact`);
+    console.log({
+      properties: Object.keys(body).map((key: string) => ({
+        property: `${key}`,
+        value: body[key],
+      })),
+    });
     const result = await axios({
       method: 'POST',
       baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
