@@ -8,7 +8,6 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   next: NextFunction,
 ) => {
   try {
-    console.log('')
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(e: any) {
