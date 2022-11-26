@@ -13,7 +13,6 @@ export const getAll = async (): Promise<any> => {
 }
 
 export const findByEmail = async (email: string): Promise<any> => {
-  console.log('findByEmail');
   return await axios({
     method: 'GET',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
@@ -40,7 +39,6 @@ export const findById = async (vid: string): Promise<any> => {
 }
 
 export const updateOne = async (email: string, body: any): Promise<any> => {
-  console.log('updateOne')
   return await axios({
     method: 'POST',
     baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
@@ -56,25 +54,13 @@ export const updateOne = async (email: string, body: any): Promise<any> => {
       ],
     }), {}),
   })
-  .then((result) => {
-    console.log("Result", result);
-    return result;
-  })
+  .then(result => result)
   .catch(() => null);;
 }
 
 export const createOne = async (body: any): Promise<any> => {
   const contact = await findByEmail(body.email);
-  console.log('Contact...');
   if(!contact) {
-    console.log('Contact does not exist');
-    console.log(`${process.env.HUBSPOT_API_URL}/contacts/v1/contact`);
-    console.log({
-      properties: Object.keys(body).map((key: string) => ({
-        property: `${key}`,
-        value: body[key],
-      })),
-    });
     const result = await axios({
       method: 'POST',
       baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
@@ -91,7 +77,6 @@ export const createOne = async (body: any): Promise<any> => {
     });
     return result;
   } else {
-    console.log('Update one')
     return updateOne(body.email, body);
   }
 }
