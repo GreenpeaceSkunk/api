@@ -111,7 +111,7 @@ data:
           transactions_form: 60
   features:
     development:
-      use_design_version: 2
+      use_design_version: 1
       enable_google_google_analytics: false
       enable_google_tag_manager: false
       enable_mercadopago: false
@@ -121,7 +121,7 @@ data:
       enable_hubspot_sync: false
       enable_transactions_sync: false
     test:
-      use_design_version: 2
+      use_design_version: 1
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true
@@ -131,7 +131,7 @@ data:
       enable_hubspot_sync: true
       enable_transactions_sync: true
     production:
-      use_design_version: 2
+      use_design_version: 1
       enable_google_google_analytics: true
       enable_google_tag_manager: true
       enable_mercadopago: true
