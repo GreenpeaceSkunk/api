@@ -34,20 +34,29 @@ router.get('/search', [async (req: Request, res: Response, next: NextFunction) =
 }]);
 
 router.get('/email/:email', [async (req: Request, res: Response, next: NextFunction) => {
-  const result = await findByEmail(req.params.email);
-  if(result) {
-    res
-      .status(200)
-      .json(
-        Object
-          .keys(result.data.properties)
-          .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.params.email)) {
+    const result = await findByEmail(req.params.email);
+    if(result) {
+      res
+        .status(200)
+        .json(
+          Object
+            .keys(result.data.properties)
+            .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
+    } else {
+      res
+        // .status(404)
+        .json({
+          status: 404,
+          errorMessage: 'User does not exist.',
+        } as IRequestError);
+    }
   } else {
     res
-      // .status(404)
+    // .status(404)
       .json({
-        status: 404,
-        errorMessage: 'User does not exist.',
+        status: 406,
+        errorMessage: 'You have entered an invalid email address!',
       } as IRequestError);
   }
 }]);
