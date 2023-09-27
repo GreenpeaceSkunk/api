@@ -11,7 +11,7 @@ type FormType = {
 export const postRecord = async (formId: number, body = {}): Promise<any> => {
   console.log('Post', body);
   const response = await axios({
-    baseURL: `https://10.5.0.4/api/forms/save`,
+    baseURL: `https://backoffice.greenpeace.org.ar/api/forms/save`,
     method: 'POST',
     data: {
       form_id: formId,
@@ -23,7 +23,7 @@ export const postRecord = async (formId: number, body = {}): Promise<any> => {
 
 export const getForm = async (formId: number|null = null): Promise<any> => {
   const response = await axios({
-    baseURL: `https://10.5.0.4/api/forms/dashboard`,
+    baseURL: `https://backoffice.greenpeace.org.ar/api/forms/dashboard`,
     method: 'GET',
     params: {},
   });
