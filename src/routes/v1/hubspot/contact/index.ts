@@ -25,7 +25,7 @@ router.get('/search', [async (req: Request, res: Response, next: NextFunction) =
           .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.contacts[b].value }), {}))
   } else {
     res
-      // .status(404)
+      .status(404)
       .json({
         status: 404,
         errorMessage: 'User does not exist.',
@@ -45,7 +45,7 @@ router.get('/email/:email', [async (req: Request, res: Response, next: NextFunct
             .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
     } else {
       res
-        // .status(404)
+        .status(404)
         .json({
           status: 404,
           errorMessage: 'User does not exist.',
@@ -53,7 +53,7 @@ router.get('/email/:email', [async (req: Request, res: Response, next: NextFunct
     }
   } else {
     res
-    // .status(404)
+      .status(404)
       .json({
         status: 406,
         errorMessage: 'You have entered an invalid email address!',
@@ -77,7 +77,7 @@ router.get('/id/:id', [async (req: Request, res: Response, next: NextFunction) =
           .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
   } else {
     res
-      // .status(404)
+      .status(404)
       .json({
         status: 404,
         errorMessage: 'User does not exist.',
@@ -99,7 +99,7 @@ router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFun
       });
   } else {
     res
-      // .status(500)
+      .status(500)
       .json({
         status: 500,
         errorMessage: 'User cannot be created or maybe exists.',
@@ -118,7 +118,7 @@ router.post('/email/:email', [authWrapper, async (req: Request, res: Response, n
       });
   } else {
     res
-      // .status(404)
+      .status(404)
       .json({
         status: 204,
         errorMessage: 'User does not exist.',
