@@ -13,7 +13,8 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   } catch(e: any) {
     // const status = (e.response.status) ? e.response.status : 500;
     const status = 500;
-    const errorMessage = (e.response.statusText) ? e.response.statusText : 'Internal Server Error';
+    // const errorMessage = (e.response.statusText) ? e.response.statusText : 'Internal Server Error';
+    const errorMessage = 'Internal Server Error';
     res
       .status(status)
       .json({
