@@ -11,10 +11,8 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(e: any) {
-    // const status = (e.response.status) ? e.response.status : 500;
-    const status = 500;
-    // const errorMessage = (e.response.statusText) ? e.response.statusText : 'Internal Server Error';
-    const errorMessage = 'Internal Server Error';
+    const status = (e.response.status) ? e.response.status : 500;
+    const errorMessage = (e.response.statusText) ? e.response.statusText : 'Internal Server Error';
     res
       .status(status)
       .json({
