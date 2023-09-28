@@ -36,29 +36,30 @@ router.get('/search', [async (req: Request, res: Response, next: NextFunction) =
 router.get('/email/:email', [async (req: Request, res: Response, next: NextFunction) => {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.params.email)) {
     const result = await findByEmail(req.params.email);
-    if(result) {
+    if(result.status === 404) {
       res
-        .status(200)
-        .json(
-          Object
-            .keys(result.data.properties)
-            .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
+        .status(result.status)
+        .json({
+          status: result.status,
+          statusText: result.statusText,
+          errorMessage: result.errorMessage,
+        } as IRequestError);
+      } else {
+        res
+          .status(200)
+          .json(
+            Object
+              .keys(result.data.properties)
+              .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
+      }
     } else {
       res
         .status(404)
         .json({
-          status: 404,
-          errorMessage: 'User does not exist.',
+          status: 406,
+          errorMessage: 'You have entered an invalid email address!',
         } as IRequestError);
     }
-  } else {
-    res
-      .status(404)
-      .json({
-        status: 406,
-        errorMessage: 'You have entered an invalid email address!',
-      } as IRequestError);
-  }
 }]);
 
 /**
@@ -87,27 +88,32 @@ router.get('/id/:id', [async (req: Request, res: Response, next: NextFunction) =
 
 
 router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
-  console.log('Create one')
+  console.log('Create one (Hubspot)')
   console.log(req.body)
   const result = await createOne(req.body);
-  if(result) {
+  console.log(result)
+  if(result.status === 200 || result.status === 201) {
     res
       .status(201)
       .json({
         id: result.data.vid,
-        ...req.body,
+        ...Object
+        .keys(result.data.properties)
+        .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}),
       });
   } else {
     res
       .status(500)
       .json({
-        status: 500,
+        status: result.status,
+        statusText: result.statusText,
         errorMessage: 'User cannot be created or maybe exists.',
+        data: result.data,
       } as IRequestError);
   }
 }]);
 
-router.post('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
+router.put('/email/:email', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
   const result = await updateOne(req.params.email, req.body);
   if(result) {
     res
