@@ -8,15 +8,15 @@ router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, 
   const clientUrl = req.header('Referer') || '';
   let country = '';
 
-  if(clientUrl.match(/.ar/)?.length) {
+  if((clientUrl.match(/.ar/) || '').length) {
     country = 'ar';
   }
 
-  if(clientUrl.match(/.co/)?.length) {
+  if((clientUrl.match(/.co/) || '').length) {
     country = 'co';
   }
 
-  if(clientUrl.match(/.cl/)?.length) {
+  if((clientUrl.match(/.cl/) || '').length) {
     country = 'cl';
   }
 
