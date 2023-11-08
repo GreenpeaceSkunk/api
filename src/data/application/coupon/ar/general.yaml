@@ -2,9 +2,6 @@ data:
   name: "general"
   site_title: "Asociate a Greenpeace Argentina"
   content:
-    amounts:
-      values: [ 699, 999, 1299 ]
-      default: 699
     social_share:
       facebook:
         text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
@@ -35,6 +32,16 @@ data:
     thank_you:
       title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
       text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+      social_media:
+        facebook:
+          profle: "https://www.facebook.com/GreenpeaceArg"
+          enabled: true
+        instagram:
+          profle: "https://www.instagram.com/greenpeacearg/"
+          enabled: true
+        twitter:
+          profle: "https://twitter.com/GreenpeaceArg"
+          enabled: true
     modal_form:
       title: "DONÁ AHORA"
       text: "Sumate y conocé nuestras causas"
@@ -42,6 +49,18 @@ data:
     social_media:
       text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
+    general:
+      country: "Argentina"
+      amounts:
+        values: [ 699, 999, 1299 ]
+        default: 699
+        min_other_amount: 301
+        currency: "$"
+      identification_types: # Only applies when `payment_gateway` is enabled
+        - dni: "DNI"
+        - ci: "Cédula"
+        - lc: "L.C."
+        - le: "L.E."
     development:
       tracking:
         salesforce:
@@ -101,29 +120,17 @@ data:
           transactions_form: 60
   features:
     development:
-      enable_google_google_analytics: false
-      enable_google_tag_manager: false
-      enable_mercadopago: false
-      enable_facebook_pixel: false
-      enable_hotjar: false
-      enable_hubspot: false
-      enable_hubspot_sync: false
-      enable_transactions_sync: false
+      use_design_version: 1
+      payment_gateway:
+        enabled: false
+        third_party: ''
     test:
-      enable_google_google_analytics: true
-      enable_google_tag_manager: true
-      enable_mercadopago: true
-      enable_facebook_pixel: true
-      enable_hotjar: true
-      enable_hubspot: true
-      enable_hubspot_sync: true
-      enable_transactions_sync: true
+      use_design_version: 1
+      payment_gateway:
+        enabled: true
+        third_party: 'mercadopago'
     production:
-      enable_google_google_analytics: true
-      enable_google_tag_manager: true
-      enable_mercadopago: true
-      enable_facebook_pixel: true
-      enable_hotjar: true
-      enable_hubspot: true
-      enable_hubspot_sync: true
-      enable_transactions_sync: true
+      use_design_version: 1
+      payment_gateway:
+        enabled: true
+        third_party: 'mercadopago'

@@ -2,21 +2,28 @@ import path from 'path';
 import fs from 'fs';
 import YAML from 'yaml';
 
-export const getCouponByName = async (name: string, environment: string): Promise<any> => {
+export type DomainType = 'ar' | 'cl' | 'co';
+
+export const getCouponByName = async (name: string, environment: string, domain: DomainType): Promise<any> => {
+
   let files: any[] = [];
   try {
-    const dir = await fs.promises.opendir(`${path.resolve('src')}/data/application/coupon`);
+    const dirName = `${path.resolve('src')}/data/application/coupon/${domain}`;
+    const dir = await fs.promises.opendir(`${dirName}`);
     
     for await (const dirent of dir) {
       files = [...files].concat(dirent.name.split('.')[0]);
     }
     
-    const coupon = await YAML.parse(fs.readFileSync(`${path.resolve('src')}/data/application/coupon/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
+    const coupon = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
     
     return Promise.resolve({
       name: coupon.data.name,
       content: coupon.data.content,
-      settings: coupon.data.settings[environment],
+      settings: {
+        general: coupon.data.settings.general,
+        ...coupon.data.settings[environment],
+      },
       features: coupon.data.features ? coupon.data.features[environment] : {},
     });
 

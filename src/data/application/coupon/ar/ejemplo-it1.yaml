@@ -52,6 +52,64 @@ data:
         subject: "social_share_email_subject"
         body: "social_share_email_body"
   settings:
+    general:
+      form_fields:
+        identification_types: # Only applies when `enable_payment_gateway` is false
+          - type: "cedula_ciudadania"
+            value: "Céd. de ciudadanía"
+            validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+              expression: "^[0-9]{8,10}$"
+              min: 8
+              max: 10
+          - type: "cedula_extranjera"
+            value: "Céd. de extranjera"
+            validator:
+              expression: "^[0-9]{8,10}$"
+              min: 8
+              max: 10
+          - type: "pasaporte"
+            value: "Pasaporte"
+            validator:
+              expression: "^[0-9]{8,10}$"
+              min: 8
+              max: 10
+        card_number:
+          validator:
+            expression: "^[0-9]{15,16}$"
+        card_security_code:
+          validator:
+            expression: "^[0-9]{3,4}$"
+        card_types:
+          - text: "Visa"
+            slug: "visa"
+            value: 2
+          - text: "Mastercard"
+            slug: "mastercard"
+            value: 3
+          - text: "Visa débito"
+            slug: "debvisa"
+            value: 4
+          - text: "Amex"
+            slug: "amex"
+            value: 5
+          - text: "Cabal"
+            slug: "cabal"
+            value: 6
+          - text: "Cabal débito"
+            slug: "debcabal"
+            value: 6
+          - text: "CMR"
+            slug: "cmr"
+            value: 7
+          - text: "Cencosud"
+            slug: "cencosud"
+            value: 7
+          - text: "Naranja"
+            slug: "naranja"
+            value: 8
+          - text: "Diners"
+            slug: "diners"
+            value: 10
     development:
       tracking:
         salesforce:
@@ -112,31 +170,7 @@ data:
   features:
     development:
       use_design_version: 1
-      # enable_google_google_analytics: false
-      # enable_google_tag_manager: false
-      # enable_mercadopago: false
-      # enable_facebook_pixel: false
-      # enable_hotjar: false
-      # enable_hubspot: false
-      # enable_hubspot_sync: false
-      # enable_transactions_sync: false
     test:
       use_design_version: 1
-      # enable_google_google_analytics: true
-      # enable_google_tag_manager: true
-      # enable_mercadopago: true
-      # enable_facebook_pixel: true
-      # enable_hotjar: true
-      # enable_hubspot: true
-      # enable_hubspot_sync: true
-      # enable_transactions_sync: true
     production:
       use_design_version: 1
-      # enable_google_google_analytics: true
-      # enable_google_tag_manager: true
-      # enable_mercadopago: true
-      # enable_facebook_pixel: true
-      # enable_hotjar: true
-      # enable_hubspot: true
-      # enable_hubspot_sync: true
-      # enable_transactions_sync: true

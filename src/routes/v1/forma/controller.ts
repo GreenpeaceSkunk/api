@@ -9,7 +9,7 @@ type FormType = {
 };
 
 export const postRecord = async (formId: number, body = {}): Promise<any> => {
-  console.log('Post', body);
+  console.log('Post (ForMa)', body);
   const response = await axios({
     baseURL: `https://backoffice.greenpeace.org.ar/api/forms/save`,
     method: 'POST',
