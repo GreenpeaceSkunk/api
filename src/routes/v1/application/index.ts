@@ -5,19 +5,18 @@ import { DomainType, getCouponByName } from './controller';
 const router = Router();
 
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+  const clientUrl = req.header('Referer') || '';
   let country = '';
 
-  console.log(req.hostname)
-  console.log(req.url)
-  if(req.hostname.match(/.ar/)?.length) {
+  if(clientUrl.match(/.ar/)?.length) {
     country = 'ar';
   }
 
-  if(req.hostname.match(/.co/)?.length) {
+  if(clientUrl.match(/.co/)?.length) {
     country = 'co';
   }
 
-  if(req.hostname.match(/.cl/)?.length) {
+  if(clientUrl.match(/.cl/)?.length) {
     country = 'cl';
   }
 
