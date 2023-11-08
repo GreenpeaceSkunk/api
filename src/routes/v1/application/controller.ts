@@ -5,8 +5,8 @@ import YAML from 'yaml';
 export type DomainType = 'ar' | 'cl' | 'co';
 
 export const getCouponByName = async (name: string, environment: string, domain: DomainType): Promise<any> => {
-
   let files: any[] = [];
+
   try {
     const dirName = `${path.resolve('src')}/data/application/coupon/${domain}`;
     const dir = await fs.promises.opendir(`${dirName}`);

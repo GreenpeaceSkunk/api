@@ -5,7 +5,7 @@ import { DomainType, getCouponByName } from './controller';
 const router = Router();
 
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  let country = 'co';
+  let country = '';
 
   if(req.hostname.match(/.ar/)?.length) {
     country = 'ar';
