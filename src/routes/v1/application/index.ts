@@ -7,6 +7,8 @@ const router = Router();
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   let country = '';
 
+  console.log(req.hostname)
+  console.log(req.url)
   if(req.hostname.match(/.ar/)?.length) {
     country = 'ar';
   }
