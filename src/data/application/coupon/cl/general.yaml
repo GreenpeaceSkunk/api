@@ -1,13 +1,12 @@
 data:
-  name: "chile"
+  name: "chile-no-trsx"
   site_title: "site_title"
   content:
     header:
       picture: "chile.png"
-      # background_color: "white"
-      # logo:
-      #   show: false
-      #   color: "orange"
+      logo:
+        show: true
+        color: pink
     home:
       title: "EL PLANETA ES NUESTRO HOGAR `Mensual`"
       text: "<p>Todos nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar campañas para seguir defendiendo el planeta.</p><p>No recibimos aportes de empresas, partidos políticos ni gobiernos. Somos 100% independientes. Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
@@ -69,10 +68,13 @@ data:
         identification_types: # Only applies when `enable_payment_gateway` is false
           - type: "rut"
             value: "RUT"
+            placeholder: "Ej. XX.XXX.XXX-X"
             validator:
               expression: ^(\d{1,3}(?:\.\d{1,3}){2}-[\dkK])$
-              min: 7
-              max: 14
+        area_code:
+          placeholder: 'Ej. XX'
+        phone_mobile_number:
+          placeholder: 'Ej. XXX-XXXX'
         card_number:
           validator:
             expression: ^[0-9]{15,16}$
@@ -112,9 +114,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:
@@ -131,9 +130,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:
@@ -150,9 +146,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:

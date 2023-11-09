@@ -4,10 +4,9 @@ data:
   content:
     header:
       picture: "colombia.jpg"
-      # background_color: "white"
-      # logo:
-      #   show: false
-      #   color: "orange"
+      logo:
+        show: true
+        color: white
     home:
       title: "home_title"
       text: "<p>home_text</p>"
@@ -79,22 +78,23 @@ data:
         identification_types: # Only applies when `enable_payment_gateway` is false
           - type: "cedula_ciudadania"
             value: "Céd. de ciudadanía"
+            placeholder: ""
             validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
               expression: ^[0-9]{8,10}$
-              min: 8
-              max: 10
           - type: "cedula_extranjera"
             value: "Céd. de extranjera"
+            placeholder: ""
             validator:
               expression: ^[0-9]{8,10}$
-              min: 8
-              max: 10
           - type: "pasaporte"
             value: "Pasaporte"
+            placeholder: ""
             validator:
               expression: ^[0-9]{8,10}$
-              min: 8
-              max: 10
+        area_code:
+          placeholder: 'Ej. XX'
+        phone_mobile_number:
+          placeholder: 'Ej. XXX-XXXX'
         card_number:
           validator:
             expression: ^[0-9]{15,16}$
@@ -134,9 +134,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:
@@ -153,9 +150,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:
@@ -172,9 +166,6 @@ data:
             id: "GTM-TZB6GQ3"
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
         hubspot:
           id: 20432059
       service:
