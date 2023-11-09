@@ -80,27 +80,27 @@ data:
           - type: "cedula_ciudadania"
             value: "Céd. de ciudadanía"
             validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
-              expression: "^[0-9]{8,10}$"
+              expression: ^[0-9]{8,10}$
               min: 8
               max: 10
           - type: "cedula_extranjera"
             value: "Céd. de extranjera"
             validator:
-              expression: "^[0-9]{8,10}$"
+              expression: ^[0-9]{8,10}$
               min: 8
               max: 10
           - type: "pasaporte"
             value: "Pasaporte"
             validator:
-              expression: "^[0-9]{8,10}$"
+              expression: ^[0-9]{8,10}$
               min: 8
               max: 10
         card_number:
           validator:
-            expression: "^[0-9]{15,16}$"
+            expression: ^[0-9]{15,16}$
         card_security_code:
           validator:
-            expression: "^[0-9]{3,4}$"
+            expression: ^[0-9]{3,4}$
         card_types:
           - text: "Visa"
             slug: "visa"
@@ -115,10 +115,14 @@ data:
             slug: "amex"
             value: 5
         location:
-          city: true
-          country: true
-          region: true
-          address: true
+          city:
+            enabled: true
+          country:
+            enabled: true
+          province:
+            enabled: true
+          address:
+            enabled: true
     development:
       tracking:
         salesforce:

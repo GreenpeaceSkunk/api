@@ -3,28 +3,28 @@ data:
   site_title: "site_title"
   content:
     header:
-      picture: "chile.jpg"
+      picture: "chile.png"
       # background_color: "white"
       # logo:
       #   show: false
       #   color: "orange"
     home:
-      title: "home_title"
-      text: "<p>home_text</p>"
-      highlighted_text: "home_highlighted_text"
-      button_text: "home_button_text"
+      title: "EL PLANETA ES NUESTRO HOGAR `Mensual`"
+      text: "<p>Todos nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar campañas para seguir defendiendo el planeta.</p><p>No recibimos aportes de empresas, partidos políticos ni gobiernos. Somos 100% independientes. Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
+      highlighted_text: "¡Sumate ahora, con vos somos más!"
+      button_text: "DONAR"
     form:
       general:
         coupon_regular_label_text: "form_coupon_regular_label_text"
         coupon_oneoff_label_text: "form_coupon_oneoff_label_text"
       registration:
-        title: "form_registration_title"
-        text: "form_registration_text"
-        button_text: "form_registration_button_text"
+        title: "Apoyar a Greenpeace en defensa del planeta. ¡Juntos podemos hacer la diferencia!"
+        text: "Una donación mensual es la mejor opción: nos ayuda a planificar acciones y campañas."
+        button_text: "DONAR"
       checkout:
-        title: "form_checkout_title"
-        text: "form_checkout_text"
-        button_text: "form_checkout_button_text"
+        title: "Apoyar a Greenpeace en defensa del planeta. ¡Juntos podemos hacer la diferencia!"
+        text: "Una donación mensual es la mejor opción: nos ayuda a planificar acciones y campañas."
+        button_text: "DONAR"
     thank_you:
       title: "thank_you_title"
       text: "thank_you_text"
@@ -70,15 +70,15 @@ data:
           - type: "rut"
             value: "RUT"
             validator:
-              expression: "^[0-9]+-[0-9kK]{1}$"
+              expression: ^(\d{1,3}(?:\.\d{1,3}){2}-[\dkK])$
               min: 7
               max: 14
         card_number:
           validator:
-            expression: "^[0-9]{15,16}$"
+            expression: ^[0-9]{15,16}$
         card_security_code:
           validator:
-            expression: "^[0-9]{3,4}$"
+            expression: ^[0-9]{3,4}$
         card_types:
           - text: "Visa"
             slug: "visa"
@@ -93,10 +93,14 @@ data:
             slug: "amex"
             value: 5
         location:
-          city: true
-          country: true
-          region: true
-          address: true
+          city:
+            enabled: false
+          country:
+            enabled: true
+          province:
+            enabled: true
+          address:
+            enabled: true
     development:
       tracking:
         salesforce:
