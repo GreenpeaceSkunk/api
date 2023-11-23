@@ -18,8 +18,11 @@ export const getCouponByName = async (name: string, environment: string, domain:
     const coupon = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
     
     return Promise.resolve({
-      name: coupon.data.name,
-      content: coupon.data.content,
+      // name: coupon.data.name,
+      // site_title: coupon.data.site_title,
+      // country: coupon.data.country,
+      // content: coupon.data.content,
+      ...coupon.data,
       settings: {
         general: coupon.data.settings.general,
         ...coupon.data.settings[environment],

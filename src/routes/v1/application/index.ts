@@ -7,7 +7,7 @@ const router = Router();
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const clientUrl = req.header('Referer') || '';
 
-  let country = '';
+  let country = 'co';
 
   if((clientUrl.match(/\.ar\//) || '').length) {
     country = 'ar';

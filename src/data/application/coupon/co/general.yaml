@@ -1,21 +1,23 @@
 data:
-  name: "colombia"
+  name: "colombia-no-trsx"
   site_title: "site_title"
+  country: "Colombia"
   content:
     header:
-      picture: "colombia.jpg"
+      picture: "cupon-gp_500.png"
       logo:
         show: true
         color: white
     home:
-      title: "home_title"
-      text: "<p>home_text</p>"
-      highlighted_text: "home_highlighted_text"
+      title: "Estás a un paso de convertirte en activista por el medioambiente."
+      text: "<p>En Greenpeace NO aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Nuestra libertad e independencia siempre está presente.</p><p>El aporte económico mensual que realizan nuestros donantes se convierte en acción por la protección y defensa de los bosques, océanos, mares, playas y todos los ecosistemas.</p><p>Ayúdanos a respetar y cuidar a la Naturaleza 💚</p><p>Buscamos soluciones y generamos cambios, cada donación SÍ hace la diferencia.</p>"
+      highlighted_text: "Para transformar la realidad necesitamos todo el apoyo posible. El primer paso, está a sólo un click, la decisión es tuya."
       button_text: "home_button_text"
     form:
       general:
-        coupon_regular_label_text: "form_coupon_regular_label_text"
-        coupon_oneoff_label_text: "form_coupon_oneoff_label_text"
+        coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
+        coupon_oneoff_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
       registration:
         title: "form_registration_title"
         text: "form_registration_text"
@@ -29,7 +31,7 @@ data:
       text: "thank_you_text"
       button_cta:
         text: "thank_you_button_cta_text"
-        link: "https://www.greenpeace.org.ar"
+        link: "https://www.greenpeace.org/colombia"
     modal_form:
       title: "modal_form_title"
       text: "modal_form_text"
@@ -68,7 +70,6 @@ data:
     #       placeholder: 'Ej. 22222222'
     #       default: 111111111
     general:
-      country: "Colombia"
       amounts:
         values: [ 20000, 35000, 50000, 80000 ]
         default: 50000
@@ -114,6 +115,9 @@ data:
           - text: "Amex"
             slug: "amex"
             value: 5
+          - text: "Diners"
+            slug: "diners"
+            value: 10
         location:
           city:
             enabled: true

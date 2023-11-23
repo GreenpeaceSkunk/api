@@ -21,6 +21,10 @@ data:
       highlighted_text: "home_highlighted_text"
       button_text: "home_button_text"
     form:
+      general:
+        coupon_regular_label_text: "form_coupon_regular_label_text" # Autorizo el débito automático mensual de:
+        coupon_oneoff_label_text: "form_coupon_oneoff_label_text" # Autorizo el pago por única vez de:
+        coupon_oneoff_label_text_2: "form_coupon_oneoff_label_text_2"
       registration:
         title: "form_registration_title"
         text: "form_registration_text"

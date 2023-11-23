@@ -24,7 +24,7 @@ export const getCities = async (): Promise<any> => {
 
 export const getPlacesByCountry = async (country: string): Promise<any> => {
   try {
-    const dirName = `${path.resolve('src')}/data/location/places`;
+    const dirName = `${path.resolve('src')}/data/location/countries`;
     return await YAML.parse(fs.readFileSync(`${dirName}/${country.toLowerCase()}.yaml`, 'utf-8'));
   } catch (err) {
     console.log('Error', err);

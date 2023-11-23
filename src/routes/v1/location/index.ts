@@ -30,12 +30,18 @@ router.get('/world/cities', [requestWrapper(async (req: Request, res: Response, 
   }
 })]);
 
-router.get('/world/countries/:country/places', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.get('/world/countries/:country', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const result = await getPlacesByCountry(req.params.country);
   if(result) {
     res
       .status(200)
-      .json(result);
+      .json(Object.keys(result.data).map((province: string) => {
+        return {
+          name: province,
+          slug: province.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, ""),
+          cities: result.data[province],
+        }
+      }));
   } else {
     res
       .status(404)
