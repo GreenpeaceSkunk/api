@@ -1,9 +1,10 @@
 data:
   name: "colombia-no-trsx"
-  site_title: "site_title"
+  site_title: "Dona a Greenpeace Colombia"
   country: "Colombia"
   content:
     header:
+      title: ""
       picture: "cupon-gp_500.png"
       logo:
         show: true
@@ -19,13 +20,13 @@ data:
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
         coupon_oneoff_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
       registration:
-        title: "form_registration_title"
-        text: "form_registration_text"
-        button_text: "form_registration_button_text"
+        title: "Solo contigo - Somos Greenpeace"
+        text: "Hazte donante"
+        button_text: "Continuar"
       checkout:
-        title: "form_checkout_title"
-        text: "form_checkout_text"
-        button_text: "form_checkout_button_text"
+        title: "Solo contigo - Somos Greenpeace"
+        text: "Hazte donante"
+        button_text: "¡Reacciona ahora!"
     thank_you:
       title: "thank_you_title"
       text: "thank_you_text"
@@ -59,16 +60,6 @@ data:
         subject: "social_share_email_subject"
         body: "social_share_email_body"
   settings:
-    # TODO: Implement it
-    # form_fields:
-    #   registration: 
-    #   checkout:
-    #     docType:
-    #       placeholder: ''
-    #       default: 'cedula_ciudadania'
-    #     docNumber:
-    #       placeholder: 'Ej. 22222222'
-    #       default: 111111111
     general:
       amounts:
         values: [ 20000, 35000, 50000, 80000 ]
@@ -180,7 +171,7 @@ data:
       use_design_version: 1
       payment_gateway:
         enabled: false
-        third_party: '' # mercadopago, transbank, payu only if enabled
+        third_party: '' # Mercadopago, Transbank, PayU only if enabled
     test:
       use_design_version: 1
       payment_gateway:

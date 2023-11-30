@@ -1,6 +1,7 @@
 data:
   name: "general"
   site_title: "Asociate a Greenpeace Argentina"
+  country: "Argentina"
   content:
     social_share:
       facebook:
@@ -15,12 +16,19 @@ data:
     header:
       picture: "general.jpg"
       title: "Unite a Greenpeace y sé parte del equipo que protege el medio ambiente"
+      logo:
+        show: true
+        color: white
     home:
       title: "Todos nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar campañas para seguir defendiendo el planeta."
       text: "<p>No recibimos aportes de empresas, partidos políticos ni gobiernos. Somos 100% independientes.</p><p>Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
       highlighted_text: "¡Sumate ahora, con vos somos más!"
       button_text: "Sumate!"
     form:
+      general:
+        coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
+        coupon_oneoff_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
       registration:
         title: "DONÁ AHORA"
         text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
@@ -50,17 +58,84 @@ data:
       text: "¡Seamos muchos más los que ayudamos al planeta!"
   settings:
     general:
-      country: "Argentina"
       amounts:
         values: [ 699, 999, 1299 ]
         default: 699
         min_other_amount: 301
         currency: "$"
-      identification_types: # Only applies when `payment_gateway` is enabled
-        - dni: "DNI"
-        - ci: "Cédula"
-        - lc: "L.C."
-        - le: "L.E."
+      form_fields:
+        identification_types: # Only applies when `enable_payment_gateway` is false
+          - type: "dni"
+            value: "DNI"
+            placeholder: ""
+            validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+              expression: ^[0-9]{7,9}$
+          - type: "cedula_identidad"
+            value: "Cédula de identidad"
+            placeholder: ""
+            validator:
+              expression: ^[0-9A-Z]{6,10}$
+          - type: "lc"
+            value: "Libreta Cívica"
+            placeholder: ""
+            validator:
+              expression: ^[0-9A-Z]{6,10}$
+          - type: "le"
+            value: "Libreta de enrolamiento"
+            placeholder: ""
+            validator:
+              expression: ^[0-9A-Z]{6,10}$
+          
+        area_code:
+          placeholder: 'Ej. XX'
+        phone_mobile_number:
+          placeholder: 'Ej. XXX-XXXX'
+        card_number:
+          validator:
+            expression: ^[0-9]{15,16}$
+        card_security_code:
+          validator:
+            expression: ^[0-9]{3,4}$
+        card_types:
+          - text: "Visa"
+            slug: "visa"
+            value: 2
+          - text: "Visa débito"
+            slug: "debvisa"
+            value: 4
+          - text: "Mastercard"
+            slug: "mastercard"
+            value: 3
+          - text: "Amex"
+            slug: "amex"
+            value: 5
+          - text: "Cabal"
+            slug: "cabal"
+            value: 6
+          - text: "Cabal débito"
+            slug: "debcabal"
+            value: 6
+          - text: "CMR"
+            slug: "cmr"
+            value: 7
+          - text: "Cencosud"
+            slug: "cencosud"
+            value: 7
+          - text: "Naranja"
+            slug: "naranja"
+            value: 8
+          - text: "Diners"
+            slug: "diners"
+            value: 10
+        location:
+          city:
+            enabled: true
+          country:
+            enabled: true
+          province:
+            enabled: true
+          address:
+            enabled: true
     development:
       tracking:
         salesforce:
@@ -79,7 +154,7 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 59
+          transactions_form: 96
     test:
       tracking:
         salesforce:
@@ -123,14 +198,14 @@ data:
       use_design_version: 1
       payment_gateway:
         enabled: false
-        third_party: ''
+        third_party: '' # Mercadopago, Transbank, PayU only if enabled
     test:
       use_design_version: 1
       payment_gateway:
         enabled: true
-        third_party: 'mercadopago'
+        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
     production:
       use_design_version: 1
       payment_gateway:
         enabled: true
-        third_party: 'mercadopago'
+        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
