@@ -197,8 +197,8 @@ data:
     development:
       use_design_version: 1
       payment_gateway:
-        enabled: false
-        third_party: '' # Mercadopago, Transbank, PayU only if enabled
+        enabled: true
+        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
     test:
       use_design_version: 1
       payment_gateway:
