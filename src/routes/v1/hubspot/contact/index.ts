@@ -90,7 +90,7 @@ router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFun
         .keys(result.data.properties)
         .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}),
       });
-  } else if(result.status === 204) { // Updated
+  } else if(result.status === 204) {
     res
       .status(200)
       .json({...req.body});

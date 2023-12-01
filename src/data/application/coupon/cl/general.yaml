@@ -1,6 +1,7 @@
 data:
   name: "chile-no-trsx"
-  site_title: "site_title"
+  site_title: "Dona a Greenpeace Chile"
+  country: "Chile"
   content:
     header:
       picture: "chile.png"
@@ -58,7 +59,6 @@ data:
         body: "social_share_email_body"
   settings:
     general:
-      country: "Chile"
       amounts:
         values: [ 10000, 15000, 20000 ]
         default: 15000
@@ -155,8 +155,8 @@ data:
     development:
       use_design_version: 1
       payment_gateway:
-        enabled: false
-        third_party: '' # mercadopago, transbank, payu only if enabled
+        enabled: true
+        third_party: 'Transbank' # mercadopago, transbank, payu only if enabled
     test:
       use_design_version: 1
       payment_gateway:

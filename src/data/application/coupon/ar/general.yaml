@@ -85,7 +85,6 @@ data:
             placeholder: ""
             validator:
               expression: ^[0-9A-Z]{6,10}$
-          
         area_code:
           placeholder: 'Ej. XX'
         phone_mobile_number:
@@ -197,8 +196,8 @@ data:
     development:
       use_design_version: 1
       payment_gateway:
-        enabled: true
-        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
+        enabled: false
+        third_party: ""
     test:
       use_design_version: 1
       payment_gateway:
