@@ -45,7 +45,7 @@ data:
     development:
       tracking:
         salesforce:
-          campaign_id: "7017X000000Mle6"
+          campaign_id: "7015c0000024Fq4"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -64,7 +64,7 @@ data:
     test:
       tracking:
         salesforce:
-          campaign_id: "7017X000000Mle6"
+          campaign_id: "7015c0000024Fq4"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
@@ -83,7 +83,7 @@ data:
     production:
       tracking:
         salesforce:
-          campaign_id: "7015c000000WEnF"
+          campaign_id: "7015c0000024Fq4"
         google:
           analytics:
             tracking_id: "UA-175817761-1"
