@@ -21,19 +21,6 @@ export const findByEmail = async (email: string): Promise<any> => {
       'Content-Type': 'application/json',
     },
   })
-  .then((result) => result)
-  .catch(() => null);
-}
-
-export const findByEmail = async (email: string): Promise<any> => {
-  return await axios({
-    method: 'GET',
-    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
-    headers: {
-      'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-  })
   .then(result => {
     return {
       status: result.status,
