@@ -37,9 +37,8 @@ export const findByEmail = async (email: string): Promise<any> => {
   });
 }
 
-export const createOne = async (body: any): Promise<any> => {
-  const user = await findByEmail(body.email);
-  if(user.status === 404) {
+export const createOne = async (body: any, exist = false): Promise<any> => {
+  if(!exist) {
     console.log('User (%s) does not exist, then create one.', body.email);
     try {
       const response = await axios({

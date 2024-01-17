@@ -1,30 +1,24 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { requestWrapper } from '../../../middlewares';
 import { postRecord } from '../forma/controller';
-import { sendEmail } from './controller';
+import { sendEmail, sign } from './controller';
+import { createOne, findByEmail } from '../hubspot/contact/controller';
+
+
 
 const router = Router();
 
 router.post('/:campaignName/sign', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  // const result = await postRecord(parseInt(req.params.formId), req.body);
-  const result = await postRecord(parseInt(req.body.form_id), req.body);
+  const result = await sign(req.body, req.params.campaignName, req.query.form_id, req.query.hb_campaign_field);
 
-  const campaigns = [
-    'salva-las-leyes-ambientales'
-  ];
-
-  if(result.status === 200) {
-    if(campaigns.includes(req.params.campaignName)) {
-      sendEmail({
-        firstName: req.body.firstName || '',
-        lastName: req.body.lastName || '',
-        email: req.body.email || '',
-      });
-    }
-
-    res.status(result.status).json(req.body);  
+  if(result.ok) {
+    res.status(200).json({
+      message: result.message,
+    });
   } else {
-    res.status(result.status);  
+    res.status(500).json({
+      errorMessage: result.message,
+    });
   }
 })]);
 
