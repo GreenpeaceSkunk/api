@@ -1,8 +1,6 @@
-import axios,{ AxiosRequestConfig } from 'axios';
-import FormData from 'form-data';
-// import { HttpsProxyAgent } from 'https-proxy-agent';
-import { createOne, findByEmail, updateOne } from '../hubspot/contact/controller';
+import axios from 'axios';
 import { postRecord } from '../forma/controller';
+import { createOne, findByEmail, updateOne } from '../hubspot/contact/controller';
 
 type BodyType = {
   firstName: string,
@@ -15,37 +13,20 @@ const sendEmailFromCampaigns = [
 ];
 
 export const sendEmail = async (body: BodyType): Promise<any> => {
-  let data = new FormData();
-  data.append('nombre', body.firstName);
-  data.append('apellido', body.lastName);
-  data.append('email', body.email);
-  data.append('key', 'JQ7X4QX5G7JQX8G1QXQXK0H7XKXQXKXQ');
-
-  // const agent = new HttpsProxyAgent('http://20.168.249.146')
-  // const config: AxiosRequestConfig = {
-  //   proxy: false,
-  //   httpsAgent: agent,
-  //   httpAgent: agent,
-  //   method: 'POST',
-  //   url: '20.168.249.146',
-  //   headers: { "Content-Type": "multipart/form-data" },
-  // };
-
-  // return axios.create(config);
   try {
-    const response = await axios({
+    await axios({
       method: 'POST',
       baseURL: 'https://envios.voluntariosgreenpeace.cl',
-      headers: { "Content-Type": "multipart/form-data" },
-      data,
+      headers: { "Content-Type": "aapplication/json" },
+      data: {
+        nombre: body.firstName,
+        apellido: body.lastName,
+        email: body.email,
+        key: 'JQ7X4QX5G7JQX8G1QXQXK0H7XKXQXKXQ',
+      },
     });
-    return response;
   } catch (error: any) {
-    return {
-      status: error.response.status,
-      statusText: error.response.statusText,
-      data: error.response.data,
-    }
+    console.log('Error when sending email from campaign.')
   }
 }
 
@@ -75,17 +56,17 @@ export const sign = async (body: any, campaignName: string, formId: any, hbCampa
     }
   
     if(sendEmailFromCampaigns.includes(campaignName)) {
-      await sendEmail(body);
+      sendEmail(body);
     }
 
     return Promise.resolve({
       ok: true,
-      message: 'El usuario ya firmó la petición',
+      message: 'Firma registrada correctamente.',
     });
   } else {
     return Promise.resolve({
       ok: false,
       message: 'El usuario ya firmó la petición',
     });
-  } 
+  }
 }

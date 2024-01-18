@@ -1,8 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { requestWrapper } from '../../../middlewares';
-import { postRecord } from '../forma/controller';
-import { sendEmail, sign } from './controller';
-import { createOne, findByEmail } from '../hubspot/contact/controller';
+import { sign } from './controller';
 
 
 
