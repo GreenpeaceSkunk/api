@@ -18,4 +18,7 @@ export interface IUser {
   birthday: string;
   userAgent?: string;
 }
+
 export interface IUserDocument extends IUser, Document {}
+
+export type DomainType = 'ar' | 'cl' | 'co';

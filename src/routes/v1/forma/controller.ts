@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { DomainType } from 'greenpeace';
 
 type FormType = {
   name: string,
@@ -8,10 +9,17 @@ type FormType = {
   lastDate: Date,
 };
 
-export const postRecord = async (formId: number, body = {}): Promise<any> => {
+const baseUrl: {[d: string]: string} = {
+  'ar': 'https://backoffice.greenpeace.org.ar',
+  'cl': '',
+  'co': 'https://backoffice.infogreenpeace.org',
+}
+
+export const postRecord = async (formId: number, body = {}, domain: DomainType): Promise<any> => {
   console.log('Post (ForMa)', body);
+  console.log(`Base URL: ${baseUrl[domain]}/api/forms/save`)
   const response = await axios({
-    baseURL: `https://backoffice.greenpeace.org.ar/api/forms/save`,
+    baseURL: `${baseUrl[domain]}/api/forms/save`,
     method: 'POST',
     data: {
       form_id: formId,
@@ -21,9 +29,9 @@ export const postRecord = async (formId: number, body = {}): Promise<any> => {
   return response;
 }
 
-export const getForm = async (formId: number|null = null): Promise<any> => {
+export const getForm = async (formId: number|null = null, domain: DomainType): Promise<any> => {
   const response = await axios({
-    baseURL: `https://backoffice.greenpeace.org.ar/api/forms/dashboard`,
+    baseURL: `${baseUrl[domain]}/api/forms/dashboard`,
     method: 'GET',
     params: {},
   });

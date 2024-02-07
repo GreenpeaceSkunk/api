@@ -1,29 +1,17 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { requestWrapper } from '../../../middlewares';
-import { DomainType, getCouponByName } from './controller';
+import { getCouponByName } from './controller';
+import { getCountryByReferer } from '../../../utils/general';
+import { DomainType } from 'greenpeace';
 
 const router = Router();
 
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const clientUrl = req.header('Referer') || '';
+  const country = getCountryByReferer(req.header('Referer'));
 
-  let country = '';
-
-  if((clientUrl.match(/\.ar\//) || '').length) {
-    country = 'ar';
-  }
-
-  if((clientUrl.match(/\.co\//) || '').length) {
-    country = 'co';
-  }
-
-  if((clientUrl.match(/\.cl\//) || '').length) {
-    country = 'cl';
-  }
-
-  if(country !== '') {
+  try {
     const result = await getCouponByName(req.params.name, `${req.query.env}`, country as DomainType);
-
+  
     if(result) {
       res
         .status(200)
@@ -33,12 +21,10 @@ router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, 
         .status(404)
         .json({});
     }
-  } else {
+  } catch (error: any) {
     res
       .status(404)
-      .json({
-        errorMessage: '`.ar|.co|.cl` is undefined',
-      });
+      .json({ errorMessage: '`.ar|.co|.cl` is undefined' });
   }
 })]);
 

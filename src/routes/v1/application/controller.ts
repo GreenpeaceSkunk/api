@@ -1,8 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import YAML from 'yaml';
-
-export type DomainType = 'ar' | 'cl' | 'co';
+import { DomainType } from 'greenpeace';
 
 export const getCouponByName = async (name: string, environment: string, domain: DomainType): Promise<any> => {
   let files: any[] = [];
