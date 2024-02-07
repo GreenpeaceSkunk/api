@@ -1,5 +1,5 @@
 data:
-  name: "colombia-no-trsx"
+  name: "colombia-offline"
   site_title: "Dona a Greenpeace Colombia"
   country: "Colombia"
   content:
@@ -13,42 +13,39 @@ data:
       title: "Estás a un paso de convertirte en activista por el medioambiente."
       text: "<p>En Greenpeace NO aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Nuestra libertad e independencia siempre está presente.</p><p>El aporte económico mensual que realizan nuestros donantes se convierte en acción por la protección y defensa de los bosques, océanos, mares, playas y todos los ecosistemas.</p><p>Ayúdanos a respetar y cuidar a la Naturaleza 💚</p><p>Buscamos soluciones y generamos cambios, cada donación SÍ hace la diferencia.</p>"
       highlighted_text: "Para transformar la realidad necesitamos todo el apoyo posible. El primer paso, está a sólo un click, la decisión es tuya."
-      button_text: "home_button_text"
+      button_text: "Dona ahora"
     form:
       general:
         coupon_regular_label_text: "Autorizo el débito automático mensual de:"
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
         coupon_oneoff_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
       registration:
-        title: "Solo contigo - Somos Greenpeace"
-        text: "Hazte donante"
+        title: "Hazte donante"
+        text: "Solo contigo - Somos Greenpeace"
         button_text: "Continuar"
       checkout:
         title: "Solo contigo - Somos Greenpeace"
         text: "Hazte donante"
         button_text: "¡Reacciona ahora!"
     thank_you:
-      title: "thank_you_title"
-      text: "thank_you_text"
-      button_cta:
-        text: "thank_you_button_cta_text"
-        link: "https://www.greenpeace.org/colombia"
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
     modal_form:
-      title: "modal_form_title"
-      text: "modal_form_text"
-      button_text: "modal_form_button_text"
+        title: "Hazte donante"
+        text: "Solo contigo - Somos Greenpeace"
+        button_text: "Dona ahora"
     social_media:
-      text: "social_media_text"
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
       profiles:
         facebook:
-          profle: "https://www.facebook.com/GreenpeaceArg"
-          enabled: true
+          url: "https://www.facebook.com/greenpeaceencolombia"
+          show: true
         instagram:
-          profle: "https://www.instagram.com/greenpeacearg/"
-          enabled: true
+          url: "https://www.instagram.com/greenpeacecolombia/"
+          show: true
         twitter:
-          profle: "https://twitter.com/GreenpeaceArg"
-          enabled: true
+          url: "https://twitter.com/GreenpeaceColom"
+          show: true
     social_share:
       facebook:
         text: "social_share_facebook_text"
@@ -67,7 +64,7 @@ data:
         min_other_amount: 10000
         currency: "$"
       form_fields:
-        identification_types: # Only applies when `enable_payment_gateway` is false
+        identification_types:
           - type: "cedula_ciudadania"
             value: "Céd. de ciudadanía"
             placeholder: ""
@@ -84,47 +81,85 @@ data:
             validator:
               expression: ^[0-9]{8,10}$
         area_code:
-          placeholder: 'Ej. XX'
+          placeholder: 'XX'
         phone_mobile_number:
-          placeholder: 'Ej. XXX-XXXX'
-        card_number:
-          validator:
-            expression: ^[0-9]{15,16}$
-        card_security_code:
-          validator:
-            expression: ^[0-9]{3,4}$
+          placeholder: 'XXX-XXXX'
         card_types:
           - text: "Visa"
             slug: "visa"
             value: 2
+            validator:
+              card_number:
+                expression: ^[0-9]{16}$
+              card_security_code:
+                expression: ^[0-9]{3}$
+          - text: "Visa débito"
+            slug: "visa_debit"
+            value: 7
+            validator:
+              card_number:
+                expression: ^[0-9]{16}$
+              card_security_code:
+                expression: ^[0-9]{3}$
           - text: "Mastercard"
             slug: "mastercard"
             value: 3
-          - text: "Visa débito"
-            slug: "debvisa"
-            value: 4
+            validator:
+              card_number:
+                expression: ^[0-9]{16}$
+              card_security_code:
+                expression: ^[0-9]{3}$
+          - text: "Mastercard débito"
+            slug: "mastercard_debit"
+            value: 8
+            validator:
+              card_number:
+                expression: ^[0-9]{16}$
+              card_security_code:
+                expression: ^[0-9]{3}$
           - text: "Amex"
             slug: "amex"
-            value: 5
-          - text: "Diners"
-            slug: "diners"
-            value: 10
+            value: 4
+            validator:
+              card_number:
+                expression: ^[0-9]{15}$
+              card_security_code:
+                expression: ^[0-9]{4}$
+          # - text: "Codensa"
+          #   slug: "codensa"
+          #   value: 5
+          #   validator:
+          #     card_number:
+          #       expression: ^[0-9]{16}$
+          #     card_security_code:
+          #       expression: ^[0-9]{3,4}$
+          # - text: "Diners"
+          #   slug: "diners"
+          #   value: 6
+          #   validator:
+          #     card_number:
+          #       expression: ^[0-9]{14,15}$
+          #     card_security_code:
+          #       expression: ^[0-9]{3,4}$
         location:
-          city:
-            enabled: true
           country:
-            enabled: true
+            show: true
+            disabled: true
           province:
-            enabled: true
+            label: 'Departamento' # Overrides the default `label`
+            show: true
+          city: # Is enabled only if `province` is enabled
+            label: 'Comuna' # Overrides the default `label`
+            show: true
           address:
-            enabled: true
+            show: true
+          zipCode:
+            show: false
     development:
       tracking:
         salesforce:
-          campaign_id: "7017X000000Mle6"
+          campaign_id: "7011J000001Jjce"
         google:
-          analytics:
-            tracking_id: "UA-175817761-1"
           tag_manager:
             id: "GTM-TZB6GQ3"
         facebook:
@@ -133,14 +168,12 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 96
+          form_id: 1
     test:
       tracking:
         salesforce:
-          campaign_id: "7017X000000Mle6"
+          campaign_id: "7011J000001Jjce"
         google:
-          analytics:
-            tracking_id: "UA-175817761-1"
           tag_manager:
             id: "GTM-TZB6GQ3"
         facebook:
@@ -149,14 +182,12 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 96
+          form_id: 1
     production:
       tracking:
         salesforce:
-          campaign_id: "7015c000000WEnj"
+          campaign_id: "701V40000024Oqc"
         google:
-          analytics:
-            tracking_id: "UA-175817761-1"
           tag_manager:
             id: "GTM-TZB6GQ3"
         facebook:
@@ -165,21 +196,19 @@ data:
           id: 20432059
       service:
         forma:
-          transactions_form: 96
+          form_id: 1
   features:
+    default:
+      use_design_version: 1
+      payment_gateway:
+        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
     development:
-      use_design_version: 1
       payment_gateway:
-        enabled: false
-        third_party: '' # Mercadopago, Transbank, PayU only if enabled
+        enabled: true
     test:
-      use_design_version: 1
       payment_gateway:
         enabled: false
-        third_party: ''
     production:
-      use_design_version: 1
       payment_gateway:
         enabled: false
-        third_party: ''
     

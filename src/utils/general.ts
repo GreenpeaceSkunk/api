@@ -12,7 +12,4 @@ export const getCountryByReferer = (referer = ''): DomainType | undefined => {
   if((referer.match(/\.cl\//) || '').length) {
     return'cl';
   }
-
-  // return null;
-  return 'co' // TODO: Remove it
 }
