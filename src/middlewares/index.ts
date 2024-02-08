@@ -1,5 +1,6 @@
 import { IRequestError } from "greenpeace";
 import { Request, Response, NextFunction, RequestHandler } from "express";
+import { getCountryByReferer } from "../utils/general";
 
 type RequestWrapperType = (fn: RequestHandler) => RequestHandler;
 const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
@@ -8,6 +9,14 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   next: NextFunction,
 ) => {
   try {
+    if(!getCountryByReferer((req.header('Referer')))) {
+      res
+        .status(400)
+        .json({
+          errorMessage: '`.ar|.co|.cl` is undefined',
+        })
+    }
+
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(error: any) {

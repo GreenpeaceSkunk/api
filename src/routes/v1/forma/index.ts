@@ -1,30 +1,25 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { requestWrapper } from '../../../middlewares';
 import { postRecord, getForm } from './controller';
-import { getCountryByReferer } from '../../../utils/general';
-import { DomainType } from 'greenpeace';
 
 const router = Router();
 
 router.post('/form/:formId/record', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const result = await postRecord(
-    parseInt(req.params.formId),
-    req.body,
-    getCountryByReferer(req.header('Referer') as DomainType)
-  );
+  try {
+    const result = await postRecord(req);
 
-  if(result.status === 200) {
-    res.status(result.status).json(req.body);  
-  } else {
-    res.status(result.status);  
-  }  
+    res
+      .status(result.status)
+      .json(result.body);
+  } catch (error: any) {
+    res
+      .status(500)
+      .json({ errorMessage: 'Error when posting new record into ForMa' });
+  }
 })]);
 
 router.get('/form/:formId?', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const result = await getForm(
-    parseInt(req.params.formId) || null, 
-    getCountryByReferer(req.header('Referer') as DomainType)
-  );
+  const result = await getForm(req);
 
   if(result) {
     res.status(200).json(result);  

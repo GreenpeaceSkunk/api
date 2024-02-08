@@ -1,9 +1,20 @@
 import path from 'path';
 import fs from 'fs';
 import YAML from 'yaml';
-import { DomainType } from 'greenpeace';
+import { getCountryByReferer } from '../../../utils/general';
+import { Request } from 'express';
 
-export const getCouponByName = async (name: string, environment: string, domain: DomainType): Promise<any> => {
+const paymentGateways: {[id: number]: string} = {
+  1: 'Mercadopago',
+  2: 'PayU',
+  3: 'Transbank',
+}
+
+export const getCouponByName = async (req: Request): Promise<any> => {
+  const couponName = 'test';
+  const environment = req.query.env as string;
+  const domain = getCountryByReferer(req.header('Referer'));
+
   let files: any[] = [];
 
   try {
@@ -14,7 +25,7 @@ export const getCouponByName = async (name: string, environment: string, domain:
       files = [...files].concat(dirent.name.split('.')[0]);
     }
     
-    const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
+    const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(couponName) ? couponName : 'general'}.yaml`, 'utf-8'));
     
     return Promise.resolve({
       ...data,
@@ -26,13 +37,14 @@ export const getCouponByName = async (name: string, environment: string, domain:
         use_design_version: data.features.default.use_design_version,
         payment_gateway: {
           ...data.features.default.payment_gateway,
+          third_party: paymentGateways[data.features.default.payment_gateway.third_party],
           ...data.features[environment].payment_gateway,
         },
       } : {},
     });
-
   } catch (err) {
-    console.error('Error', err);
-    return Promise.resolve(null);
+    return Promise.resolve({
+      errorMessage: `The coupon "${couponName}" or "general" at "${domain}" does not exist.`,
+    });
   }
 }
