@@ -193,18 +193,16 @@ data:
         forma:
           transactions_form: 60
   features:
-    development:
+    default:
       use_design_version: 1
+      payment_gateway:
+        third_party: 1
+    development:
       payment_gateway:
         enabled: false
-        third_party: ""
     test:
-      use_design_version: 1
       payment_gateway:
-        enabled: true
-        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
+        enabled: false
     production:
-      use_design_version: 1
       payment_gateway:
         enabled: true
-        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled

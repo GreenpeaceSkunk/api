@@ -34,7 +34,7 @@ export const getCouponByName = async (req: Request): Promise<any> => {
         ...data.settings[environment],
       },
       features: data.features ? {
-        use_design_version: data.features.default.use_design_version,
+        ...data.features.default,
         payment_gateway: {
           ...data.features.default.payment_gateway,
           third_party: paymentGateways[data.features.default.payment_gateway.third_party],

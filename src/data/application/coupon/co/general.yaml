@@ -200,11 +200,12 @@ data:
   features:
     default:
       use_design_version: 1
+      expand_form: true # Only applied to mobile 
       payment_gateway:
-        third_party: 'Mercadopago' # Mercadopago, Transbank, PayU only if enabled
+        third_party: 2
     development:
       payment_gateway:
-        enabled: true
+        enabled: false
     test:
       payment_gateway:
         enabled: false
