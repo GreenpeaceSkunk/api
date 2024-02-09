@@ -28,27 +28,40 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     
     const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(couponName) ? couponName : 'general'}.yaml`, 'utf-8'));
 
-    if(data.features[environment].payment_gateway.enabled && !paymentGateways[data.features.default.payment_gateway.third_party]) {
+    const parsedData = {
+      name: data.name,
+      site_title: data.site_title,
+      country: data.country,
+      content: data.content,
+      settings: {
+        ...data.settings,
+        tracking: {
+          ...data.settings.tracking.default,
+          ...(data.overrides.environment[environment]?.tracking)
+            && data.overrides.environment[environment].tracking,
+        },
+        service: {
+          ...data.settings.service.default,
+          ...(data.overrides.environment[environment]?.service)
+            && data.overrides.environment[environment].service,
+        },
+      },
+      features: {
+        ...data.features.default,
+        ...(data.overrides.environment[environment]?.features)
+          && data.overrides.environment[environment].features,
+      },
+    };
+
+    parsedData.features.payment_gateway.third_party = paymentGateways[parsedData.features.payment_gateway.third_party];
+
+    if(parsedData.features.payment_gateway.enabled && !paymentGateways[parsedData.features.payment_gateway.third_party]) {
       return Promise.resolve({
-        errorMessage: 'If Payment Gateway is enabled thus third party might be defined',
+        errorMessage: 'If Payment Gateway is enabled, third party might be defined.',
       });
     }
-    
-    return Promise.resolve({
-      ...data,
-      settings: {
-        general: data.settings.general,
-        ...data.settings[environment],
-      },
-      features: data.features ? {
-        ...data.features.default,
-        payment_gateway: {
-          ...data.features.default.payment_gateway,
-          third_party: paymentGateways[data.features.default.payment_gateway.third_party],
-          ...data.features[environment].payment_gateway,
-        },
-      } : {},
-    });
+
+    return Promise.resolve(parsedData);
   } catch (err) {
     return Promise.resolve({
       errorMessage: `The coupon "${couponName}" or "general" at "${domain}" does not exist.`,
