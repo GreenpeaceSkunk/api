@@ -4,7 +4,8 @@ import YAML from 'yaml';
 import { getCountryByReferer } from '../../../utils/general';
 import { Request } from 'express';
 
-const paymentGateways: {[id: number]: string} = {
+const paymentGateways: {[id: number]: string | null} = {
+  0: null,
   1: 'Mercadopago',
   2: 'PayU',
   3: 'Transbank',
@@ -26,6 +27,12 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     }
     
     const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(couponName) ? couponName : 'general'}.yaml`, 'utf-8'));
+
+    if(data.features[environment].payment_gateway.enabled && !paymentGateways[data.features.default.payment_gateway.third_party]) {
+      return Promise.resolve({
+        errorMessage: 'If Payment Gateway is enabled thus third party might be defined',
+      });
+    }
     
     return Promise.resolve({
       ...data,
