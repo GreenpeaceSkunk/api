@@ -37,13 +37,13 @@ export const getCouponByName = async (req: Request): Promise<any> => {
         ...data.settings,
         tracking: {
           ...data.settings.tracking.default,
-          ...(data.overrides.environment[environment]?.tracking)
-            && data.overrides.environment[environment].tracking,
+          ...(data.overrides.environment[environment]?.settings.tracking)
+            && data.overrides.environment[environment].settings.tracking,
         },
-        service: {
-          ...data.settings.service.default,
-          ...(data.overrides.environment[environment]?.service)
-            && data.overrides.environment[environment].service,
+        services: {
+          ...data.settings.services.default,
+          ...(data.overrides.environment[environment]?.settings.services)
+            && data.overrides.environment[environment].settings.services,
         },
       },
       features: {
@@ -52,10 +52,10 @@ export const getCouponByName = async (req: Request): Promise<any> => {
           && data.overrides.environment[environment].features,
       },
     };
-
+    
     parsedData.features.payment_gateway.third_party = paymentGateways[parsedData.features.payment_gateway.third_party];
-
-    if(parsedData.features.payment_gateway.enabled && !paymentGateways[parsedData.features.payment_gateway.third_party]) {
+   
+    if(parsedData.features.payment_gateway.enabled && !parsedData.features.payment_gateway.third_party) {
       return Promise.resolve({
         errorMessage: 'If Payment Gateway is enabled, third party might be defined.',
       });
