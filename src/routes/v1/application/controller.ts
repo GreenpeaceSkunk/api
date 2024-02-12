@@ -1,27 +1,70 @@
 import path from 'path';
 import fs from 'fs';
 import YAML from 'yaml';
+import { getCountryByReferer } from '../../../utils/general';
+import { Request } from 'express';
 
-export const getCouponByName = async (name: string, environment: string): Promise<any> => {
+const paymentGateways: {[id: number]: string | null} = {
+  0: null,
+  1: 'Mercadopago',
+  2: 'PayU',
+  3: 'Transbank',
+}
+
+export const getCouponByName = async (req: Request): Promise<any> => {
+  const couponName = 'test';
+  const environment = req.query.env as string;
+  const domain = getCountryByReferer(req.header('Referer'));
+
   let files: any[] = [];
+
   try {
-    const dir = await fs.promises.opendir(`${path.resolve('src')}/data/application/coupon`);
+    const dirName = `${path.resolve('src')}/data/application/coupon/${domain}`;
+    const dir = await fs.promises.opendir(`${dirName}`);
     
     for await (const dirent of dir) {
       files = [...files].concat(dirent.name.split('.')[0]);
     }
     
-    const coupon = await YAML.parse(fs.readFileSync(`${path.resolve('src')}/data/application/coupon/${files.includes(name) ? name : 'general'}.yaml`, 'utf-8'));
-    
-    return Promise.resolve({
-      name: coupon.data.name,
-      content: coupon.data.content,
-      settings: coupon.data.settings[environment],
-      features: coupon.data.features ? coupon.data.features[environment] : {},
-    });
+    const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(couponName) ? couponName : 'general'}.yaml`, 'utf-8'));
 
+    const parsedData = {
+      name: data.name,
+      site_title: data.site_title,
+      country: data.country,
+      content: data.content,
+      settings: {
+        ...data.settings,
+        tracking: {
+          ...data.settings.tracking.default,
+          ...(data.overrides.environment[environment]?.settings.tracking)
+            && data.overrides.environment[environment].settings.tracking,
+        },
+        services: {
+          ...data.settings.services.default,
+          ...(data.overrides.environment[environment]?.settings.services)
+            && data.overrides.environment[environment].settings.services,
+        },
+      },
+      features: {
+        ...data.features.default,
+        ...(data.overrides.environment[environment]?.features)
+          && data.overrides.environment[environment].features,
+      },
+    };
+    
+    parsedData.features.payment_gateway.third_party = paymentGateways[parsedData.features.payment_gateway.third_party];
+   
+    if(parsedData.features.payment_gateway.enabled && !parsedData.features.payment_gateway.third_party) {
+      return Promise.resolve({
+        errorMessage: 'If Payment Gateway is enabled, third party might be defined.',
+      });
+    }
+
+    return Promise.resolve(parsedData);
   } catch (err) {
-    console.log('Error', err);
-    return Promise.resolve(null);
+    return Promise.resolve({
+      errorMessage: `The coupon "${couponName}" or "general" at "${domain}" does not exist.`,
+    });
   }
 }

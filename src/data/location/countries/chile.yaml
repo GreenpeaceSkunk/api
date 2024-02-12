@@ -1,0 +1,69 @@
+data:
+  Antofagasta:
+    - Antofagasta
+    - Tocopilla
+    - El Loa y Antofagasta
+  Arica y Parinacota:
+    - Arica y Parinacota
+  Atacama:
+    - Copiapó
+    - Chañaral
+    - Huasco
+  Aysén del General Carlos Ibañez del Campo:
+    - Coyhaique
+    - Aisén
+    - Capitán Prat
+    - General Carrera
+  Coquimbo:
+    - Elqui
+    - Choapa
+    - Limarí
+  La Araucanía:
+    - Cautín
+    - Malleco
+  Los Lagos:
+    - Llanquihue
+    - Chiloé
+    - Osorno
+    - Palena
+  Los Ríos:
+    - Valdivia
+    - Ranco
+  Magallanes y de la Antártica Chilena:
+    - Magallanes
+    - Antártica Chilena
+    - Tierra del Fuego
+    - Última Esperanza
+  Bio-Bío:
+    - Concepción
+    - Arauco
+    - Biobío
+    - Ñuble
+  O'Higgins:
+    - Cachapoal
+    - Cardenal Caro
+    - Colchagua
+  Maule:
+    - Talca
+    - Cauquenes
+    - Curicó
+    - Linares
+  Metropolitana de Santiago:
+    - Santiago 
+    - Cordillera 
+    - Chacabuco
+    - Maipo
+    - Melipilla
+    - Talagante
+  Tarapacá:
+    - Iquique
+    - Tamarugal
+  Valparaíso:
+    - Valparaíso
+    - Isla de Pascua
+    - Los Andes
+    - Petorca
+    - Quillota
+    - San Antonio
+    - San Felipe de Aconcagua
+    - Marga Marga

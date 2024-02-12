@@ -30,7 +30,7 @@ export const sendEmail = async (body: BodyType): Promise<any> => {
   }
 }
 
-export const sign = async (body: any, campaignName: string, formId: any, hbCampaignField: any): Promise<any> => {
+export const sign = async (body: any, campaignName: string, formId: any, hbCampaignField: any, referer: any): Promise<any> => {
   const user = await findByEmail(body.email);
   const campaignField = (hbCampaignField) ? {[`${hbCampaignField}`]: 'SI'} : {};
   let alreadySigned = false;
@@ -52,7 +52,7 @@ export const sign = async (body: any, campaignName: string, formId: any, hbCampa
     });
     
     if(formId) {
-      await postRecord(parseInt(`${formId}`), body);
+      await postRecord(formId, body, referer);
     }
   
     if(sendEmailFromCampaigns.includes(campaignName)) {

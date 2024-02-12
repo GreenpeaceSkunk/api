@@ -1,10 +1,10 @@
-FROM node:18 as base
+FROM node:18.19.0 as base
 
 WORKDIR /home/app/api
 
 COPY package*.json ./
 
-RUN npm install -g npm@8.15.0
+RUN npm install -g npm@9.3.1
 RUN npm install
 RUN npm run types
 

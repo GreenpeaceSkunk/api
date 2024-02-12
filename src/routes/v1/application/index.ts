@@ -5,16 +5,15 @@ import { getCouponByName } from './controller';
 const router = Router();
 
 router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const result = await getCouponByName(req.params.name, `${req.query.env}`);
-
-  if(result) {
+  try {
+    const result = await getCouponByName(req);
     res
       .status(200)
-      .json(result);  
-  } else {
+      .json(result);
+  } catch (error: any) {
     res
       .status(404)
-      .json({});
+      .json({ errorMessage: error.errorMessage });
   }
 })]);
 

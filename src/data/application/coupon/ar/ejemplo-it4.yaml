@@ -1,20 +1,21 @@
 data:
-  name: "colombia"
+  name: "ejemplo-it4"
   site_title: "site_title"
   content:
     amounts:
-      values: [ 30000, 50000, 60000, 80000 ]
-      default: 30000
+      values: [ 399, 699, 1299 ]
+      default: 699
     header:
-      picture: "colombia.jpg"
+      picture: "greenlab.png"
       background_color: "white"
       logo:
         show: true
         color: "#6ACA25"
     form:
       general:
-        coupon_regular_label_text: "form_coupon_regular_label_text"
-        coupon_oneoff_label_text: "form_coupon_oneoff_label_text"
+        coupon_regular_label_text: "form_coupon_regular_label_text" # Autorizo el débito automático mensual de:
+        coupon_oneoff_label_text: "form_coupon_oneoff_label_text" # Autorizo el pago por única vez de:
+        coupon_oneoff_label_text_2: "form_coupon_oneoff_label_text_2"
       registration:
         title: "form_registration_title"
         text: "form_registration_text"

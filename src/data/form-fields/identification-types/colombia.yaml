@@ -1,0 +1,16 @@
+data:
+  - type: "cedula_ciudadania"
+    value: "Céd. de ciudadanía"
+    placeholder: ""
+    validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+      expression: ^[0-9]{8,10}$
+  - type: "cedula_extranjera"
+    value: "Céd. de extranjera"
+    placeholder: ""
+    validator:
+      expression: ^[0-9]{8,10}$
+  - type: "pasaporte"
+    value: "Pasaporte"
+    placeholder: ""
+    validator:
+      expression: ^[0-9]{8,10}$

@@ -34,31 +34,22 @@ router.get('/search', [async (req: Request, res: Response, next: NextFunction) =
 }]);
 
 router.get('/email/:email', [async (req: Request, res: Response, next: NextFunction) => {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.params.email)) {
-    const result = await findByEmail(req.params.email);
-    if(result.status === 404) {
-      res
-        .status(result.status)
-        .json({
-          status: result.status,
-          statusText: result.statusText,
-          errorMessage: result.errorMessage,
-        } as IRequestError);
-      } else {
-        res
-          .status(200)
-          .json(
-            Object
-              .keys(result.data.properties)
-              .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
-      }
+  const result = await findByEmail(req.params.email);
+  if(result.status === 404) {
+    res
+      .status(result.status)
+      .json({
+        status: result.status,
+        statusText: result.statusText,
+        errorMessage: result.errorMessage,
+      } as IRequestError);
     } else {
       res
-        .status(404)
-        .json({
-          status: 406,
-          errorMessage: 'You have entered an invalid email address!',
-        } as IRequestError);
+        .status(200)
+        .json(
+          Object
+            .keys(result.data.properties)
+            .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}))
     }
 }]);
 
@@ -88,27 +79,28 @@ router.get('/email/:email', [async (req: Request, res: Response, next: NextFunct
 
 
 router.post('/', [authWrapper, async (req: Request, res: Response, next: NextFunction) => {
-  console.log('Create one (Hubspot)')
-  console.log(req.body)
   const result = await createOne(req.body);
-  console.log(result)
+
   if(result.status === 200 || result.status === 201) {
     res
-      .status(201)
+      .status(result.status)
       .json({
         id: result.data.vid,
         ...Object
         .keys(result.data.properties)
         .reduce((a: any, b: string) => ({ ...a, [`${b}`]: result.data.properties[b].value }), {}),
       });
+  } else if(result.status === 204) {
+    res
+      .status(200)
+      .json({...req.body});
   } else {
     res
-      .status(500)
+      .status(result.status)
       .json({
         status: result.status,
         statusText: result.statusText,
-        errorMessage: 'User cannot be created or maybe exists.',
-        data: result.data,
+        errorMessage: 'User cannot be created or updated.',
       } as IRequestError);
   }
 }]);

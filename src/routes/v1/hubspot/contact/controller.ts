@@ -109,5 +109,3 @@ export const search = async (queryParams: any): Promise<any> => {
   });
   return result;
 }
-
-

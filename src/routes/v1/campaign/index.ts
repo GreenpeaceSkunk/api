@@ -8,7 +8,13 @@ import YAML from 'yaml';
 const router = Router();
 
 router.post('/:campaignName/sign', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
-  const result = await sign(req.body, req.params.campaignName, req.query.form_id, req.query.hb_campaign_field);
+  const result = await sign(
+    req.body,
+    req.params.campaignName,
+    req.query.form_id,
+    req.query.hb_campaign_field,
+    req.header('Referer')
+  );
 
   if(result.ok) {
     res.status(200).json({
