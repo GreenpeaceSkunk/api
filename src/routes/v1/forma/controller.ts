@@ -20,16 +20,18 @@ export const postRecord = async (req: Request): Promise<any> => {
   const {body, params: { formId }} = req;
   const domain = getCountryByReferer(req.header('Referer'));
   
+  const data = {
+    form_id: parseInt(formId),
+    ...body,
+  };
+  
   console.log(`ForMa URL: ${baseUrl[domain!]}/api/forms/save`);
-  console.log('Post (ForMa)', body);
+  console.log('Post (ForMa)', data);
 
   return await axios({
     baseURL: `${baseUrl[domain!]}/api/forms/save`,
     method: 'POST',
-    data: {
-      form_id: formId,
-      ...body,
-    },
+    data,
   });
 }
 
