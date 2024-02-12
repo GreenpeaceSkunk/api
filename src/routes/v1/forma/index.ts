@@ -1,10 +1,10 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { requestWrapper } from '../../../middlewares';
+import { requestWrapper, validateReferer } from '../../../middlewares';
 import { postRecord, getForm } from './controller';
 
 const router = Router();
 
-router.post('/form/:formId/record', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.post('/form/:formId/record', [validateReferer, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   try {
     const {body, params: { formId }} = req;
     const result = await postRecord(formId, body, req.header('Referer'));
@@ -19,7 +19,7 @@ router.post('/form/:formId/record', [requestWrapper(async (req: Request, res: Re
   }
 })]);
 
-router.get('/form/:formId?', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.get('/form/:formId?', [validateReferer, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   const result = await getForm(req);
 
   if(result) {

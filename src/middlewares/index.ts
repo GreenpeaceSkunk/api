@@ -9,15 +9,6 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   next: NextFunction,
 ) => {
   try {
-    // This should be moved to another middleware
-    if(!getCountryByReferer((req.header('Referer')))) {
-      res
-        .status(400)
-        .json({
-          errorMessage: '`.ar|.co|.cl` is undefined',
-        })
-    }
-
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(error: any) {
@@ -33,6 +24,31 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   }
 }
 
+const validateReferer: RequestWrapperType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    if(!getCountryByReferer((req.header('Referer')))) {
+      throw new Error('`.ar|.co|.cl` is undefined');
+    }
+
+    const fnReturn = await fn(req, res, next);
+    return fnReturn;
+  } catch(error: any) {
+    console.log('Error', error);
+    const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
+    res
+      .status(500)
+      .json({
+        status: 500,
+        errorMessage,
+      } as IRequestError);
+  }
+}
+
 export {
   requestWrapper,
+  validateReferer,
 }
