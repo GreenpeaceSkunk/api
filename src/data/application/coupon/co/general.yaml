@@ -158,20 +158,21 @@ data:
     tracking:
       default:
         salesforce:
-          campaign_id: "7015c0000024Fq4"
+          campaign_id: "7011J000001Jjce"
         google:
-          # analytics:
-          #   tracking_id: "UA-175817761-1"
+          analytics:
+            tracking_id: "UA-175817761-1"
+            enabled: true
           tag_manager:
             id: "GTM-TZB6GQ3"
+            enabled: true
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
+          enabled: true
         hubspot:
           id: 20432059
-    service:
+          enabled: true
+    services:
       default:
         forma:
           form_id: 1
@@ -187,8 +188,14 @@ data:
       development:
       test:
       production:
+        settings:
+          tracking:
+            salesforce:
+              campaign_id: 701V40000024Oqc
+          services:
+            forma:
+              form_id: 5
         features:
           payment_gateway:
-            enabled: true
-            third_party: 1
-    
+            enabled: false
+            third_party: 0

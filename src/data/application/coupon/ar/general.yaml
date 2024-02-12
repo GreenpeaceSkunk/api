@@ -195,18 +195,19 @@ data:
         salesforce:
           campaign_id: "7015c0000024Fq4"
         google:
-          # analytics:
-          #   tracking_id: "UA-175817761-1"
+          analytics:
+            tracking_id: "UA-175817761-1"
+            enabled: true
           tag_manager:
             id: "GTM-TZB6GQ3"
+            enabled: true
         facebook:
           pixel_id: 713455948697688
-        hotjar:
-          id: 2797198
-          sv: 6
+          enabled: false
         hubspot:
           id: 20432059
-    service:
+          enabled: false
+    services:
       default:
         forma:
           form_id: 96
@@ -221,13 +222,15 @@ data:
     environment:
       development:
       test:
-        service:
-          forma:
-            form_id: 59
+        settings:
+          service:
+            forma:
+              form_id: 59
       production:
-        service:
-          forma:
-            form_id: 60
+        settings:
+          service:
+            forma:
+              form_id: 60
         features:
           payment_gateway:
             enabled: true
