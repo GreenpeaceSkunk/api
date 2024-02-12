@@ -15,12 +15,13 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
     console.log('Error', error);
     // const status = (error.response.status) ? error.response.status : 500;
     const status = 500;
-    const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
+    // const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
+    // const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
     res
       .status(status)
       .json({
         status,
-        errorMessage,
+        errorMessage: 'API Internal Server Error',
       } as IRequestError);
   }
 }
@@ -39,12 +40,11 @@ const validateReferer: RequestWrapperType = (fn: (...args: any[]) => void | Prom
     return fnReturn;
   } catch(error: any) {
     console.log('Error', error);
-    const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
     res
       .status(500)
       .json({
         status: 500,
-        errorMessage,
+        errorMessage: '`.ar|.co|.cl` is undefined',
       } as IRequestError);
   }
 }
