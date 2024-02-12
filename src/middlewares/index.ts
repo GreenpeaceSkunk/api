@@ -9,6 +9,7 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   next: NextFunction,
 ) => {
   try {
+    // This should be moved to another middleware
     if(!getCountryByReferer((req.header('Referer')))) {
       res
         .status(400)
