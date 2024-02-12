@@ -13,7 +13,8 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
     return fnReturn;
   } catch(error: any) {
     console.log('Error', error);
-    const status = (error.response.status) ? error.response.status : 500;
+    // const status = (error.response.status) ? error.response.status : 500;
+    const status = 500;
     const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
     res
       .status(status)
