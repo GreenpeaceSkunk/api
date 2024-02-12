@@ -179,7 +179,7 @@ data:
   features:
     default:
       use_design_version: 1
-      expand_form: false
+      expand_form: true
       payment_gateway:
         enabled: false
         third_party: 0
