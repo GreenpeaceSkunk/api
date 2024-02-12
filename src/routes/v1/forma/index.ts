@@ -6,7 +6,8 @@ const router = Router();
 
 router.post('/form/:formId/record', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const result = await postRecord(req);
+    const {body, params: { formId }} = req;
+    const result = await postRecord(formId, body, req.header('Referer'));
 
     res
       .status(result.status)

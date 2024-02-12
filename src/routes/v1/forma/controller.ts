@@ -16,9 +16,8 @@ const baseUrl: {[d: string]: string} = {
   'co': 'https://backoffice.infogreenpeace.org',
 }
 
-export const postRecord = async (req: Request): Promise<any> => {
-  const {body, params: { formId }} = req;
-  const domain = getCountryByReferer(req.header('Referer'));
+export const postRecord = async (formId: string, body: any, referer: any): Promise<any> => {
+  const domain = getCountryByReferer(referer);
   
   const data = {
     form_id: parseInt(formId),

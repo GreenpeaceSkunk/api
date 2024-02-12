@@ -12,32 +12,59 @@ export const getAll = async (): Promise<any> => {
   return result;
 }
 
-export const findById = async (vid: string): Promise<any> => {
+export const findByEmail = async (email: string): Promise<any> => {
   return await axios({
     method: 'GET',
-    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/vid/${vid}/profile`,
+    baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
     headers: {
       'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
       'Content-Type': 'application/json',
     },
   })
-  .then((result) => result)
-  .catch(() => null);
+  .then(result => {
+    return {
+      status: result.status,
+      statusText: result.statusText,
+      data: result.data,
+    }
+  })
+  .catch(error => {
+    return {
+      status: error.response.status,
+      statusText: error.response.statusText,
+      errorMessage: error.response.data.message,
+    };
+  });
 }
 
-export const findByEmail = async (email: string): Promise<any> => {
-  try  {
-    const user = await axios({
-      method: 'GET',
-      baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact/email/${email}/profile`,
-      headers: {
-        'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-    });
-    return user;
-  } catch (error: any) {
-    return null;
+export const createOne = async (body: any, exist = false): Promise<any> => {
+  if(!exist) {
+    console.log('User (%s) does not exist, then create one.', body.email);
+    try {
+      const response = await axios({
+        method: 'POST',
+        baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
+        headers: {
+          'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        data: {
+          properties: Object.keys(body).map((key: string) => ({
+            property: `${key}`,
+            value: body[key],
+          })),
+        },
+      });
+      return response;
+    } catch (error: any) {
+      return {
+        status: error.response.status,
+        statusText: error.response.statusText,
+        data: error.response.data,
+      }
+    }
+  } else {
+    return updateOne(body.email, body);
   }
 }
 
@@ -56,38 +83,12 @@ export const updateOne = async (email: string, body: any): Promise<any> => {
         { property: b, value: body[b] }
       ],
     }), {}),
+  })
+  .then(result => result)
+  .catch(error => {
+    console.log(error.toJSON());
+    return null;
   });
-}
-
-/**
- * https://legacydocs.hubspot.com/docs/methods/contacts/create_contact
- * @param body
- * @returns
- */
-export const createOne = async (body: any): Promise<any> => {
-  console.log('Create one (Hubspot)')
-  const result = await findByEmail(body.email);
-
-  if(result === null) {
-    console.log('User (%s) does not exist, then create one.', body.email);
-    return await axios({
-      method: 'POST',
-      baseURL: `${process.env.HUBSPOT_API_URL}/contacts/v1/contact`,
-      headers: {
-        'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      data: {
-        properties: Object.keys(body).map((key: string) => ({
-          property: `${key}`,
-          value: body[key],
-        })),
-      },
-    });
-  } else {
-    console.log('User exists, then update ..');
-    return await updateOne(body.email, body);
-  }
 }
 
 export const search = async (queryParams: any): Promise<any> => {
@@ -108,5 +109,3 @@ export const search = async (queryParams: any): Promise<any> => {
   });
   return result;
 }
-
-
