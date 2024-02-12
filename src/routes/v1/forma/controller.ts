@@ -12,7 +12,7 @@ type FormType = {
 
 const baseUrl: {[d: string]: string} = {
   'ar': 'https://backoffice.greenpeace.org.ar',
-  'cl': '',
+  'cl': 'https://backoffice.voluntariosgreenpeace.cl',
   'co': 'https://backoffice.infogreenpeace.org',
 }
 
