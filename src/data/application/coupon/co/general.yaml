@@ -17,8 +17,8 @@ data:
     form:
       general:
         coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_regular_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
-        coupon_oneoff_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
       registration:
         title: "Hazte donante"
         text: "Solo contigo - Somos Greenpeace"
@@ -26,7 +26,7 @@ data:
       checkout:
         title: "Solo contigo - Somos Greenpeace"
         text: "Hazte donante"
-        button_text: "¡Reacciona ahora!"
+        button_text: "¡Súmate ahora!"
     thank_you:
       title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
       text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
@@ -59,102 +59,109 @@ data:
   settings:
     general:
       amounts:
-        values: [ 20000, 35000, 50000, 80000 ]
-        default: 50000
-        min_other_amount: 10000
+        values: [ 40000, 50000, 80000 ]
+        default: 40000
+        min_other_amount: 40000
         currency: "$"
       form_fields:
-        identification_types:
-          - type: "cedula_ciudadania"
-            value: "Céd. de ciudadanía"
-            placeholder: ""
-            validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
-              expression: ^[0-9]{8,10}$
-          - type: "cedula_extranjera"
-            value: "Céd. de extranjera"
-            placeholder: ""
-            validator:
-              expression: ^[0-9]{8,10}$
-          - type: "pasaporte"
-            value: "Pasaporte"
-            placeholder: ""
-            validator:
-              expression: ^[0-9]{8,10}$
-        area_code:
-          placeholder: 'XX'
-        phone_mobile_number:
-          placeholder: 'XXX-XXXX'
-        card_types:
-          - text: "Visa"
-            slug: "visa"
-            value: 2
-            validator:
-              card_number:
-                expression: ^[0-9]{16}$
-              card_security_code:
-                expression: ^[0-9]{3}$
-          - text: "Visa débito"
-            slug: "visa_debit"
-            value: 7
-            validator:
-              card_number:
-                expression: ^[0-9]{16}$
-              card_security_code:
-                expression: ^[0-9]{3}$
-          - text: "Mastercard"
-            slug: "mastercard"
-            value: 3
-            validator:
-              card_number:
-                expression: ^[0-9]{16}$
-              card_security_code:
-                expression: ^[0-9]{3}$
-          - text: "Mastercard débito"
-            slug: "mastercard_debit"
-            value: 8
-            validator:
-              card_number:
-                expression: ^[0-9]{16}$
-              card_security_code:
-                expression: ^[0-9]{3}$
-          - text: "Amex"
-            slug: "amex"
-            value: 4
-            validator:
-              card_number:
-                expression: ^[0-9]{15}$
-              card_security_code:
-                expression: ^[0-9]{4}$
-          # - text: "Codensa"
-          #   slug: "codensa"
-          #   value: 5
-          #   validator:
-          #     card_number:
-          #       expression: ^[0-9]{16}$
-          #     card_security_code:
-          #       expression: ^[0-9]{3,4}$
-          # - text: "Diners"
-          #   slug: "diners"
-          #   value: 6
-          #   validator:
-          #     card_number:
-          #       expression: ^[0-9]{14,15}$
-          #     card_security_code:
-          #       expression: ^[0-9]{3,4}$
-        location:
-          country:
+        registration:
+          area_code:
+            placeholder: 'XX'
+          identification_types:
+            values:
+              - type: "cedula_ciudadania"
+                value: "Céd. de ciudadanía"
+                placeholder: ""
+                validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+                  expression: ^[0-9]{8,10}$
+              - type: "cedula_extranjera"
+                value: "Céd. de extranjera"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+              - type: "pasaporte"
+                value: "Pasaporte"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+          phone_mobile_number:
+            placeholder: 'XXX-XXXX'
+          birthDate:
             show: true
-            disabled: true
-          province:
-            label: 'Departamento' # Overrides the default `label`
-            show: true
-          city: # Is enabled only if `province` is enabled
-            label: 'Comuna' # Overrides the default `label`
-            show: true
-          address:
-            show: true
-          zipCode:
+          genre:
             show: false
+          location:
+            address:
+              show: true
+            country:
+              show: true
+              disabled: true
+            city:
+              show: true # Enabled only if `province` is enabled
+            province:
+              show: true
+              label: 'Departamento'
+            zipCode:
+              show: false
+        checkout:
+          card_types:
+            values:
+              - text: "Visa"
+                slug: "visa"
+                value: 2
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Visa débito"
+                slug: "visa_debit"
+                value: 7
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Mastercard"
+                slug: "mastercard"
+                value: 3
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Mastercard débito"
+                slug: "mastercard_debit"
+                value: 8
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Amex"
+                slug: "amex"
+                value: 4
+                validator:
+                  card_number:
+                    expression: ^[0-9]{15}$
+                  card_security_code:
+                    expression: ^[0-9]{4}$
+              # - text: "Codensa"
+              #   slug: "codensa"
+              #   value: 5
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{16}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
+              # - text: "Diners"
+              #   slug: "diners"
+              #   value: 6
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{14,15}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
     tracking:
       default:
         salesforce:
