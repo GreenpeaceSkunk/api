@@ -1,7 +1,7 @@
-import dns from 'dns';
 import { DomainType } from "greenpeace";
 
-type DomainUrlType = {domain: string, country: string};
+type DomainUrlType = {domain: string, country: DomainType};
+
 export const getCountryByReferer = (referer = ''): DomainType | any => {
   referer = referer.replace('https://', '').replace('http://', '').replace('www.', '').split('/')[0].split('?')[0];
 
