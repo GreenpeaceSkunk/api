@@ -17,7 +17,7 @@ data:
     form:
       general:
         coupon_regular_label_text: "Autorizo el débito automático mensual de:"
-        coupon_regular_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
+        coupon_regular_label_text_2: "<i>Acepto que se realicen eventuales actualizaciones al monto de mi donación que permitan mantener el valor de los aportes.</i>"
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
       registration:
         title: "Hazte donante"
@@ -201,7 +201,7 @@ data:
               campaign_id: 701V40000024Oqc
           services:
             forma:
-              form_id: 5
+              form_id: 9
         features:
           payment_gateway:
             enabled: false
