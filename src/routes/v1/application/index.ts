@@ -1,10 +1,10 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { requestWrapper } from '../../../middlewares';
+import { refererWrapper, requestWrapper } from '../../../middlewares';
 import { getCouponByName } from './controller';
 
 const router = Router();
 
-router.get('/coupon/:name', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.get('/coupon/:name', [refererWrapper, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await getCouponByName(req);
     res

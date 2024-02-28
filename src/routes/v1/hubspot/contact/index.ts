@@ -1,8 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { IRequestError } from 'greenpeace';
-import { authWrapper } from '../../../../auth';
-import { requestWrapper } from '../../../../middlewares';
 import { createOne, findByEmail, getAll, search, updateOne } from './controller';
+import { authWrapper, requestWrapper } from '../../../../middlewares';
 
 const router = Router();
 

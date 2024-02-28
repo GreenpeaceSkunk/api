@@ -1,22 +1,37 @@
+import dns from 'dns';
 import { DomainType } from "greenpeace";
 
-export const getCountryByReferer = (referer = ''): DomainType | undefined => {
-  if((referer.match(/\.ar\//) || referer.match(/\.ar/) || '').length) {
-    return 'ar';
-  }
-  
-  // if((referer.match(/\.org\//) || referer.match(/\.org/) || '').length) {
-  //   return 'ar';
-  // }
+type DomainUrlType = {domain: string, country: string};
+export const getCountryByReferer = (referer = ''): DomainType | any => {
+  referer = referer.replace('https://', '').replace('http://', '').replace('www.', '').split('/')[0].split('?')[0];
 
-  if((referer.match(/\.co\//) || referer.match(/\.co/) || '').length) {
-    return 'co';
-  }
-  
-  if((referer.match(/\.cl\//) || referer.match(/\.cl/) || '').length) {
-    return 'cl';
+  const topLevelDomain = ['ar', 'cl', 'co'].find((value: string) => {
+    const validTopLevelDomain = referer.match(new RegExp(`\\b${value}\/?\\b`));
+    if(validTopLevelDomain) return validTopLevelDomain;
+  });
+
+  if(typeof topLevelDomain === 'undefined') {
+    const validDomains: Array<DomainUrlType> = [
+      {
+        domain: 'votaporlosbosques.org',
+        country: 'ar',
+      },
+      {
+        domain: 'salvalasleyesambientales.org',
+        country: 'ar',
+      }
+    ];
+
+    const validTopLevelDomain = validDomains.find((value: DomainUrlType) => {
+      if(value.domain.includes(referer)) {
+        return value.country
+      }
+    });
+
+    if(validTopLevelDomain?.country) return validTopLevelDomain?.country;
+
+    return null;
   }
 
-  // Remove it afterwards
-  return 'ar';
+  return topLevelDomain;
 }

@@ -1,10 +1,10 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { requestWrapper, validateReferer } from '../../../middlewares';
+import { refererWrapper, requestWrapper } from '../../../middlewares';
 import { postRecord, getForm } from './controller';
 
 const router = Router();
 
-router.post('/form/:formId/record', [validateReferer(requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.post('/form/:formId/record', [refererWrapper, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   try {
     const {body, params: { formId }} = req;
     const result = await postRecord(formId, body, req.header('Referer'));
@@ -17,9 +17,9 @@ router.post('/form/:formId/record', [validateReferer(requestWrapper(async (req: 
       .status(500)
       .json({ errorMessage: 'Error when posting new record into ForMa' });
   }
-}))]);
+})]);
 
-router.get('/form/:formId?', [validateReferer(requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+router.get('/form/:formId?', [refererWrapper, requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
   console.log('Get form')
   
   const result = await getForm(req);
@@ -29,6 +29,6 @@ router.get('/form/:formId?', [validateReferer(requestWrapper(async (req: Request
   } else {
     res.status(404).json({});  
   }
-}))]);
+})]);
 
 export default router;

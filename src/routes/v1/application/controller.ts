@@ -1,7 +1,6 @@
 import path from 'path';
 import fs from 'fs';
 import YAML from 'yaml';
-import { getCountryByReferer } from '../../../utils/general';
 import { Request } from 'express';
 
 const paymentGateways: {[id: number]: string | null} = {
@@ -12,21 +11,21 @@ const paymentGateways: {[id: number]: string | null} = {
 }
 
 export const getCouponByName = async (req: Request): Promise<any> => {
-  const couponName = 'test';
+  const couponName = req.params.name;
   const environment = req.query.env as string;
-  const domain = getCountryByReferer(req.header('Referer'));
+  const country = req.query.topLevelDomain;
 
   let files: any[] = [];
 
   try {
-    const dirName = `${path.resolve('src')}/data/application/coupon/${domain}`;
+    const dirName = `${path.resolve('src')}/data/application/coupon/${country}`;
     const dir = await fs.promises.opendir(`${dirName}`);
     
     for await (const dirent of dir) {
       files = [...files].concat(dirent.name.split('.')[0]);
     }
-    
-    const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${files.includes(couponName) ? couponName : 'general'}.yaml`, 'utf-8'));
+
+    const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${couponName}.yaml`, 'utf-8'));
 
     const parsedData = {
       name: data.name,
@@ -54,7 +53,7 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     };
     
     parsedData.features.payment_gateway.third_party = paymentGateways[parsedData.features.payment_gateway.third_party];
-   
+
     if(parsedData.features.payment_gateway.enabled && !parsedData.features.payment_gateway.third_party) {
       return Promise.resolve({
         errorMessage: 'If Payment Gateway is enabled, third party might be defined.',
@@ -64,7 +63,7 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     return Promise.resolve(parsedData);
   } catch (err) {
     return Promise.resolve({
-      errorMessage: `The coupon "${couponName}" or "general" at "${domain}" does not exist.`,
+      errorMessage: `Error: coupon '${req.params.name}' at '${country}' does not exist.`,
     });
   }
 }

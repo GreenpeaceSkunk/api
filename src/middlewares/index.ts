@@ -1,9 +1,11 @@
 import { IRequestError } from "greenpeace";
 import { Request, Response, NextFunction, RequestHandler } from "express";
 import { getCountryByReferer } from "../utils/general";
+// import { getCountryByReferer } from "../utils/general";
 
-type RequestWrapperType = (fn: RequestHandler) => RequestHandler;
-const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
+type RequestMiddlewareType = (fn: RequestHandler) => RequestHandler;
+
+export const requestWrapper: RequestMiddlewareType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
   req: Request,
   res: Response,
   next: NextFunction,
@@ -12,13 +14,9 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(error: any) {
-    console.log('Error', error);
-    // const status = (error.response.status) ? error.response.status : 500;
     const status = 500;
-    // const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
-    // const errorMessage = (error.response.statusText) ? error.response.statusText : 'API Internal Server Error';
     res
-      .status(status)
+      .status(500)
       .json({
         status,
         errorMessage: 'API Internal Server Error',
@@ -26,30 +24,33 @@ const requestWrapper: RequestWrapperType = (fn: (...args: any[]) => void | Promi
   }
 }
 
-const validateReferer: RequestWrapperType = (fn: (...args: any[]) => void | Promise<IRequestError> ) => async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
-  try {
-    if(!getCountryByReferer((req.header('Referer')))) {
-      throw new Error('`.ar|.co|.cl` is undefined');
-    }
-
-    const fnReturn = await fn(req, res, next);
-    return fnReturn;
-  } catch(error: any) {
-    console.log('Error', error);
+export const authWrapper: any = requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+  if(!req.headers['x-greenlab-app'] && req.headers['x-greenlab-app'] !== null) {
     res
-      .status(500)
+      .status(403)
       .json({
-        status: 500,
-        errorMessage: '`.ar|.co|.cl` is undefined',
+        status: 403,
+        errorMessage: 'Forbbiden: invalid application.',
       } as IRequestError);
+  } else {
+    next();
   }
-}
+});
 
-export {
-  requestWrapper,
-  validateReferer,
-}
+export const refererWrapper: any = requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+  const country = getCountryByReferer(`${req.header('Referer')}`.toLowerCase());
+  const countries = ['ar', 'cl', 'co'];
+
+  if(!country || !countries.includes(country)) {
+    res
+      .status(400)
+      .json({
+        status: 400,
+        errorMessage: `Forbbiden: invalid country code. Received (${country}).`,
+      } as IRequestError);
+  } else {
+    // Include dynamically to query
+    req.query.topLevelDomain = country;
+    next();
+  }
+});
