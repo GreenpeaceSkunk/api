@@ -226,6 +226,10 @@ data:
           service:
             forma:
               form_id: 59
+        features:
+          payment_gateway:
+            enabled: true
+            third_party: 1
       production:
         settings:
           service:
