@@ -59,7 +59,7 @@ data:
   settings:
     general:
       amounts:
-        values: [ 2000, 4000, 6200 ]
+        values: [ 2000, 4000, 6000 ]
         default: 2000
         min_other_amount: 2000
         currency: "$"
@@ -218,7 +218,7 @@ data:
     services:
       default:
         forma:
-          form_id: 96
+          form_id: 110
   features:
     default:
       use_design_version: 1
@@ -231,3 +231,7 @@ data:
       development:
       test:
       production:
+        settings:
+          service:
+            forma:
+              form_id: 111
