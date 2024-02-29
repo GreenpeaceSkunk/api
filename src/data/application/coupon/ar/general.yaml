@@ -231,7 +231,7 @@ data:
       development:
       test:
         settings:
-          service:
+          services:
             forma:
               form_id: 59
         features:
@@ -240,7 +240,7 @@ data:
             third_party: 1
       production:
         settings:
-          service:
+          services:
             forma:
               form_id: 60
         features:

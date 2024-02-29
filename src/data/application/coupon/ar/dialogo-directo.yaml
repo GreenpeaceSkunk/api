@@ -232,6 +232,6 @@ data:
       test:
       production:
         settings:
-          service:
+          services:
             forma:
               form_id: 111
