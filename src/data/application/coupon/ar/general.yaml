@@ -192,12 +192,6 @@ data:
                     expression: ^[0-9]{16}$
                   card_security_code:
                     expression: ^[0-9]{3}$
-        # card_number:
-        #   validator:
-        #     expression: ^[0-9]{15,16}$
-        # card_security_code:
-        #   validator:
-        #     expression: ^[0-9]{3,4}$
     tracking:
       default:
         salesforce:
@@ -230,19 +224,11 @@ data:
     environment:
       development:
       test:
-        settings:
-          services:
-            forma:
-              form_id: 59
-        features:
-          payment_gateway:
-            enabled: true
-            third_party: 1
       production:
         settings:
           services:
             forma:
-              form_id: 60
+              form_id: 114
         features:
           payment_gateway:
             enabled: true
