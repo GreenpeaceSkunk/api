@@ -95,6 +95,8 @@ data:
             show: false
           genre:
             show: false
+          is_card_holder:
+            show: false
           location:
             country:
               show: false
