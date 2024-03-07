@@ -31,7 +31,13 @@ export const getCouponByName = async (req: Request): Promise<any> => {
       name: data.name,
       site_title: data.site_title,
       country: data.country,
-      content: data.content,
+      content: {
+        ...data.content,
+        header: {
+          ...data.content.header,
+          picture: `${country}/${data.content.header.picture}`,
+        },
+      },
       settings: {
         ...data.settings,
         tracking: {
