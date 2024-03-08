@@ -64,9 +64,7 @@ data:
         min_other_amount: 40000
         currency: "$"
       form_fields:
-        registration:
-          area_code:
-            placeholder: 'XX'
+        shared:
           identification_types:
             values:
               - type: "cedula_ciudadania"
@@ -84,12 +82,17 @@ data:
                 placeholder: ""
                 validator:
                   expression: ^[0-9]{8,10}$
+        registration:
+          area_code:
+            placeholder: 'XX'
           phone_mobile_number:
             placeholder: 'XXX-XXXX'
           birthDate:
             show: true
           genre:
             show: false
+          is_card_holder:
+            show: true 
           location:
             address:
               show: true
