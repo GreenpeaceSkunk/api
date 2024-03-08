@@ -226,11 +226,3 @@ data:
       development:
       test:
       production:
-        settings:
-          services:
-            forma:
-              form_id: 114
-        features:
-          payment_gateway:
-            enabled: true
-            third_party: 1
