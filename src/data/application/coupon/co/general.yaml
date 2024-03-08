@@ -187,6 +187,7 @@ data:
     default:
       use_design_version: 1
       expand_form: true
+      sync_local: true # Only if payment_gateway.enabled is false
       payment_gateway:
         enabled: false
         third_party: 0

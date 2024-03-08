@@ -154,6 +154,8 @@ data:
   features:
     development:
       use_design_version: 1
+      expand_form: false
+      sync_local: true # Only if payment_gateway.enabled is false
       payment_gateway:
         enabled: true
         third_party: 'Transbank' # mercadopago, transbank, payu only if enabled
