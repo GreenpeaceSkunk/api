@@ -1,5 +1,5 @@
 data:
-  name: "dialogo-directo"
+  name: "general"
   site_title: "Asociate a Greenpeace Argentina"
   country: "Argentina"
   content:
@@ -94,8 +94,6 @@ data:
           birthDate:
             show: false
           genre:
-            show: false
-          is_card_holder:
             show: false
           location:
             country:
@@ -194,12 +192,6 @@ data:
                     expression: ^[0-9]{16}$
                   card_security_code:
                     expression: ^[0-9]{3}$
-        # card_number:
-        #   validator:
-        #     expression: ^[0-9]{15,16}$
-        # card_security_code:
-        #   validator:
-        #     expression: ^[0-9]{3,4}$
     tracking:
       default:
         salesforce:
@@ -234,7 +226,3 @@ data:
       development:
       test:
       production:
-        settings:
-          services:
-            forma:
-              form_id: 113
