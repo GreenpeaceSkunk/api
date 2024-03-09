@@ -1,0 +1,201 @@
+data:
+  name: "sync-local"
+  site_title: "Dona a Greenpeace Colombia"
+  country: "Colombia"
+  content:
+    header:
+      title: ""
+      picture: "cupon-gp_500.png"
+      logo:
+        show: true
+        color: white
+    home:
+      title: "Estás a un paso de convertirte en activista por el medioambiente."
+      text: "<p>En Greenpeace NO aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Nuestra libertad e independencia siempre está presente.</p><p>El aporte económico mensual que realizan nuestros donantes se convierte en acción por la protección y defensa de los bosques, océanos, mares, playas y todos los ecosistemas.</p><p>Ayúdanos a respetar y cuidar a la Naturaleza 💚</p><p>Buscamos soluciones y generamos cambios, cada donación SÍ hace la diferencia.</p>"
+      highlighted_text: "Para transformar la realidad necesitamos todo el apoyo posible. El primer paso, está a sólo un click, la decisión es tuya."
+      button_text: "Dona ahora"
+    form:
+      general:
+        coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_regular_label_text_2: "<i>Acepto que se realicen eventuales actualizaciones al monto de mi donación que permitan mantener el valor de los aportes.</i>"
+        coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
+      registration:
+        title: "Hazte donante"
+        text: "Solo contigo - Somos Greenpeace"
+        button_text: "Continuar"
+      checkout:
+        title: "Solo contigo - Somos Greenpeace"
+        text: "Hazte donante"
+        button_text: "¡Súmate ahora!"
+    thank_you:
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+    modal_form:
+        title: "Hazte donante"
+        text: "Solo contigo - Somos Greenpeace"
+        button_text: "Dona ahora"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
+      profiles:
+        facebook:
+          url: "https://www.facebook.com/greenpeaceencolombia"
+          show: true
+        instagram:
+          url: "https://www.instagram.com/greenpeacecolombia/"
+          show: true
+        twitter:
+          url: "https://twitter.com/GreenpeaceColom"
+          show: true
+    social_share:
+      facebook:
+        text: "social_share_facebook_text"
+      twitter:
+        text: "social_share_twitter_text"
+      whatsapp:
+        text: "social_share_whatsapp_text"
+      email:
+        subject: "social_share_email_subject"
+        body: "social_share_email_body"
+  settings:
+    general:
+      amounts:
+        values: [ 40000, 50000, 80000 ]
+        default: 40000
+        min_other_amount: 40000
+        currency: "$"
+      form_fields:
+        shared:
+          identification_types:
+            values:
+              - type: "cedula_ciudadania"
+                value: "Céd. de ciudadanía"
+                placeholder: ""
+                validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+                  expression: ^[0-9]{8,10}$
+              - type: "cedula_extranjera"
+                value: "Céd. de extranjera"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+              - type: "pasaporte"
+                value: "Pasaporte"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+        registration:
+          area_code:
+            placeholder: 'XX'
+          phone_mobile_number:
+            placeholder: 'XXX-XXXX'
+          birthDate:
+            show: true
+          genre:
+            show: false
+          is_card_holder:
+            show: true 
+          location:
+            address:
+              show: true
+            country:
+              show: true
+              disabled: true
+            city:
+              show: true # Enabled only if `province` is enabled
+            province:
+              show: true
+              label: 'Departamento'
+            zipCode:
+              show: false
+        checkout:
+          card_types:
+            values:
+              - text: "Visa"
+                slug: "visa"
+                value: 2
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Visa débito"
+                slug: "visa_debit"
+                value: 7
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Mastercard"
+                slug: "mastercard"
+                value: 3
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Mastercard débito"
+                slug: "mastercard_debit"
+                value: 8
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Amex"
+                slug: "amex"
+                value: 4
+                validator:
+                  card_number:
+                    expression: ^[0-9]{15}$
+                  card_security_code:
+                    expression: ^[0-9]{4}$
+              # - text: "Codensa"
+              #   slug: "codensa"
+              #   value: 5
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{16}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
+              # - text: "Diners"
+              #   slug: "diners"
+              #   value: 6
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{14,15}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
+    tracking:
+      default:
+        salesforce:
+          campaign_id: "7011J000001Jjce"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+            enabled: true
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+            enabled: true
+        facebook:
+          pixel_id: 713455948697688
+          enabled: true
+        hubspot:
+          id: 20432059
+          enabled: true
+    services:
+      default:
+        forma:
+          form_id: 1
+  features:
+    default:
+      use_design_version: 1
+      expand_form: true
+      sync_local: true # Only if payment_gateway.enabled is false
+      payment_gateway:
+        enabled: false
+        third_party: 0
+  overrides:
+    environment:
+      development:
+      test:
+      production:
