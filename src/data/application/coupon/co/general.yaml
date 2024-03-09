@@ -207,6 +207,7 @@ data:
             forma:
               form_id: 9
         features:
+          sync_local: false
           payment_gateway:
             enabled: false
             third_party: 0

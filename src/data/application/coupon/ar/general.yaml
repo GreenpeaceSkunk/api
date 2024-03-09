@@ -234,6 +234,7 @@ data:
             forma:
               form_id: 114
         features:
+          sync_local: false
           payment_gateway:
             enabled: true
             third_party: 1
