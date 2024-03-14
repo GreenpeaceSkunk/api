@@ -107,6 +107,11 @@ data:
             zipCode:
               show: false
         checkout:
+          card_security_code:
+            disabled: true
+          card_expiration_date:
+            show: true
+            required: true
           card_types:
             values:
               - text: "Visa"
@@ -190,7 +195,9 @@ data:
     default:
       use_design_version: 1
       expand_form: true
-      sync_local: true # Only if payment_gateway.enabled is false
+      sync_local:
+        enabled: true # Only if payment_gateway.enabled is false
+        total_collectors: 10
       payment_gateway:
         enabled: false
         third_party: 0
