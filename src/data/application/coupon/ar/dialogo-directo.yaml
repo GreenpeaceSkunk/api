@@ -64,7 +64,7 @@ data:
         min_other_amount: 2000
         currency: "$"
       form_fields:
-        registration:
+        shared:
           identification_types:
             values:
               - type: "dni"
@@ -87,6 +87,7 @@ data:
                 placeholder: ""
                 validator:
                   expression: ^[0-9A-Z]{6,10}$
+        registration:
           area_code:
             placeholder: 'Ej. XX'
           phone_mobile_number:
