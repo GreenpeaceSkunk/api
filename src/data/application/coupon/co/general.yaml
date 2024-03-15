@@ -59,9 +59,9 @@ data:
   settings:
     general:
       amounts:
-        values: [ 40000, 50000, 80000 ]
-        default: 40000
-        min_other_amount: 40000
+        values: [ 30000, 50000, 80000 ]
+        default: 30000
+        min_other_amount: 30000
         currency: "$"
       form_fields:
         shared:
