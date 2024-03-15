@@ -1,26 +1,73 @@
 data:
-  Buenos Aires:
-  Ciudad Autónoma de Buenos Aires:
-  Catamarca:
-  Chaco:
-  Chubut:
-  Córdoba:
-  Corrientes:
-  Entre Ríos:
-  Formosa:
-  Jujuy:
-  La Pampa:
-  La Rioja:
-  Mendoza:
-  Misiones:
-  Neuquén:
-  Río Negro:
-  Salta:
-  San Juan:
-  San Luis:
-  Santa Cruz:
-  Santa Fe:
-  Santiago del Estero:
-  Tierra del Fuego, Antártida e Islas del Atlántico Sur:
-  Tucumán:
-
+  - name: Ciudad Autónoma de Buenos Aires
+    code: 02
+    data:
+  - name: Buenos Aires
+    code: 06
+    data:
+  - name: Catamarca
+    code: 10
+    data:
+  - name: Córdoba
+    code: 14
+    data:
+  - name: Corrientes
+    code: 18
+    data:
+  - name: Chaco
+    code: 22
+    data:
+  - name: Chubut
+    code: 26
+    data:
+  - name: Entre Ríos
+    code: 30
+    data:
+  - name: Formosa
+    code: 34
+    data:
+  - name: Jujuy
+    code: 38
+    data:
+  - name: La Pampa
+    code: 42
+    data:
+  - name: La Rioja
+    code: 46
+    data:
+  - name: Mendoza
+    code: 50
+    data:
+  - name: Misiones
+    code: 54
+    data:
+  - name: Neuquén
+    code: 58
+    data:
+  - name: Río Negro
+    code: 62
+    data:
+  - name: Salta
+    code: 66
+    data:
+  - name: San Juan
+    code: 70
+    data:
+  - name: San Luis
+    code: 74
+    data:
+  - name: Santa Cruz
+    code: 78
+    data:
+  - name: Santa Fe
+    code: 82
+    data:
+  - name: Santiago del Estero
+    code: 86
+    data:
+  - name: Tucumán
+    code: 90
+    data:
+  - name: Tierra del Fuego, Antártida e Islas del Atlántico Sur
+    code: 94
+    data:

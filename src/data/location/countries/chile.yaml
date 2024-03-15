@@ -1,69 +1,99 @@
 data:
-  Antofagasta:
-    - Antofagasta
-    - Tocopilla
-    - El Loa y Antofagasta
-  Arica y Parinacota:
-    - Arica y Parinacota
-  Atacama:
-    - Copiapó
-    - Chañaral
-    - Huasco
-  Aysén del General Carlos Ibañez del Campo:
-    - Coyhaique
-    - Aisén
-    - Capitán Prat
-    - General Carrera
-  Coquimbo:
-    - Elqui
-    - Choapa
-    - Limarí
-  La Araucanía:
-    - Cautín
-    - Malleco
-  Los Lagos:
-    - Llanquihue
-    - Chiloé
-    - Osorno
-    - Palena
-  Los Ríos:
-    - Valdivia
-    - Ranco
-  Magallanes y de la Antártica Chilena:
-    - Magallanes
-    - Antártica Chilena
-    - Tierra del Fuego
-    - Última Esperanza
-  Bio-Bío:
-    - Concepción
-    - Arauco
-    - Biobío
-    - Ñuble
-  O'Higgins:
-    - Cachapoal
-    - Cardenal Caro
-    - Colchagua
-  Maule:
-    - Talca
-    - Cauquenes
-    - Curicó
-    - Linares
-  Metropolitana de Santiago:
-    - Santiago 
-    - Cordillera 
-    - Chacabuco
-    - Maipo
-    - Melipilla
-    - Talagante
-  Tarapacá:
-    - Iquique
-    - Tamarugal
-  Valparaíso:
-    - Valparaíso
-    - Isla de Pascua
-    - Los Andes
-    - Petorca
-    - Quillota
-    - San Antonio
-    - San Felipe de Aconcagua
-    - Marga Marga
+  - name: Antofagasta
+    code:
+    data:
+      - Antofagasta
+      - Tocopilla
+      - El Loa y Antofagasta
+  - name: Arica y Parinacota
+    code:
+    data:
+      - Arica y Parinacota
+  - name: Atacama
+    code:
+    data:
+      - Copiapó
+      - Chañaral
+      - Huasco
+  - name: Aysén del General Carlos Ibañez del Campo
+    code:
+    data:
+      - Coyhaique
+      - Aisén
+      - Capitán Prat
+      - General Carrera
+  - name: Coquimbo
+    code:
+    data:
+      - Elqui
+      - Choapa
+      - Limarí
+  - name: La Araucanía
+    code:
+    data:
+      - Cautín
+      - Malleco
+  - name: Los Lagos
+    code:
+    data:
+      - Llanquihue
+      - Chiloé
+      - Osorno
+      - Palena
+  - name: Los Ríos
+    code:
+    data:
+      - Valdivia
+      - Ranco
+  - name: Magallanes y de la Antártica Chilena
+    code:
+    data:
+      - Magallanes
+      - Antártica Chilena
+      - Tierra del Fuego
+      - Última Esperanza
+  - name: Bio-Bío
+    code:
+    data:
+      - Concepción
+      - Arauco
+      - Biobío
+      - Ñuble
+  - name: O'Higgins
+    code:
+    data:
+      - Cachapoal
+      - Cardenal Caro
+      - Colchagua
+  - name: Maule
+    code:
+    data:
+      - Talca
+      - Cauquenes
+      - Curicó
+      - Linares
+  - name: Metropolitana de Santiago
+    code:
+    data:
+      - Santiago
+      - Cordillera
+      - Chacabuco
+      - Maipo
+      - Melipilla
+      - Talagante
+  - name: Tarapacá
+    code:
+    data:
+      - Iquique
+      - Tamarugal
+  - name: Valparaíso
+    code:
+    data:
+      - Valparaíso
+      - Isla de Pascua
+      - Los Andes
+      - Petorca
+      - Quillota
+      - San Antonio
+      - San Felipe de Aconcagua
+      - Marga Marga

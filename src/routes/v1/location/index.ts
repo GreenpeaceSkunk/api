@@ -35,11 +35,12 @@ router.get('/world/countries/:country', [requestWrapper(async (req: Request, res
   if(result) {
     res
       .status(200)
-      .json(Object.keys(result.data).map((province: string) => {
+      .json(result.data.map(({ code, data, name }: {name: string; code: number; data: Array<string>}) => {
         return {
-          name: province,
-          slug: province.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, ""),
-          cities: result.data[province],
+          name,
+          code,
+          slug: name.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, ""),
+          cities: data,
         }
       }));
   } else {
