@@ -11,7 +11,6 @@ const paymentGateways: {[id: number]: string | null} = {
 }
 
 export const getCouponByName = async (req: Request): Promise<any> => {
-  const couponName = req.params.name;
   const environment = req.query.env as string;
   const country = req.query.topLevelDomain;
 
@@ -21,10 +20,11 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     const dirName = `${path.resolve('src')}/data/application/coupon/${country}`;
     const dir = await fs.promises.opendir(`${dirName}`);
     
-    for await (const dirent of dir) {
-      files = [...files].concat(dirent.name.split('.')[0]);
+    for await (const file of dir) {
+      files = [...files].concat(file.name.split('.')[0]);
     }
 
+    const couponName = files.includes(req.params.name) ? req.params.name : 'general';
     const {data} = await YAML.parse(fs.readFileSync(`${dirName}/${couponName}.yaml`, 'utf-8'));
 
     const parsedData = {
@@ -69,7 +69,7 @@ export const getCouponByName = async (req: Request): Promise<any> => {
     return Promise.resolve(parsedData);
   } catch (err) {
     return Promise.resolve({
-      errorMessage: `Error: coupon '${req.params.name}' at '${country}' does not exist.`,
+      errorMessage: `Error: coupon '${req.params.name}' does not exist at '${country}' or malformed.`,
     });
   }
 }
