@@ -1,10 +1,10 @@
 data:
   - name: Bogotá D.C.
-    code: 001
+    code: "001"
     data:
       - Bogotá D.C.
   - name: Amazonas
-    code: 002
+    code: "002"
     data:
       - El Encanto
       - La Chorrera
@@ -18,7 +18,7 @@ data:
       - Puerto Santander
       - Tarapacá
   - name: Antioquia
-    code: 003
+    code: "003"
     data:
       - Abejorral
       - Abriaquí
@@ -146,7 +146,7 @@ data:
       - Yondó
       - Zaragoza
   - name: Arauca
-    code: 004
+    code: "004"
     data:
       - Arauca
       - Arauquita
@@ -156,7 +156,7 @@ data:
       - Saravena
       - Tame
   - name: Atlantico
-    code: 005
+    code: "005"
     data:
       - Baranoa
       - Barranquilla
@@ -182,7 +182,7 @@ data:
       - Tubará
       - Usiacurí
   - name: Bolivar
-    code: 006
+    code: "006"
     data:
       - Achí
       - Altos del Rosario
@@ -231,7 +231,7 @@ data:
       - Villanueva
       - Zambrano
   - name: Boyaca
-    code: 007
+    code: "007"
     data:
       - Almeida
       - Aquitania
@@ -357,7 +357,7 @@ data:
       - Viracachá
       - Zetaquira
   - name: Caldas
-    code: 008
+    code: "008"
     data:
       - Aguadas
       - Anserma
@@ -387,7 +387,7 @@ data:
       - Villamaría
       - Viterbo
   - name: Caqueta
-    code: 009
+    code: "009"
     data:
       - Albania
       - Belén de Los Andaquies
@@ -406,7 +406,7 @@ data:
       - Solita
       - Valparaíso
   - name: Casanare
-    code: 010
+    code: "010"
     data:
       - Aguazul
       - Chámeza
@@ -428,7 +428,7 @@ data:
       - Villanueva
       - Yopal
   - name: Cauca
-    code: 011
+    code: "011"
     data:
       - Almaguer
       - Argelia
@@ -473,7 +473,7 @@ data:
       - Totoró
       - Villa Rica
   - name: Cesar
-    code: 012
+    code: "012"
     data:
       - Aguachica
       - Agustín Codazzi
@@ -501,7 +501,7 @@ data:
       - Tamalameque
       - Valledupar
   - name: Choco
-    code: 013
+    code: "013"
     data:
       - Acandí
       - Alto Baudo
@@ -535,7 +535,7 @@ data:
       - Unguía
       - Unión Panamericana
   - name: Cordoba
-    code: 014
+    code: "014"
     data:
       - Ayapel
       - Buenavista
@@ -568,7 +568,7 @@ data:
       - Tuchín
       - Valencia
   - name: Cundinamarca
-    code: 015
+    code: "015"
     data:
       - Agua de Dios
       - Albán
@@ -687,7 +687,7 @@ data:
       - Zipacón
       - Zipaquirá
   - name: Guainia
-    code: 016
+    code: "016"
     data:
       - Barranco Minas
       - Cacahual
@@ -699,14 +699,14 @@ data:
       - Puerto Colombia
       - San Felipe
   - name: Guaviare
-    code: 017
+    code: "017"
     data:
       - Calamar
       - El Retorno
       - Miraflores
       - San José del Guaviare
   - name: Huila
-    code: 018
+    code: "018"
     data:
       - Acevedo
       - Agrado
@@ -746,7 +746,7 @@ data:
       - Villavieja
       - Yaguará
   - name: La Guajira
-    code: 019
+    code: "019"
     data:
       - Albania
       - Barrancas
@@ -764,7 +764,7 @@ data:
       - Urumita
       - Villanueva
   - name: Magdalena
-    code: 020
+    code: "020"
     data:
       - Algarrobo
       - Aracataca
@@ -797,7 +797,7 @@ data:
       - Zapayán
       - Zona Bananera
   - name: Meta
-    code: 021
+    code: "021"
     data:
       - Acacias
       - Barranca de Upía
@@ -829,7 +829,7 @@ data:
       - Villavicencio
       - Vista Hermosa
   - name: Nariño
-    code: 022
+    code: "022"
     data:
       - Albán
       - Aldana
@@ -896,7 +896,7 @@ data:
       - Túquerres
       - Yacuanquer
   - name: Norte de Santander
-    code: 023
+    code: "023"
     data:
       - Abrego
       - Arboledas
@@ -939,7 +939,7 @@ data:
       - Villa Caro
       - Villa del Rosario
   - name: Putumayo
-    code: 024
+    code: "024"
     data:
       - Colón
       - Leguízamo
@@ -955,7 +955,7 @@ data:
       - Valle de Guamez
       - Villagarzón
   - name: Quindio
-    code: 025
+    code: "025"
     data:
       - Armenia
       - Buenavista
@@ -970,7 +970,7 @@ data:
       - Quimbaya
       - Salento
   - name: Risaralda
-    code: 026
+    code: "026"
     data:
       - Apía
       - Balboa
@@ -987,12 +987,12 @@ data:
       - Santa Rosa de Cabal
       - Santuario
   - name: San Andres y Providencia
-    code: 027
+    code: "027"
     data:
       - Providencia
       - San Andrés
   - name: Santander
-    code: 028
+    code: "028"
     data:
       - Aguada
       - Albania
@@ -1082,7 +1082,7 @@ data:
       - Villanueva
       - Zapatoca
   - name: Sucre
-    code: 029
+    code: "029"
     data:
       - Buenavista
       - Caimito
@@ -1111,7 +1111,7 @@ data:
       - Sucre
       - Tolú Viejo
   - name: Tolima
-    code: 030
+    code: "030"
     data:
       - Alpujarra
       - Alvarado
@@ -1161,7 +1161,7 @@ data:
       - Villahermosa
       - Villarrica
   - name: Valle del Cauca
-    code: 031
+    code: "031"
     data:
       - Alcalá
       - Andalucía
@@ -1206,7 +1206,7 @@ data:
       - Yumbo
       - Zarzal
   - name: Vaupes
-    code: 032
+    code: "032"
     data:
       - Carurú
       - Mitú
@@ -1215,7 +1215,7 @@ data:
       - Taraira
       - Yavaraté
   - name: Vichada
-    code: 033
+    code: "033"
     data:
       - Cumaribo
       - La Primavera
