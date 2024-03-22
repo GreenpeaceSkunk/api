@@ -92,7 +92,7 @@ data:
           genre:
             show: false
           is_card_holder:
-            show: true 
+            show: true
           location:
             address:
               show: true
