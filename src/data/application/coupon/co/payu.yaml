@@ -235,7 +235,7 @@ data:
     services:
       default:
         forma:
-          form_id: 9
+          form_id: 13
   features:
     default:
       use_design_version: 1
@@ -255,7 +255,7 @@ data:
               campaign_id: 701V40000024Oqc
           services:
             forma:
-              form_id: 9
+              form_id: 14
         features:
           sync_local: false
           payment_gateway:
