@@ -1,79 +1,79 @@
 data:
   - name: Antofagasta
-    code:
+    code: ""
     data:
       - Antofagasta
       - Tocopilla
       - El Loa y Antofagasta
   - name: Arica y Parinacota
-    code:
+    code: ""
     data:
       - Arica y Parinacota
   - name: Atacama
-    code:
+    code: ""
     data:
       - Copiapó
       - Chañaral
       - Huasco
   - name: Aysén del General Carlos Ibañez del Campo
-    code:
+    code: ""
     data:
       - Coyhaique
       - Aisén
       - Capitán Prat
       - General Carrera
   - name: Coquimbo
-    code:
+    code: ""
     data:
       - Elqui
       - Choapa
       - Limarí
   - name: La Araucanía
-    code:
+    code: ""
     data:
       - Cautín
       - Malleco
   - name: Los Lagos
-    code:
+    code: ""
     data:
       - Llanquihue
       - Chiloé
       - Osorno
       - Palena
   - name: Los Ríos
-    code:
+    code: ""
     data:
       - Valdivia
       - Ranco
   - name: Magallanes y de la Antártica Chilena
-    code:
+    code: ""
     data:
       - Magallanes
       - Antártica Chilena
       - Tierra del Fuego
       - Última Esperanza
   - name: Bio-Bío
-    code:
+    code: ""
     data:
       - Concepción
       - Arauco
       - Biobío
       - Ñuble
   - name: O'Higgins
-    code:
+    code: ""
     data:
       - Cachapoal
       - Cardenal Caro
       - Colchagua
   - name: Maule
-    code:
+    code: ""
     data:
       - Talca
       - Cauquenes
       - Curicó
       - Linares
   - name: Metropolitana de Santiago
-    code:
+    code: ""
     data:
       - Santiago
       - Cordillera
@@ -82,12 +82,12 @@ data:
       - Melipilla
       - Talagante
   - name: Tarapacá
-    code:
+    code: ""
     data:
       - Iquique
       - Tamarugal
   - name: Valparaíso
-    code:
+    code: ""
     data:
       - Valparaíso
       - Isla de Pascua

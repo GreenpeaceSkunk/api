@@ -28,8 +28,8 @@ data:
         text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
         button_text: "Doná"
     thank_you:
-      title: "thank_you_title"
-      text: "thank_you_text"
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
       button_cta:
         text: "thank_you_button_cta_text"
         link: "https://www.greenpeace.org.ar"
