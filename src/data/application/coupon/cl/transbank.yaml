@@ -38,7 +38,7 @@ data:
       text: "modal_form_text"
       button_text: "modal_form_button_text"
     social_media:
-      text: "social_media_text"
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
       profiles:
         facebook:
           profle: "https://www.facebook.com/greenpeace.chile/"
