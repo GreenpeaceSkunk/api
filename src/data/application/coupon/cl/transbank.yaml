@@ -154,12 +154,12 @@ data:
     services:
       default:
         forma:
-          form_id: 1
+          form_id: 22
   features:
     default:
       use_design_version: 1
       expand_form: false
-      sync_local: true # Only if payment_gateway.enabled is false
+      sync_local: true
       payment_gateway:
         enabled: true
         third_party: 3
@@ -171,4 +171,4 @@ data:
         settings:
           services:
             forma:
-              form_id: 2
+              form_id: 23
