@@ -256,8 +256,3 @@ data:
           services:
             forma:
               form_id: 14
-        features:
-          sync_local: false
-          payment_gateway:
-            enabled: false
-            third_party: 0

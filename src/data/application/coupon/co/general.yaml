@@ -67,18 +67,33 @@ data:
         shared:
           identification_types:
             values:
-              - type: "cedula_ciudadania"
+              - type: "CC"
                 value: "Céd. de ciudadanía"
                 placeholder: ""
                 validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
                   expression: ^[0-9]{8,10}$
-              - type: "cedula_extranjera"
+              - type: "CE"
                 value: "Céd. de extranjera"
                 placeholder: ""
                 validator:
                   expression: ^[0-9]{8,10}$
-              - type: "pasaporte"
+              - type: "PP"
                 value: "Pasaporte"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+              - type: "TI"
+                value: "Tarjeta de Identidad"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+              - type: "RC"
+                value: "Registro civil de nacimiento"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9]{8,10}$
+              - type: "NIT"
+                value: "Número de Identificación Tributaria"
                 placeholder: ""
                 validator:
                   expression: ^[0-9]{8,10}$
@@ -96,6 +111,10 @@ data:
           location:
             address:
               show: true
+              required: true
+            addressNumber:
+              show: true
+              required: true
             country:
               show: true
               disabled: true
@@ -149,22 +168,53 @@ data:
                     expression: ^[0-9]{15}$
                   card_security_code:
                     expression: ^[0-9]{4}$
-              # - text: "Codensa"
-              #   slug: "codensa"
-              #   value: 5
-              #   validator:
-              #     card_number:
-              #       expression: ^[0-9]{16}$
-              #     card_security_code:
-              #       expression: ^[0-9]{3,4}$
-              # - text: "Diners"
-              #   slug: "diners"
-              #   value: 6
-              #   validator:
-              #     card_number:
-              #       expression: ^[0-9]{14,15}$
-              #     card_security_code:
-              #       expression: ^[0-9]{3,4}$
+              - text: "Codensa"
+                slug: "codensa"
+                value: 5
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3,4}$
+              - text: "Diners"
+                slug: "diners"
+                value: 6
+                validator:
+                  card_number:
+                    expression: ^[0-9]{14,15}$
+                  card_security_code:
+                    expression: ^[0-9]{3,4}$
+          bank_account_types:
+            values:
+              - text: 'Cuentas de ahorro'
+                slug: 'cuenta_ahorro'
+                value: 'AHORROS'
+              # - text: 'Cuentas exprés'
+              #   slug: 'cuenta_expres'
+              #   value: 'CE'
+              # - text: 'Cuentas de nómina'
+              #   slug: 'cuenta_nomina'
+              #   value: 'CN'
+              # - text: 'Cuentas corrientes'
+              #   slug: 'cuenta_corriente'
+              #   value: 'CC'
+              # - text: 'Certificados de depósito o CDT'
+              #   slug: 'cuenta_certificado_deposito'
+              #   value: 'CDT'
+              # - text: 'Cuentas para pensión'
+              #   slug: 'cuenta_pension'
+              #   value: 'CP'
+          banks:
+            values:
+              - text: 'Banco 1'
+                slug: 'bank_1'
+                value: 'bank_1'
+              - text: 'Banco 2'
+                slug: 'bank_2'
+                value: 'bank_2'
+              - text: 'Banco 3'
+                slug: 'bank_3'
+                value: 'bank_3'
     tracking:
       default:
         salesforce:
@@ -185,15 +235,15 @@ data:
     services:
       default:
         forma:
-          form_id: 9
+          form_id: 13
   features:
     default:
       use_design_version: 1
       expand_form: true
       sync_local: false # Only if payment_gateway.enabled is false
       payment_gateway:
-        enabled: false
-        third_party: 0
+        enabled: true
+        third_party: 2
   overrides:
     environment:
       development:
@@ -205,7 +255,7 @@ data:
               campaign_id: 701V40000024Oqc
           services:
             forma:
-              form_id: 9
+              form_id: 14
         features:
           sync_local: false
           payment_gateway:
