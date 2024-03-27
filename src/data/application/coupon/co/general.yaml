@@ -1,5 +1,5 @@
 data:
-  name: "colombia-general"
+  name: "colombia-payu"
   site_title: "Dona a Greenpeace Colombia"
   country: "Colombia"
   content:
@@ -99,9 +99,13 @@ data:
                   expression: ^[0-9]{8,10}$
         registration:
           area_code:
-            placeholder: 'XX'
-          phone_mobile_number:
-            placeholder: 'XXX-XXXX'
+            placeholder: 'Ej. XXX'
+            validator:
+              expression: ^[0-9]{3}$
+          phone_number:
+            placeholder: 'Ej. XXXXXXX'
+            validator:
+              expression: ^[0-9]{9}$
           birthDate:
             show: true
           genre:
@@ -256,8 +260,3 @@ data:
           services:
             forma:
               form_id: 14
-        features:
-          sync_local: false
-          payment_gateway:
-            enabled: false
-            third_party: 0

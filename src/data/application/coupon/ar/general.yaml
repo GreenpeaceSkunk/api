@@ -90,8 +90,13 @@ data:
         registration:
           area_code:
             placeholder: 'Ej. XX'
-          phone_mobile_number:
-            placeholder: 'Ej. XXX-XXXX'
+            validator:
+              expression: ^[0-9]{2}$
+          phone_number:
+            placeholder: 'Ej. XXXXXXXX'
+            helpText: 'Solo números sin el 15.'
+            validator:
+              expression: ^[0-9]{8}$
           birthDate:
             show: false
           genre:

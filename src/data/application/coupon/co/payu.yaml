@@ -99,9 +99,13 @@ data:
                   expression: ^[0-9]{8,10}$
         registration:
           area_code:
-            placeholder: 'XX'
-          phone_mobile_number:
-            placeholder: 'XXX-XXXX'
+            placeholder: 'Ej. XXX'
+            validator:
+              expression: ^[0-9]{3}$
+          phone_number:
+            placeholder: 'Ej. XXXXXXX'
+            validator:
+              expression: ^[0-9]{7}$
           birthDate:
             show: true
           genre:

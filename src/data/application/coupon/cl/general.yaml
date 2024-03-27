@@ -28,8 +28,8 @@ data:
         text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
         button_text: "Doná"
     thank_you:
-      title: "thank_you_title"
-      text: "thank_you_text"
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
       button_cta:
         text: "thank_you_button_cta_text"
         link: "https://www.greenpeace.org.ar"
@@ -38,7 +38,7 @@ data:
       text: "modal_form_text"
       button_text: "modal_form_button_text"
     social_media:
-      text: "social_media_text"
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
       profiles:
         facebook:
           profle: "https://www.facebook.com/greenpeace.chile/"
@@ -75,12 +75,15 @@ data:
                 placeholder: "Ej. XX.XXX.XXX-X"
                 validator:
                   expression: ^(\d{1,3}(?:\.\d{1,3}){2}-[\dkK])$
-
         registration:
           area_code:
-            placeholder: 'Ej. XX'
-          phone_mobile_number:
-            placeholder: 'Ej. XXX-XXXX'
+            placeholder: 'Ej. 9'
+            validator:
+              expression: ^[9]{1}$
+          phone_number:
+            placeholder: 'Ej. XXXXXXX'
+            validator:
+              expression: ^[0-9]{8}$
           birthDate:
             show: true
           genre:
@@ -97,8 +100,12 @@ data:
               show: true
             address:
               show: true
-            zipCode:
+              required: true
+            addressNumber:
               show: true
+              required: true
+            zipCode:
+              show: false
         checkout:
           card_types:
             values:
@@ -154,12 +161,12 @@ data:
     services:
       default:
         forma:
-          form_id: 1
+          form_id: 22
   features:
     default:
       use_design_version: 1
       expand_form: false
-      sync_local: true # Only if payment_gateway.enabled is false
+      sync_local: true
       payment_gateway:
         enabled: true
         third_party: 3
@@ -171,4 +178,4 @@ data:
         settings:
           services:
             forma:
-              form_id: 2
+              form_id: 23
