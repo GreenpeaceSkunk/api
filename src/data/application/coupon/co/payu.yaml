@@ -60,8 +60,8 @@ data:
     general:
       amounts:
         values: [ 30000, 50000, 80000 ]
-        default: 30000
-        min_other_amount: 30000
+        default: 1000
+        min_other_amount: 1000
         currency: "$"
       form_fields:
         shared:
