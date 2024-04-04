@@ -116,6 +116,8 @@ data:
             address:
               show: true
               required: true
+              validator:
+                expression: ^[A-Za-z0-9\s\-]*$
             addressNumber:
               show: true
               required: true
