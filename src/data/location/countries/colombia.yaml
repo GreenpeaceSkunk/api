@@ -1,1223 +1,2369 @@
-data:
-  - name: Bogotá D.C.
-    code: "001"
-    data:
-      - Bogotá D.C.
-  - name: Amazonas
-    code: "002"
-    data:
-      - El Encanto
-      - La Chorrera
-      - La Pedrera
-      - La Victoria
-      - Leticia
-      - Miriti Paraná
-      - Puerto Alegría
-      - Puerto Arica
-      - Puerto Nariño
-      - Puerto Santander
-      - Tarapacá
-  - name: Antioquia
-    code: "003"
-    data:
-      - Abejorral
-      - Abriaquí
-      - Alejandría
-      - Amagá
-      - Amalfi
-      - Andes
-      - Angelópolis
-      - Angostura
-      - Anorí
-      - Anza
-      - Apartadó
-      - Arboletes
-      - Argelia
-      - Armenia
-      - Barbosa
-      - Bello
-      - Belmira
-      - Betania
-      - Betulia
-      - Briceño
-      - Buriticá
-      - Cáceres
-      - Caicedo
-      - Caldas
-      - Campamento
-      - Cañasgordas
-      - Caracolí
-      - Caramanta
-      - Carepa
-      - Carolina
-      - Caucasia
-      - Chigorodó
-      - Cisneros
-      - Ciudad Bolívar
-      - Cocorná
-      - Concepción
-      - Concordia
-      - Copacabana
-      - Dabeiba
-      - Don Matías
-      - Ebéjico
-      - El Bagre
-      - El Carmen de Viboral
-      - El Santuario
-      - Entrerrios
-      - Envigado
-      - Fredonia
-      - Frontino
-      - Giraldo
-      - Girardota
-      - Gómez Plata
-      - Granada
-      - Guadalupe
-      - Guarne
-      - Guatapé
-      - Heliconia
-      - Hispania
-      - Itagui
-      - Ituango
-      - Jardín
-      - Jericó
-      - La Ceja
-      - La Estrella
-      - La Pintada
-      - La Unión
-      - Liborina
-      - Maceo
-      - Marinilla
-      - Medellín
-      - Montebello
-      - Murindó
-      - Mutatá
-      - Nariño
-      - Nechí
-      - Necoclí
-      - Olaya
-      - Peñol
-      - Peque
-      - Pueblorrico
-      - Puerto Berrío
-      - Puerto Nare
-      - Puerto Triunfo
-      - Remedios
-      - Retiro
-      - Rionegro
-      - Sabanalarga
-      - Sabaneta
-      - Salgar
-      - San Andrés de Cuerquía
-      - San Carlos
-      - San Francisco
-      - San Jerónimo
-      - San José de La Montaña
-      - San Juan de Urabá
-      - San Luis
-      - San Pedro
-      - San Pedro de Uraba
-      - San Rafael
-      - San Roque
-      - San Vicente
-      - Santa Bárbara
-      - Santa Rosa de Osos
-      - Santafé de Antioquia
-      - Santo Domingo
-      - Segovia
-      - Sonsón
-      - Sopetrán
-      - Támesis
-      - Tarazá
-      - Tarso
-      - Titiribí
-      - Toledo
-      - Turbo
-      - Uramita
-      - Urrao
-      - Valdivia
-      - Valparaíso
-      - Vegachí
-      - Venecia
-      - Vigía del Fuerte
-      - Yalí
-      - Yarumal
-      - Yolombó
-      - Yondó
-      - Zaragoza
-  - name: Arauca
-    code: "004"
-    data:
-      - Arauca
-      - Arauquita
-      - Cravo Norte
-      - Fortul
-      - Puerto Rondón
-      - Saravena
-      - Tame
-  - name: Atlantico
-    code: "005"
-    data:
-      - Baranoa
-      - Barranquilla
-      - Campo de La Cruz
-      - Candelaria
-      - Galapa
-      - Juan de Acosta
-      - Luruaco
-      - Malambo
-      - Manatí
-      - Palmar de Varela
-      - Piojó
-      - Polonuevo
-      - Ponedera
-      - Puerto Colombia
-      - Repelón
-      - Sabanagrande
-      - Sabanalarga
-      - Santa Lucía
-      - Santo Tomás
-      - Soledad
-      - Suan
-      - Tubará
-      - Usiacurí
-  - name: Bolivar
-    code: "006"
-    data:
-      - Achí
-      - Altos del Rosario
-      - Arenal
-      - Arjona
-      - Arroyohondo
-      - Barranco de Loba
-      - Calamar
-      - Cantagallo
-      - Cartagena
-      - Cicuco
-      - Clemencia
-      - Córdoba
-      - El Carmen de Bolívar
-      - El Guamo
-      - El Peñón
-      - Hatillo de Loba
-      - Magangué
-      - Mahates
-      - Margarita
-      - María la Baja
-      - Mompós
-      - Montecristo
-      - Morales
-      - Norosí
-      - Pinillos
-      - Regidor
-      - Río Viejo
-      - San Cristóbal
-      - San Estanislao
-      - San Fernando
-      - San Jacinto
-      - San Jacinto del Cauca
-      - San Juan Nepomuceno
-      - San Martín de Loba
-      - San Pablo de Borbur
-      - Santa Catalina
-      - Santa Rosa
-      - Santa Rosa del Sur
-      - Simití
-      - Soplaviento
-      - Talaigua Nuevo
-      - Tiquisio
-      - Turbaco
-      - Turbaná
-      - Villanueva
-      - Zambrano
-  - name: Boyaca
-    code: "007"
-    data:
-      - Almeida
-      - Aquitania
-      - Arcabuco
-      - Belén
-      - Berbeo
-      - Betéitiva
-      - Boavita
-      - Boyacá
-      - Briceño
-      - Buena Vista
-      - Busbanzá
-      - Caldas
-      - Campohermoso
-      - Cerinza
-      - Chinavita
-      - Chiquinquirá
-      - Chíquiza
-      - Chiscas
-      - Chita
-      - Chitaraque
-      - Chivatá
-      - Chivor
-      - Ciénega
-      - Cómbita
-      - Coper
-      - Corrales
-      - Covarachía
-      - Cubará
-      - Cucaita
-      - Cuítiva
-      - Duitama
-      - El Cocuy
-      - El Espino
-      - Firavitoba
-      - Floresta
-      - Gachantivá
-      - Gameza
-      - Garagoa
-      - Guacamayas
-      - Guateque
-      - Guayatá
-      - Güicán
-      - Iza
-      - Jenesano
-      - Jericó
-      - La Capilla
-      - La Uvita
-      - La Victoria
-      - Labranzagrande
-      - Macanal
-      - Maripí
-      - Miraflores
-      - Mongua
-      - Monguí
-      - Moniquirá
-      - Motavita
-      - Muzo
-      - Nobsa
-      - Nuevo Colón
-      - Oicatá
-      - Otanche
-      - Pachavita
-      - Páez
-      - Paipa
-      - Pajarito
-      - Panqueba
-      - Pauna
-      - Paya
-      - Paz de Río
-      - Pesca
-      - Pisba
-      - Puerto Boyacá
-      - Quípama
-      - Ramiriquí
-      - Ráquira
-      - Rondón
-      - Saboyá
-      - Sáchica
-      - Samacá
-      - San Eduardo
-      - San José de Pare
-      - San Luis de Gaceno
-      - San Mateo
-      - San Miguel de Sema
-      - San Pablo de Borbur
-      - Santa María
-      - Santa Rosa de Viterbo
-      - Santa Sofía
-      - Santana
-      - Sativanorte
-      - Sativasur
-      - Siachoque
-      - Soatá
-      - Socha
-      - Socotá
-      - Sogamoso
-      - Somondoco
-      - Sora
-      - Soracá
-      - Sotaquirá
-      - Susacón
-      - Sutamarchán
-      - Sutatenza
-      - Tasco
-      - Tenza
-      - Tibaná
-      - Tibasosa
-      - Tinjacá
-      - Tipacoque
-      - Toca
-      - Togüí
-      - Tópaga
-      - Tota
-      - Tunja
-      - Tununguá
-      - Turmequé
-      - Tuta
-      - Tutazá
-      - Umbita
-      - Ventaquemada
-      - Villa de Leyva
-      - Viracachá
-      - Zetaquira
-  - name: Caldas
-    code: "008"
-    data:
-      - Aguadas
-      - Anserma
-      - Aranzazu
-      - Belalcázar
-      - Chinchiná
-      - Filadelfia
-      - La Dorada
-      - La Merced
-      - Manizales
-      - Manzanares
-      - Marmato
-      - Marquetalia
-      - Marulanda
-      - Neira
-      - Norcasia
-      - Pácora
-      - Palestina
-      - Pensilvania
-      - Riosucio
-      - Risaralda
-      - Salamina
-      - Samaná
-      - San José
-      - Supía
-      - Victoria
-      - Villamaría
-      - Viterbo
-  - name: Caqueta
-    code: "009"
-    data:
-      - Albania
-      - Belén de Los Andaquies
-      - Cartagena del Chairá
-      - Curillo
-      - El Doncello
-      - El Paujil
-      - Florencia
-      - La Montañita
-      - Milán
-      - Morelia
-      - Puerto Rico
-      - San José del Fragua
-      - San Vicente del Caguán
-      - Solano
-      - Solita
-      - Valparaíso
-  - name: Casanare
-    code: "010"
-    data:
-      - Aguazul
-      - Chámeza
-      - Hato Corozal
-      - La Salina
-      - Maní
-      - Monterrey
-      - Nunchía
-      - Orocué
-      - Paz de Ariporo
-      - Pore
-      - Recetor
-      - Sabanalarga
-      - Sácama
-      - San Luis de Gaceno
-      - Támara
-      - Tauramena
-      - Trinidad
-      - Villanueva
-      - Yopal
-  - name: Cauca
-    code: "011"
-    data:
-      - Almaguer
-      - Argelia
-      - Balboa
-      - Bolívar
-      - Buenos Aires
-      - Cajibío
-      - Caldono
-      - Caloto
-      - Corinto
-      - El Tambo
-      - Florencia
-      - Guachené
-      - Guapi
-      - Inzá
-      - Jambaló
-      - La Sierra
-      - La Vega
-      - López
-      - Mercaderes
-      - Miranda
-      - Morales
-      - Padilla
-      - Páez
-      - Patía
-      - Piamonte
-      - Piendamó
-      - Popayán
-      - Puerto Tejada
-      - Puracé
-      - Rosas
-      - San Sebastián
-      - Santa Rosa
-      - Santander de Quilichao
-      - Silvia
-      - Sotara
-      - Suárez
-      - Sucre
-      - Timbío
-      - Timbiquí
-      - Toribio
-      - Totoró
-      - Villa Rica
-  - name: Cesar
-    code: "012"
-    data:
-      - Aguachica
-      - Agustín Codazzi
-      - Astrea
-      - Becerril
-      - Bosconia
-      - Chimichagua
-      - Chiriguaná
-      - Curumaní
-      - El Copey
-      - El Paso
-      - Gamarra
-      - González
-      - La Gloria
-      - La Jagua de Ibirico
-      - La Paz
-      - Manaure
-      - Pailitas
-      - Pelaya
-      - Pueblo Bello
-      - Río de Oro
-      - San Alberto
-      - San Diego
-      - San Martín
-      - Tamalameque
-      - Valledupar
-  - name: Choco
-    code: "013"
-    data:
-      - Acandí
-      - Alto Baudo
-      - Atrato
-      - Bagadó
-      - Bahía Solano
-      - Bajo Baudó
-      - Belén de Bajira
-      - Bojaya
-      - Carmen del Darien
-      - Cértegui
-      - Condoto
-      - El Cantón del San Pablo
-      - El Carmen de Atrato
-      - El Litoral del San Juan
-      - Istmina
-      - Juradó
-      - Lloró
-      - Medio Atrato
-      - Medio Baudó
-      - Medio San Juan
-      - Nóvita
-      - Nuquí
-      - Quibdó
-      - Río Iro
-      - Río Quito
-      - Riosucio
-      - San José del Palmar
-      - Sipí
-      - Tadó
-      - Unguía
-      - Unión Panamericana
-  - name: Cordoba
-    code: "014"
-    data:
-      - Ayapel
-      - Buenavista
-      - Canalete
-      - Cereté
-      - Chimá
-      - Chinú
-      - Ciénaga de Oro
-      - Cotorra
-      - La Apartada
-      - Lorica
-      - Los Córdobas
-      - Momil
-      - Montelíbano
-      - Montería
-      - Moñitos
-      - Planeta Rica
-      - Pueblo Nuevo
-      - Puerto Escondido
-      - Puerto Libertador
-      - Purísima
-      - Sahagún
-      - San Andrés Sotavento
-      - San Antero
-      - San Bernardo del Viento
-      - San Carlos
-      - San José de Uré
-      - San Pelayo
-      - Tierralta
-      - Tuchín
-      - Valencia
-  - name: Cundinamarca
-    code: "015"
-    data:
-      - Agua de Dios
-      - Albán
-      - Anapoima
-      - Anolaima
-      - Apulo
-      - Arbeláez
-      - Beltrán
-      - Bituima
-      - Bojacá
-      - Cabrera
-      - Cachipay
-      - Cajicá
-      - Caparrapí
-      - Caqueza
-      - Carmen de Carupa
-      - Chaguaní
-      - Chía
-      - Chipaque
-      - Choachí
-      - Chocontá
-      - Cogua
-      - Cota
-      - Cucunubá
-      - El Colegio
-      - El Peñón
-      - El Rosal
-      - Facatativá
-      - Fomeque
-      - Fosca
-      - Funza
-      - Fúquene
-      - Fusagasugá
-      - Gachala
-      - Gachancipá
-      - Gachetá
-      - Gama
-      - Girardot
-      - Granada
-      - Guachetá
-      - Guaduas
-      - Guasca
-      - Guataquí
-      - Guatavita
-      - Guayabal de Siquima
-      - Guayabetal
-      - Gutiérrez
-      - Jerusalén
-      - Junín
-      - La Calera
-      - La Mesa
-      - La Palma
-      - La Peña
-      - La Vega
-      - Lenguazaque
-      - Macheta
-      - Madrid
-      - Manta
-      - Medina
-      - Mosquera
-      - Nariño
-      - Nemocón
-      - Nilo
-      - Nimaima
-      - Nocaima
-      - Pacho
-      - Paime
-      - Pandi
-      - Paratebueno
-      - Pasca
-      - Puerto Salgar
-      - Pulí
-      - Quebradanegra
-      - Quetame
-      - Quipile
-      - Ricaurte
-      - San Antonio del Tequendama
-      - San Bernardo
-      - San Cayetano
-      - San Francisco
-      - San Juan de Río Seco
-      - Sasaima
-      - Sesquilé
-      - Sibaté
-      - Silvania
-      - Simijaca
-      - Soacha
-      - Sopó
-      - Subachoque
-      - Suesca
-      - Supatá
-      - Susa
-      - Sutatausa
-      - Tabio
-      - Tausa
-      - Tena
-      - Tenjo
-      - Tibacuy
-      - Tibirita
-      - Tocaima
-      - Tocancipá
-      - Topaipí
-      - Ubalá
-      - Ubaque
-      - Une
-      - Útica
-      - Venecia
-      - Vergara
-      - Vianí
-      - Villa de San Diego de Ubate
-      - Villagómez
-      - Villapinzón
-      - Villeta
-      - Viotá
-      - Yacopí
-      - Zipacón
-      - Zipaquirá
-  - name: Guainia
-    code: "016"
-    data:
-      - Barranco Minas
-      - Cacahual
-      - Inírida
-      - La Guadalupe
-      - Mapiripana
-      - Morichal
-      - Pana Pana
-      - Puerto Colombia
-      - San Felipe
-  - name: Guaviare
-    code: "017"
-    data:
-      - Calamar
-      - El Retorno
-      - Miraflores
-      - San José del Guaviare
-  - name: Huila
-    code: "018"
-    data:
-      - Acevedo
-      - Agrado
-      - Aipe
-      - Algeciras
-      - Altamira
-      - Baraya
-      - Campoalegre
-      - Colombia
-      - Elías
-      - Garzón
-      - Gigante
-      - Guadalupe
-      - Hobo
-      - Iquira
-      - Isnos
-      - La Argentina
-      - La Plata
-      - Nátaga
-      - Neiva
-      - Oporapa
-      - Paicol
-      - Palermo
-      - Palestina
-      - Pital
-      - Pitalito
-      - Rivera
-      - Saladoblanco
-      - San Agustín
-      - Santa María
-      - Suaza
-      - Tarqui
-      - Tello
-      - Teruel
-      - Tesalia
-      - Timaná
-      - Villavieja
-      - Yaguará
-  - name: La Guajira
-    code: "019"
-    data:
-      - Albania
-      - Barrancas
-      - Dibula
-      - Distracción
-      - El Molino
-      - Fonseca
-      - Hatonuevo
-      - La Jagua del Pilar
-      - Maicao
-      - Manaure
-      - Riohacha
-      - San Juan del Cesar
-      - Uribia
-      - Urumita
-      - Villanueva
-  - name: Magdalena
-    code: "020"
-    data:
-      - Algarrobo
-      - Aracataca
-      - Ariguaní
-      - Cerro San Antonio
-      - Chivolo
-      - Ciénaga
-      - Concordia
-      - El Banco
-      - El Piñon
-      - El Retén
-      - Fundación
-      - Guamal
-      - Nueva Granada
-      - Pedraza
-      - Pijiño del Carmen
-      - Pivijay
-      - Plato
-      - Pueblo Viejo
-      - Remolino
-      - Sabanas de San Angel
-      - Salamina
-      - San Sebastián de Buenavista
-      - San Zenón
-      - Santa Ana
-      - Santa Bárbara de Pinto
-      - Santa Marta
-      - Sitionuevo
-      - Tenerife
-      - Zapayán
-      - Zona Bananera
-  - name: Meta
-    code: "021"
-    data:
-      - Acacias
-      - Barranca de Upía
-      - Cabuyaro
-      - Castilla la Nueva
-      - Cubarral
-      - Cumaral
-      - El Calvario
-      - El Castillo
-      - El Dorado
-      - Fuente de Oro
-      - Granada
-      - Guamal
-      - La Macarena
-      - Lejanías
-      - Mapiripán
-      - Mesetas
-      - Puerto Concordia
-      - Puerto Gaitán
-      - Puerto Lleras
-      - Puerto López
-      - Puerto Rico
-      - Restrepo
-      - San Carlos de Guaroa
-      - San Juan de Arama
-      - San Juanito
-      - San Martín
-      - Uribe
-      - Villavicencio
-      - Vista Hermosa
-  - name: Nariño
-    code: "022"
-    data:
-      - Albán
-      - Aldana
-      - Ancuyá
-      - Arboleda
-      - Barbacoas
-      - Belén
-      - Buesaco
-      - Chachagüí
-      - Colón
-      - Consaca
-      - Contadero
-      - Córdoba
-      - Cuaspud
-      - Cumbal
-      - Cumbitara
-      - El Charco
-      - El Peñol
-      - El Rosario
-      - El Tablón de Gómez
-      - El Tambo
-      - Francisco Pizarro
-      - Funes
-      - Guachucal
-      - Guaitarilla
-      - Gualmatán
-      - Iles
-      - Imués
-      - Ipiales
-      - La Cruz
-      - La Florida
-      - La Llanada
-      - La Tola
-      - La Unión
-      - Leiva
-      - Linares
-      - Los Andes
-      - Magüí
-      - Mallama
-      - Mosquera
-      - Nariño
-      - Olaya Herrera
-      - Ospina
-      - Pasto
-      - Policarpa
-      - Potosí
-      - Providencia
-      - Puerres
-      - Pupiales
-      - Ricaurte
-      - Roberto Payán
-      - Samaniego
-      - San Andrés de Tumaco
-      - San Bernardo
-      - San Lorenzo
-      - San Pablo
-      - San Pedro de Cartago
-      - Sandoná
-      - Santa Bárbara
-      - Santacruz
-      - Sapuyes
-      - Taminango
-      - Tangua
-      - Túquerres
-      - Yacuanquer
-  - name: Norte de Santander
-    code: "023"
-    data:
-      - Abrego
-      - Arboledas
-      - Bochalema
-      - Bucarasica
-      - Cachirá
-      - Cácota
-      - Chinácota
-      - Chitagá
-      - Convención
-      - Cúcuta
-      - Cucutilla
-      - Durania
-      - El Carmen
-      - El Tarra
-      - El Zulia
-      - Gramalote
-      - Hacarí
-      - Herrán
-      - La Esperanza
-      - La Playa
-      - Labateca
-      - Los Patios
-      - Lourdes
-      - Mutiscua
-      - Ocaña
-      - Pamplona
-      - Pamplonita
-      - Puerto Santander
-      - Ragonvalia
-      - Salazar
-      - San Calixto
-      - San Cayetano
-      - Santiago
-      - Sardinata
-      - Silos
-      - Teorama
-      - Tibú
-      - Toledo
-      - Villa Caro
-      - Villa del Rosario
-  - name: Putumayo
-    code: "024"
-    data:
-      - Colón
-      - Leguízamo
-      - Mocoa
-      - Orito
-      - Puerto Asís
-      - Puerto Caicedo
-      - Puerto Guzmán
-      - San Francisco
-      - San Miguel
-      - Santiago
-      - Sibundoy
-      - Valle de Guamez
-      - Villagarzón
-  - name: Quindio
-    code: "025"
-    data:
-      - Armenia
-      - Buenavista
-      - Calarcá
-      - Circasia
-      - Córdoba
-      - Filandia
-      - Génova
-      - La Tebaida
-      - Montenegro
-      - Pijao
-      - Quimbaya
-      - Salento
-  - name: Risaralda
-    code: "026"
-    data:
-      - Apía
-      - Balboa
-      - Belén de Umbría
-      - Dosquebradas
-      - Guática
-      - La Celia
-      - La Virginia
-      - Marsella
-      - Mistrató
-      - Pereira
-      - Pueblo Rico
-      - Quinchía
-      - Santa Rosa de Cabal
-      - Santuario
-  - name: San Andres y Providencia
-    code: "027"
-    data:
-      - Providencia
-      - San Andrés
-  - name: Santander
-    code: "028"
-    data:
-      - Aguada
-      - Albania
-      - Aratoca
-      - Barbosa
-      - Barichara
-      - Barrancabermeja
-      - Betulia
-      - Bolívar
-      - Bucaramanga
-      - Cabrera
-      - California
-      - Capitanejo
-      - Carcasí
-      - Cepitá
-      - Cerrito
-      - Charalá
-      - Charta
-      - Chimá
-      - Chipatá
-      - Cimitarra
-      - Concepción
-      - Confines
-      - Contratación
-      - Coromoro
-      - Curití
-      - El Carmen de Chucurí
-      - El Guacamayo
-      - El Peñón
-      - El Playón
-      - Encino
-      - Enciso
-      - Florián
-      - Floridablanca
-      - Galán
-      - Gambita
-      - Girón
-      - Guaca
-      - Guadalupe
-      - Guapotá
-      - Guavatá
-      - Güepsa
-      - Hato
-      - Jesús María
-      - Jordán
-      - La Belleza
-      - La Paz
-      - Landázuri
-      - Lebríja
-      - Los Santos
-      - Macaravita
-      - Málaga
-      - Matanza
-      - Mogotes
-      - Molagavita
-      - Ocamonte
-      - Oiba
-      - Onzaga
-      - Palmar
-      - Palmas del Socorro
-      - Páramo
-      - Piedecuesta
-      - Pinchote
-      - Puente Nacional
-      - Puerto Parra
-      - Puerto Wilches
-      - Rionegro
-      - Sabana de Torres
-      - San Andrés
-      - San Benito
-      - San Gil
-      - San Joaquín
-      - San José de Miranda
-      - San Miguel
-      - San Vicente de Chucurí
-      - Santa Bárbara
-      - Santa Helena del Opón
-      - Simacota
-      - Socorro
-      - Suaita
-      - Sucre
-      - Suratá
-      - Tona
-      - Valle de San José
-      - Vélez
-      - Vetas
-      - Villanueva
-      - Zapatoca
-  - name: Sucre
-    code: "029"
-    data:
-      - Buenavista
-      - Caimito
-      - Chalán
-      - Coloso
-      - Corozal
-      - Coveñas
-      - El Roble
-      - Galeras
-      - Guaranda
-      - La Unión
-      - Los Palmitos
-      - Majagual
-      - Morroa
-      - Ovejas
-      - Palmito
-      - Sampués
-      - San Benito Abad
-      - San Juan de Betulia
-      - San Luis de Sincé
-      - San Marcos
-      - San Onofre
-      - San Pedro
-      - Santiago de Tolú
-      - Sincelejo
-      - Sucre
-      - Tolú Viejo
-  - name: Tolima
-    code: "030"
-    data:
-      - Alpujarra
-      - Alvarado
-      - Ambalema
-      - Anzoátegui
-      - Armero
-      - Ataco
-      - Cajamarca
-      - Carmen de Apicala
-      - Casabianca
-      - Chaparral
-      - Coello
-      - Coyaima
-      - Cunday
-      - Dolores
-      - Espinal
-      - Falan
-      - Flandes
-      - Fresno
-      - Guamo
-      - Herveo
-      - Honda
-      - Ibagué
-      - Icononzo
-      - Lérida
-      - Líbano
-      - Mariquita
-      - Melgar
-      - Murillo
-      - Natagaima
-      - Ortega
-      - Palocabildo
-      - Piedras
-      - Planadas
-      - Prado
-      - Purificación
-      - Rio Blanco
-      - Roncesvalles
-      - Rovira
-      - Saldaña
-      - San Antonio
-      - San Luis
-      - Santa Isabel
-      - Suárez
-      - Valle de San Juan
-      - Venadillo
-      - Villahermosa
-      - Villarrica
-  - name: Valle del Cauca
-    code: "031"
-    data:
-      - Alcalá
-      - Andalucía
-      - Ansermanuevo
-      - Argelia
-      - Bolívar
-      - Buenaventura
-      - Bugalagrande
-      - Caicedonia
-      - Cali
-      - Calima
-      - Candelaria
-      - Cartago
-      - Dagua
-      - El Águila
-      - El Cairo
-      - El Cerrito
-      - El Dovio
-      - Florida
-      - Ginebra
-      - Guacarí
-      - Guadalajara de Buga
-      - Jamundí
-      - La Cumbre
-      - La Unión
-      - La Victoria
-      - Obando
-      - Palmira
-      - Pradera
-      - Restrepo
-      - Riofrío
-      - Roldanillo
-      - San Pedro
-      - Sevilla
-      - Toro
-      - Trujillo
-      - Tuluá
-      - Ulloa
-      - Versalles
-      - Vijes
-      - Yotoco
-      - Yumbo
-      - Zarzal
-  - name: Vaupes
-    code: "032"
-    data:
-      - Carurú
-      - Mitú
-      - Pacoa
-      - Papunahua
-      - Taraira
-      - Yavaraté
-  - name: Vichada
-    code: "033"
-    data:
-      - Cumaribo
-      - La Primavera
-      - Puerto Carreño
-      - Santa Rosalía
+name: "Colombia"
+slug: "colombia"
+code: "CO"
+dial_code: "+57"
+regions:
+  - name: "Región Andina"
+    code: ""
+    provinces:
+      - code: "003"
+        name: "Antioquia"
+        cities:
+          - name: "Abejorral"
+            code: ""
+          - name: "Abriaquí"
+            code: ""
+          - name: "Alejandría"
+            code: ""
+          - name: "Amagá"
+            code: ""
+          - name: "Amalfi"
+            code: ""
+          - name: "Andes"
+            code: ""
+          - name: "Angelópolis"
+            code: ""
+          - name: "Angostura"
+            code: ""
+          - name: "Anorí"
+            code: ""
+          - name: "Anza"
+            code: ""
+          - name: "Apartadó"
+            code: ""
+          - name: "Arboletes"
+            code: ""
+          - name: "Argelia"
+            code: ""
+          - name: "Armenia"
+            code: ""
+          - name: "Barbosa"
+            code: ""
+          - name: "Bello"
+            code: ""
+          - name: "Belmira"
+            code: ""
+          - name: "Betania"
+            code: ""
+          - name: "Betulia"
+            code: ""
+          - name: "Briceño"
+            code: ""
+          - name: "Buriticá"
+            code: ""
+          - name: "Cáceres"
+            code: ""
+          - name: "Caicedo"
+            code: ""
+          - name: "Caldas"
+            code: ""
+          - name: "Campamento"
+            code: ""
+          - name: "Cañasgordas"
+            code: ""
+          - name: "Caracolí"
+            code: ""
+          - name: "Caramanta"
+            code: ""
+          - name: "Carepa"
+            code: ""
+          - name: "Carolina"
+            code: ""
+          - name: "Caucasia"
+            code: ""
+          - name: "Chigorodó"
+            code: ""
+          - name: "Cisneros"
+            code: ""
+          - name: "Ciudad Bolívar"
+            code: ""
+          - name: "Cocorná"
+            code: ""
+          - name: "Concepción"
+            code: ""
+          - name: "Concordia"
+            code: ""
+          - name: "Copacabana"
+            code: ""
+          - name: "Dabeiba"
+            code: ""
+          - name: "Don Matías"
+            code: ""
+          - name: "Ebéjico"
+            code: ""
+          - name: "El Bagre"
+            code: ""
+          - name: "El Carmen de Viboral"
+            code: ""
+          - name: "El Santuario"
+            code: ""
+          - name: "Entrerrios"
+            code: ""
+          - name: "Envigado"
+            code: ""
+          - name: "Fredonia"
+            code: ""
+          - name: "Frontino"
+            code: ""
+          - name: "Giraldo"
+            code: ""
+          - name: "Girardota"
+            code: ""
+          - name: "Gómez Plata"
+            code: ""
+          - name: "Granada"
+            code: ""
+          - name: "Guadalupe"
+            code: ""
+          - name: "Guarne"
+            code: ""
+          - name: "Guatapé"
+            code: ""
+          - name: "Heliconia"
+            code: ""
+          - name: "Hispania"
+            code: ""
+          - name: "Itagui"
+            code: ""
+          - name: "Ituango"
+            code: ""
+          - name: "Jardín"
+            code: ""
+          - name: "Jericó"
+            code: ""
+          - name: "La Ceja"
+            code: ""
+          - name: "La Estrella"
+            code: ""
+          - name: "La Pintada"
+            code: ""
+          - name: "La Unión"
+            code: ""
+          - name: "Liborina"
+            code: ""
+          - name: "Maceo"
+            code: ""
+          - name: "Marinilla"
+            code: ""
+          - name: "Medellín"
+            code: ""
+          - name: "Montebello"
+            code: ""
+          - name: "Murindó"
+            code: ""
+          - name: "Mutatá"
+            code: ""
+          - name: "Nariño"
+            code: ""
+          - name: "Nechí"
+            code: ""
+          - name: "Necoclí"
+            code: ""
+          - name: "Olaya"
+            code: ""
+          - name: "Peñol"
+            code: ""
+          - name: "Peque"
+            code: ""
+          - name: "Pueblorrico"
+            code: ""
+          - name: "Puerto Berrío"
+            code: ""
+          - name: "Puerto Nare"
+            code: ""
+          - name: "Puerto Triunfo"
+            code: ""
+          - name: "Remedios"
+            code: ""
+          - name: "Retiro"
+            code: ""
+          - name: "Rionegro"
+            code: ""
+          - name: "Sabanalarga"
+            code: ""
+          - name: "Sabaneta"
+            code: ""
+          - name: "Salgar"
+            code: ""
+          - name: "San Andrés de Cuerquía"
+            code: ""
+          - name: "San Carlos"
+            code: ""
+          - name: "San Francisco"
+            code: ""
+          - name: "San Jerónimo"
+            code: ""
+          - name: "San José de La Montaña"
+            code: ""
+          - name: "San Juan de Urabá"
+            code: ""
+          - name: "San Luis"
+            code: ""
+          - name: "San Pedro"
+            code: ""
+          - name: "San Pedro de Uraba"
+            code: ""
+          - name: "San Rafael"
+            code: ""
+          - name: "San Roque"
+            code: ""
+          - name: "San Vicente"
+            code: ""
+          - name: "Santa Bárbara"
+            code: ""
+          - name: "Santa Rosa de Osos"
+            code: ""
+          - name: "Santafé de Antioquia"
+            code: ""
+          - name: "Santo Domingo"
+            code: ""
+          - name: "Segovia"
+            code: ""
+          - name: "Sonsón"
+            code: ""
+          - name: "Sopetrán"
+            code: ""
+          - name: "Támesis"
+            code: ""
+          - name: "Tarazá"
+            code: ""
+          - name: "Tarso"
+            code: ""
+          - name: "Titiribí"
+            code: ""
+          - name: "Toledo"
+            code: ""
+          - name: "Turbo"
+            code: ""
+          - name: "Uramita"
+            code: ""
+          - name: "Urrao"
+            code: ""
+          - name: "Valdivia"
+            code: ""
+          - name: "Valparaíso"
+            code: ""
+          - name: "Vegachí"
+            code: ""
+          - name: "Venecia"
+            code: ""
+          - name: "Vigía del Fuerte"
+            code: ""
+          - name: "Yalí"
+            code: ""
+          - name: "Yarumal"
+            code: ""
+          - name: "Yolombó"
+            code: ""
+          - name: "Yondó"
+            code: ""
+          - name: "Zaragoza"
+            code: ""
+      - code: "001"
+        name: "Bogotá"
+        cities:
+          - code: ""
+            name: "Bogotá D.C."
+      - code: "015"
+        name: "Cundinamarca"
+        cities:
+          - name: "Agua de Dios"
+            code: ""
+          - name: "Albán"
+            code: ""
+          - name: "Anapoima"
+            code: ""
+          - name: "Anolaima"
+            code: ""
+          - name: "Apulo"
+            code: ""
+          - name: "Arbeláez"
+            code: ""
+          - name: "Beltrán"
+            code: ""
+          - name: "Bituima"
+            code: ""
+          - name: "Bojacá"
+            code: ""
+          - name: "Cabrera"
+            code: ""
+          - name: "Cachipay"
+            code: ""
+          - name: "Cajicá"
+            code: ""
+          - name: "Caparrapí"
+            code: ""
+          - name: "Caqueza"
+            code: ""
+          - name: "Carmen de Carupa"
+            code: ""
+          - name: "Chaguaní"
+            code: ""
+          - name: "Chía"
+            code: ""
+          - name: "Chipaque"
+            code: ""
+          - name: "Choachí"
+            code: ""
+          - name: "Chocontá"
+            code: ""
+          - name: "Cogua"
+            code: ""
+          - name: "Cota"
+            code: ""
+          - name: "Cucunubá"
+            code: ""
+          - name: "El Colegio"
+            code: ""
+          - name: "El Peñón"
+            code: ""
+          - name: "El Rosal"
+            code: ""
+          - name: "Facatativá"
+            code: ""
+          - name: "Fomeque"
+            code: ""
+          - name: "Fosca"
+            code: ""
+          - name: "Funza"
+            code: ""
+          - name: "Fúquene"
+            code: ""
+          - name: "Fusagasugá"
+            code: ""
+          - name: "Gachala"
+            code: ""
+          - name: "Gachancipá"
+            code: ""
+          - name: "Gachetá"
+            code: ""
+          - name: "Gama"
+            code: ""
+          - name: "Girardot"
+            code: ""
+          - name: "Granada"
+            code: ""
+          - name: "Guachetá"
+            code: ""
+          - name: "Guaduas"
+            code: ""
+          - name: "Guasca"
+            code: ""
+          - name: "Guataquí"
+            code: ""
+          - name: "Guatavita"
+            code: ""
+          - name: "Guayabal de Siquima"
+            code: ""
+          - name: "Guayabetal"
+            code: ""
+          - name: "Gutiérrez"
+            code: ""
+          - name: "Jerusalén"
+            code: ""
+          - name: "Junín"
+            code: ""
+          - name: "La Calera"
+            code: ""
+          - name: "La Mesa"
+            code: ""
+          - name: "La Palma"
+            code: ""
+          - name: "La Peña"
+            code: ""
+          - name: "La Vega"
+            code: ""
+          - name: "Lenguazaque"
+            code: ""
+          - name: "Macheta"
+            code: ""
+          - name: "Madrid"
+            code: ""
+          - name: "Manta"
+            code: ""
+          - name: "Medina"
+            code: ""
+          - name: "Mosquera"
+            code: ""
+          - name: "Nariño"
+            code: ""
+          - name: "Nemocón"
+            code: ""
+          - name: "Nilo"
+            code: ""
+          - name: "Nimaima"
+            code: ""
+          - name: "Nocaima"
+            code: ""
+          - name: "Pacho"
+            code: ""
+          - name: "Paime"
+            code: ""
+          - name: "Pandi"
+            code: ""
+          - name: "Paratebueno"
+            code: ""
+          - name: "Pasca"
+            code: ""
+          - name: "Puerto Salgar"
+            code: ""
+          - name: "Pulí"
+            code: ""
+          - name: "Quebradanegra"
+            code: ""
+          - name: "Quetame"
+            code: ""
+          - name: "Quipile"
+            code: ""
+          - name: "Ricaurte"
+            code: ""
+          - name: "San Antonio del Tequendama"
+            code: ""
+          - name: "San Bernardo"
+            code: ""
+          - name: "San Cayetano"
+            code: ""
+          - name: "San Francisco"
+            code: ""
+          - name: "San Juan de Río Seco"
+            code: ""
+          - name: "Sasaima"
+            code: ""
+          - name: "Sesquilé"
+            code: ""
+          - name: "Sibaté"
+            code: ""
+          - name: "Silvania"
+            code: ""
+          - name: "Simijaca"
+            code: ""
+          - name: "Soacha"
+            code: ""
+          - name: "Sopó"
+            code: ""
+          - name: "Subachoque"
+            code: ""
+          - name: "Suesca"
+            code: ""
+          - name: "Supatá"
+            code: ""
+          - name: "Susa"
+            code: ""
+          - name: "Sutatausa"
+            code: ""
+          - name: "Tabio"
+            code: ""
+          - name: "Tausa"
+            code: ""
+          - name: "Tena"
+            code: ""
+          - name: "Tenjo"
+            code: ""
+          - name: "Tibacuy"
+            code: ""
+          - name: "Tibirita"
+            code: ""
+          - name: "Tocaima"
+            code: ""
+          - name: "Tocancipá"
+            code: ""
+          - name: "Topaipí"
+            code: ""
+          - name: "Ubalá"
+            code: ""
+          - name: "Ubaque"
+            code: ""
+          - name: "Une"
+            code: ""
+          - name: "Útica"
+            code: ""
+          - name: "Venecia"
+            code: ""
+          - name: "Vergara"
+            code: ""
+          - name: "Vianí"
+            code: ""
+          - name: "Villa de San Diego de Ubate"
+            code: ""
+          - name: "Villagómez"
+            code: ""
+          - name: "Villapinzón"
+            code: ""
+          - name: "Villeta"
+            code: ""
+          - name: "Viotá"
+            code: ""
+          - name: "Yacopí"
+            code: ""
+          - name: "Zipacón"
+            code: ""
+          - name: "Zipaquirá"
+            code: ""
+      - code: "007"
+        name: "Boyacá"
+        cities:
+          - name: "Almeida"
+            code: ""
+          - name: "Aquitania"
+            code: ""
+          - name: "Arcabuco"
+            code: ""
+          - name: "Belén"
+            code: ""
+          - name: "Berbeo"
+            code: ""
+          - name: "Betéitiva"
+            code: ""
+          - name: "Boavita"
+            code: ""
+          - name: "Boyacá"
+            code: ""
+          - name: "Briceño"
+            code: ""
+          - name: "Buena Vista"
+            code: ""
+          - name: "Busbanzá"
+            code: ""
+          - name: "Caldas"
+            code: ""
+          - name: "Campohermoso"
+            code: ""
+          - name: "Cerinza"
+            code: ""
+          - name: "Chinavita"
+            code: ""
+          - name: "Chiquinquirá"
+            code: ""
+          - name: "Chíquiza"
+            code: ""
+          - name: "Chiscas"
+            code: ""
+          - name: "Chita"
+            code: ""
+          - name: "Chitaraque"
+            code: ""
+          - name: "Chivatá"
+            code: ""
+          - name: "Chivor"
+            code: ""
+          - name: "Ciénega"
+            code: ""
+          - name: "Cómbita"
+            code: ""
+          - name: "Coper"
+            code: ""
+          - name: "Corrales"
+            code: ""
+          - name: "Covarachía"
+            code: ""
+          - name: "Cubará"
+            code: ""
+          - name: "Cucaita"
+            code: ""
+          - name: "Cuítiva"
+            code: ""
+          - name: "Duitama"
+            code: ""
+          - name: "El Cocuy"
+            code: ""
+          - name: "El Espino"
+            code: ""
+          - name: "Firavitoba"
+            code: ""
+          - name: "Floresta"
+            code: ""
+          - name: "Gachantivá"
+            code: ""
+          - name: "Gameza"
+            code: ""
+          - name: "Garagoa"
+            code: ""
+          - name: "Guacamayas"
+            code: ""
+          - name: "Guateque"
+            code: ""
+          - name: "Guayatá"
+            code: ""
+          - name: "Güicán"
+            code: ""
+          - name: "Iza"
+            code: ""
+          - name: "Jenesano"
+            code: ""
+          - name: "Jericó"
+            code: ""
+          - name: "La Capilla"
+            code: ""
+          - name: "La Uvita"
+            code: ""
+          - name: "La Victoria"
+            code: ""
+          - name: "Labranzagrande"
+            code: ""
+          - name: "Macanal"
+            code: ""
+          - name: "Maripí"
+            code: ""
+          - name: "Miraflores"
+            code: ""
+          - name: "Mongua"
+            code: ""
+          - name: "Monguí"
+            code: ""
+          - name: "Moniquirá"
+            code: ""
+          - name: "Motavita"
+            code: ""
+          - name: "Muzo"
+            code: ""
+          - name: "Nobsa"
+            code: ""
+          - name: "Nuevo Colón"
+            code: ""
+          - name: "Oicatá"
+            code: ""
+          - name: "Otanche"
+            code: ""
+          - name: "Pachavita"
+            code: ""
+          - name: "Páez"
+            code: ""
+          - name: "Paipa"
+            code: ""
+          - name: "Pajarito"
+            code: ""
+          - name: "Panqueba"
+            code: ""
+          - name: "Pauna"
+            code: ""
+          - name: "Paya"
+            code: ""
+          - name: "Paz de Río"
+            code: ""
+          - name: "Pesca"
+            code: ""
+          - name: "Pisba"
+            code: ""
+          - name: "Puerto Boyacá"
+            code: ""
+          - name: "Quípama"
+            code: ""
+          - name: "Ramiriquí"
+            code: ""
+          - name: "Ráquira"
+            code: ""
+          - name: "Rondón"
+            code: ""
+          - name: "Saboyá"
+            code: ""
+          - name: "Sáchica"
+            code: ""
+          - name: "Samacá"
+            code: ""
+          - name: "San Eduardo"
+            code: ""
+          - name: "San José de Pare"
+            code: ""
+          - name: "San Luis de Gaceno"
+            code: ""
+          - name: "San Mateo"
+            code: ""
+          - name: "San Miguel de Sema"
+            code: ""
+          - name: "San Pablo de Borbur"
+            code: ""
+          - name: "Santa María"
+            code: ""
+          - name: "Santa Rosa de Viterbo"
+            code: ""
+          - name: "Santa Sofía"
+            code: ""
+          - name: "Santana"
+            code: ""
+          - name: "Sativanorte"
+            code: ""
+          - name: "Sativasur"
+            code: ""
+          - name: "Siachoque"
+            code: ""
+          - name: "Soatá"
+            code: ""
+          - name: "Socha"
+            code: ""
+          - name: "Socotá"
+            code: ""
+          - name: "Sogamoso"
+            code: ""
+          - name: "Somondoco"
+            code: ""
+          - name: "Sora"
+            code: ""
+          - name: "Soracá"
+            code: ""
+          - name: "Sotaquirá"
+            code: ""
+          - name: "Susacón"
+            code: ""
+          - name: "Sutamarchán"
+            code: ""
+          - name: "Sutatenza"
+            code: ""
+          - name: "Tasco"
+            code: ""
+          - name: "Tenza"
+            code: ""
+          - name: "Tibaná"
+            code: ""
+          - name: "Tibasosa"
+            code: ""
+          - name: "Tinjacá"
+            code: ""
+          - name: "Tipacoque"
+            code: ""
+          - name: "Toca"
+            code: ""
+          - name: "Togüí"
+            code: ""
+          - name: "Tópaga"
+            code: ""
+          - name: "Tota"
+            code: ""
+          - name: "Tunja"
+            code: ""
+          - name: "Tununguá"
+            code: ""
+          - name: "Turmequé"
+            code: ""
+          - name: "Tuta"
+            code: ""
+          - name: "Tutazá"
+            code: ""
+          - name: "Umbita"
+            code: ""
+          - name: "Ventaquemada"
+            code: ""
+          - name: "Villa de Leyva"
+            code: ""
+          - name: "Viracachá"
+            code: ""
+          - name: "Zetaquira"
+            code: ""
+      - code: "008"
+        name: "Caldas"
+        cities:
+          - name: "Aguadas"
+            code: ""
+          - name: "Anserma"
+            code: ""
+          - name: "Aranzazu"
+            code: ""
+          - name: "Belalcázar"
+            code: ""
+          - name: "Chinchiná"
+            code: ""
+          - name: "Filadelfia"
+            code: ""
+          - name: "La Dorada"
+            code: ""
+          - name: "La Merced"
+            code: ""
+          - name: "Manizales"
+            code: ""
+          - name: "Manzanares"
+            code: ""
+          - name: "Marmato"
+            code: ""
+          - name: "Marquetalia"
+            code: ""
+          - name: "Marulanda"
+            code: ""
+          - name: "Neira"
+            code: ""
+          - name: "Norcasia"
+            code: ""
+          - name: "Pácora"
+            code: ""
+          - name: "Palestina"
+            code: ""
+          - name: "Pensilvania"
+            code: ""
+          - name: "Riosucio"
+            code: ""
+          - name: "Risaralda"
+            code: ""
+          - name: "Salamina"
+            code: ""
+          - name: "Samaná"
+            code: ""
+          - name: "San José"
+            code: ""
+          - name: "Supía"
+            code: ""
+          - name: "Victoria"
+            code: ""
+          - name: "Villamaría"
+            code: ""
+          - name: "Viterbo"
+            code: ""
+      - code: "018"
+        name: "Huila"
+        cities:
+          - name: "Acevedo"
+            code: ""
+          - name: "Agrado"
+            code: ""
+          - name: "Aipe"
+            code: ""
+          - name: "Algeciras"
+            code: ""
+          - name: "Altamira"
+            code: ""
+          - name: "Baraya"
+            code: ""
+          - name: "Campoalegre"
+            code: ""
+          - name: "Colombia"
+            code: ""
+          - name: "Elías"
+            code: ""
+          - name: "Garzón"
+            code: ""
+          - name: "Gigante"
+            code: ""
+          - name: "Guadalupe"
+            code: ""
+          - name: "Hobo"
+            code: ""
+          - name: "Iquira"
+            code: ""
+          - name: "Isnos"
+            code: ""
+          - name: "La Argentina"
+            code: ""
+          - name: "La Plata"
+            code: ""
+          - name: "Nátaga"
+            code: ""
+          - name: "Neiva"
+            code: ""
+          - name: "Oporapa"
+            code: ""
+          - name: "Paicol"
+            code: ""
+          - name: "Palermo"
+            code: ""
+          - name: "Palestina"
+            code: ""
+          - name: "Pital"
+            code: ""
+          - name: "Pitalito"
+            code: ""
+          - name: "Rivera"
+            code: ""
+          - name: "Saladoblanco"
+            code: ""
+          - name: "San Agustín"
+            code: ""
+          - name: "Santa María"
+            code: ""
+          - name: "Suaza"
+            code: ""
+          - name: "Tarqui"
+            code: ""
+          - name: "Tello"
+            code: ""
+          - name: "Teruel"
+            code: ""
+          - name: "Tesalia"
+            code: ""
+          - name: "Timaná"
+            code: ""
+          - name: "Villavieja"
+            code: ""
+          - name: "Yaguará"
+            code: ""
+      - code: "023"
+        name: "Norte de Santander"
+        cities:
+          - name: "Abrego"
+            code: ""
+          - name: "Arboledas"
+            code: ""
+          - name: "Bochalema"
+            code: ""
+          - name: "Bucarasica"
+            code: ""
+          - name: "Cachirá"
+            code: ""
+          - name: "Cácota"
+            code: ""
+          - name: "Chinácota"
+            code: ""
+          - name: "Chitagá"
+            code: ""
+          - name: "Convención"
+            code: ""
+          - name: "Cúcuta"
+            code: ""
+          - name: "Cucutilla"
+            code: ""
+          - name: "Durania"
+            code: ""
+          - name: "El Carmen"
+            code: ""
+          - name: "El Tarra"
+            code: ""
+          - name: "El Zulia"
+            code: ""
+          - name: "Gramalote"
+            code: ""
+          - name: "Hacarí"
+            code: ""
+          - name: "Herrán"
+            code: ""
+          - name: "La Esperanza"
+            code: ""
+          - name: "La Playa"
+            code: ""
+          - name: "Labateca"
+            code: ""
+          - name: "Los Patios"
+            code: ""
+          - name: "Lourdes"
+            code: ""
+          - name: "Mutiscua"
+            code: ""
+          - name: "Ocaña"
+            code: ""
+          - name: "Pamplona"
+            code: ""
+          - name: "Pamplonita"
+            code: ""
+          - name: "Puerto Santander"
+            code: ""
+          - name: "Ragonvalia"
+            code: ""
+          - name: "Salazar"
+            code: ""
+          - name: "San Calixto"
+            code: ""
+          - name: "San Cayetano"
+            code: ""
+          - name: "Santiago"
+            code: ""
+          - name: "Sardinata"
+            code: ""
+          - name: "Silos"
+            code: ""
+          - name: "Teorama"
+            code: ""
+          - name: "Tibú"
+            code: ""
+          - name: "Toledo"
+            code: ""
+          - name: "Villa Caro"
+            code: ""
+          - name: "Villa del Rosario"
+            code: ""
+      - code: "025"
+        name: "Quindío"
+        cities:
+          - name: "Armenia"
+            code: ""
+          - name: "Buenavista"
+            code: ""
+          - name: "Calarcá"
+            code: ""
+          - name: "Circasia"
+            code: ""
+          - name: "Córdoba"
+            code: ""
+          - name: "Filandia"
+            code: ""
+          - name: "Génova"
+            code: ""
+          - name: "La Tebaida"
+            code: ""
+          - name: "Montenegro"
+            code: ""
+          - name: "Pijao"
+            code: ""
+          - name: "Quimbaya"
+            code: ""
+          - name: "Salento"
+            code: ""
+      - code: "026"
+        name: "Risaralda"
+        cities:
+          - name: "Apía"
+            code: ""
+          - name: "Balboa"
+            code: ""
+          - name: "Belén de Umbría"
+            code: ""
+          - name: "Dosquebradas"
+            code: ""
+          - name: "Guática"
+            code: ""
+          - name: "La Celia"
+            code: ""
+          - name: "La Virginia"
+            code: ""
+          - name: "Marsella"
+            code: ""
+          - name: "Mistrató"
+            code: ""
+          - name: "Pereira"
+            code: ""
+          - name: "Pueblo Rico"
+            code: ""
+          - name: "Quinchía"
+            code: ""
+          - name: "Santa Rosa de Cabal"
+            code: ""
+          - name: "Santuario"
+            code: ""
+      - code: "028"
+        name: "Santander"
+        cities:
+          - name: "Aguada"
+            code: ""
+          - name: "Albania"
+            code: ""
+          - name: "Aratoca"
+            code: ""
+          - name: "Barbosa"
+            code: ""
+          - name: "Barichara"
+            code: ""
+          - name: "Barrancabermeja"
+            code: ""
+          - name: "Betulia"
+            code: ""
+          - name: "Bolívar"
+            code: ""
+          - name: "Bucaramanga"
+            code: ""
+          - name: "Cabrera"
+            code: ""
+          - name: "California"
+            code: ""
+          - name: "Capitanejo"
+            code: ""
+          - name: "Carcasí"
+            code: ""
+          - name: "Cepitá"
+            code: ""
+          - name: "Cerrito"
+            code: ""
+          - name: "Charalá"
+            code: ""
+          - name: "Charta"
+            code: ""
+          - name: "Chimá"
+            code: ""
+          - name: "Chipatá"
+            code: ""
+          - name: "Cimitarra"
+            code: ""
+          - name: "Concepción"
+            code: ""
+          - name: "Confines"
+            code: ""
+          - name: "Contratación"
+            code: ""
+          - name: "Coromoro"
+            code: ""
+          - name: "Curití"
+            code: ""
+          - name: "El Carmen de Chucurí"
+            code: ""
+          - name: "El Guacamayo"
+            code: ""
+          - name: "El Peñón"
+            code: ""
+          - name: "El Playón"
+            code: ""
+          - name: "Encino"
+            code: ""
+          - name: "Enciso"
+            code: ""
+          - name: "Florián"
+            code: ""
+          - name: "Floridablanca"
+            code: ""
+          - name: "Galán"
+            code: ""
+          - name: "Gambita"
+            code: ""
+          - name: "Girón"
+            code: ""
+          - name: "Guaca"
+            code: ""
+          - name: "Guadalupe"
+            code: ""
+          - name: "Guapotá"
+            code: ""
+          - name: "Guavatá"
+            code: ""
+          - name: "Güepsa"
+            code: ""
+          - name: "Hato"
+            code: ""
+          - name: "Jesús María"
+            code: ""
+          - name: "Jordán"
+            code: ""
+          - name: "La Belleza"
+            code: ""
+          - name: "La Paz"
+            code: ""
+          - name: "Landázuri"
+            code: ""
+          - name: "Lebríja"
+            code: ""
+          - name: "Los Santos"
+            code: ""
+          - name: "Macaravita"
+            code: ""
+          - name: "Málaga"
+            code: ""
+          - name: "Matanza"
+            code: ""
+          - name: "Mogotes"
+            code: ""
+          - name: "Molagavita"
+            code: ""
+          - name: "Ocamonte"
+            code: ""
+          - name: "Oiba"
+            code: ""
+          - name: "Onzaga"
+            code: ""
+          - name: "Palmar"
+            code: ""
+          - name: "Palmas del Socorro"
+            code: ""
+          - name: "Páramo"
+            code: ""
+          - name: "Piedecuesta"
+            code: ""
+          - name: "Pinchote"
+            code: ""
+          - name: "Puente Nacional"
+            code: ""
+          - name: "Puerto Parra"
+            code: ""
+          - name: "Puerto Wilches"
+            code: ""
+          - name: "Rionegro"
+            code: ""
+          - name: "Sabana de Torres"
+            code: ""
+          - name: "San Andrés"
+            code: ""
+          - name: "San Benito"
+            code: ""
+          - name: "San Gil"
+            code: ""
+          - name: "San Joaquín"
+            code: ""
+          - name: "San José de Miranda"
+            code: ""
+          - name: "San Miguel"
+            code: ""
+          - name: "San Vicente de Chucurí"
+            code: ""
+          - name: "Santa Bárbara"
+            code: ""
+          - name: "Santa Helena del Opón"
+            code: ""
+          - name: "Simacota"
+            code: ""
+          - name: "Socorro"
+            code: ""
+          - name: "Suaita"
+            code: ""
+          - name: "Sucre"
+            code: ""
+          - name: "Suratá"
+            code: ""
+          - name: "Tona"
+            code: ""
+          - name: "Valle de San José"
+            code: ""
+          - name: "Vélez"
+            code: ""
+          - name: "Vetas"
+            code: ""
+          - name: "Villanueva"
+            code: ""
+          - name: "Zapatoca"
+            code: ""
+      - code: "030"
+        name: "Tolima"
+        cities:
+          - name: "Alpujarra"
+            code: ""
+          - name: "Alvarado"
+            code: ""
+          - name: "Ambalema"
+            code: ""
+          - name: "Anzoátegui"
+            code: ""
+          - name: "Armero"
+            code: ""
+          - name: "Ataco"
+            code: ""
+          - name: "Cajamarca"
+            code: ""
+          - name: "Carmen de Apicala"
+            code: ""
+          - name: "Casabianca"
+            code: ""
+          - name: "Chaparral"
+            code: ""
+          - name: "Coello"
+            code: ""
+          - name: "Coyaima"
+            code: ""
+          - name: "Cunday"
+            code: ""
+          - name: "Dolores"
+            code: ""
+          - name: "Espinal"
+            code: ""
+          - name: "Falan"
+            code: ""
+          - name: "Flandes"
+            code: ""
+          - name: "Fresno"
+            code: ""
+          - name: "Guamo"
+            code: ""
+          - name: "Herveo"
+            code: ""
+          - name: "Honda"
+            code: ""
+          - name: "Ibagué"
+            code: ""
+          - name: "Icononzo"
+            code: ""
+          - name: "Lérida"
+            code: ""
+          - name: "Líbano"
+            code: ""
+          - name: "Mariquita"
+            code: ""
+          - name: "Melgar"
+            code: ""
+          - name: "Murillo"
+            code: ""
+          - name: "Natagaima"
+            code: ""
+          - name: "Ortega"
+            code: ""
+          - name: "Palocabildo"
+            code: ""
+          - name: "Piedras"
+            code: ""
+          - name: "Planadas"
+            code: ""
+          - name: "Prado"
+            code: ""
+          - name: "Purificación"
+            code: ""
+          - name: "Rio Blanco"
+            code: ""
+          - name: "Roncesvalles"
+            code: ""
+          - name: "Rovira"
+            code: ""
+          - name: "Saldaña"
+            code: ""
+          - name: "San Antonio"
+            code: ""
+          - name: "San Luis"
+            code: ""
+          - name: "Santa Isabel"
+            code: ""
+          - name: "Suárez"
+            code: ""
+          - name: "Valle de San Juan"
+            code: ""
+          - name: "Venadillo"
+            code: ""
+          - name: "Villahermosa"
+            code: ""
+          - name: "Villarrica"
+            code: ""
+  - name: "Región Amazónica"
+    code: ""
+    provinces:
+      - code: "002"
+        name: "Amazonas"
+        cities:
+          - name: "El Encanto"
+            code: ""
+          - name: "La Chorrera"
+            code: ""
+          - name: "La Pedrera"
+            code: ""
+          - name: "La Victoria"
+            code: ""
+          - name: "Leticia"
+            code: ""
+          - name: "Miriti Paraná"
+            code: ""
+          - name: "Puerto Alegría"
+            code: ""
+          - name: "Puerto Arica"
+            code: ""
+          - name: "Puerto Nariño"
+            code: ""
+          - name: "Puerto Santander"
+            code: ""
+          - name: "Tarapacá"
+            code: ""
+      - code: "009"
+        name: "Caquetá"
+        cities:
+          - name: "Albania"
+            code: ""
+          - name: "Belén de Los Andaquies"
+            code: ""
+          - name: "Cartagena del Chairá"
+            code: ""
+          - name: "Curillo"
+            code: ""
+          - name: "El Doncello"
+            code: ""
+          - name: "El Paujil"
+            code: ""
+          - name: "Florencia"
+            code: ""
+          - name: "La Montañita"
+            code: ""
+          - name: "Milán"
+            code: ""
+          - name: "Morelia"
+            code: ""
+          - name: "Puerto Rico"
+            code: ""
+          - name: "San José del Fragua"
+            code: ""
+          - name: "San Vicente del Caguán"
+            code: ""
+          - name: "Solano"
+            code: ""
+          - name: "Solita"
+            code: ""
+          - name: "Valparaíso"
+            code: ""
+      - code: "016"
+        name: "Guainía"
+        cities:
+          - name: "Barranco Minas"
+            code: ""
+          - name: "Cacahual"
+            code: ""
+          - name: "Inírida"
+            code: ""
+          - name: "La Guadalupe"
+            code: ""
+          - name: "Mapiripana"
+            code: ""
+          - name: "Morichal"
+            code: ""
+          - name: "Pana Pana"
+            code: ""
+          - name: "Puerto Colombia"
+            code: ""
+          - name: "San Felipe"
+            code: ""
+      - code: "017"
+        name: "Guaviare"
+        cities:
+          - name: "Calamar"
+            code: ""
+          - name: "El Retorno"
+            code: ""
+          - name: "Miraflores"
+            code: ""
+          - name: "San José del Guaviare"
+            code: ""
+      - code: "024"
+        name: "Putumayo"
+        cities:
+          - name: "Colón"
+            code: ""
+          - name: "Leguízamo"
+            code: ""
+          - name: "Mocoa"
+            code: ""
+          - name: "Orito"
+            code: ""
+          - name: "Puerto Asís"
+            code: ""
+          - name: "Puerto Caicedo"
+            code: ""
+          - name: "Puerto Guzmán"
+            code: ""
+          - name: "San Francisco"
+            code: ""
+          - name: "San Miguel"
+            code: ""
+          - name: "Santiago"
+            code: ""
+          - name: "Sibundoy"
+            code: ""
+          - name: "Valle de Guamez"
+            code: ""
+          - name: "Villagarzón"
+            code: ""
+  - name: "Región Pacífica"
+    code: ""
+    provinces:
+      - code: "031"
+        name: "Valle del Cauca"
+        cities:
+          - name: "Alcalá"
+            code: ""
+          - name: "Andalucía"
+            code: ""
+          - name: "Ansermanuevo"
+            code: ""
+          - name: "Argelia"
+            code: ""
+          - name: "Bolívar"
+            code: ""
+          - name: "Buenaventura"
+            code: ""
+          - name: "Bugalagrande"
+            code: ""
+          - name: "Caicedonia"
+            code: ""
+          - name: "Cali"
+            code: ""
+          - name: "Calima"
+            code: ""
+          - name: "Candelaria"
+            code: ""
+          - name: "Cartago"
+            code: ""
+          - name: "Dagua"
+            code: ""
+          - name: "El Águila"
+            code: ""
+          - name: "El Cairo"
+            code: ""
+          - name: "El Cerrito"
+            code: ""
+          - name: "El Dovio"
+            code: ""
+          - name: "Florida"
+            code: ""
+          - name: "Ginebra"
+            code: ""
+          - name: "Guacarí"
+            code: ""
+          - name: "Guadalajara de Buga"
+            code: ""
+          - name: "Jamundí"
+            code: ""
+          - name: "La Cumbre"
+            code: ""
+          - name: "La Unión"
+            code: ""
+          - name: "La Victoria"
+            code: ""
+          - name: "Obando"
+            code: ""
+          - name: "Palmira"
+            code: ""
+          - name: "Pradera"
+            code: ""
+          - name: "Restrepo"
+            code: ""
+          - name: "Riofrío"
+            code: ""
+          - name: "Roldanillo"
+            code: ""
+          - name: "San Pedro"
+            code: ""
+          - name: "Sevilla"
+            code: ""
+          - name: "Toro"
+            code: ""
+          - name: "Trujillo"
+            code: ""
+          - name: "Tuluá"
+            code: ""
+          - name: "Ulloa"
+            code: ""
+          - name: "Versalles"
+            code: ""
+          - name: "Vijes"
+            code: ""
+          - name: "Yotoco"
+            code: ""
+          - name: "Yumbo"
+            code: ""
+          - name: "Zarzal"
+            code: ""
+      - code: "013"
+        name: "Chocó"
+        cities:
+          - name: "Acandí"
+            code: ""
+          - name: "Alto Baudo"
+            code: ""
+          - name: "Atrato"
+            code: ""
+          - name: "Bagadó"
+            code: ""
+          - name: "Bahía Solano"
+            code: ""
+          - name: "Bajo Baudó"
+            code: ""
+          - name: "Belén de Bajira"
+            code: ""
+          - name: "Bojaya"
+            code: ""
+          - name: "Carmen del Darien"
+            code: ""
+          - name: "Cértegui"
+            code: ""
+          - name: "Condoto"
+            code: ""
+          - name: "El Cantón del San Pablo"
+            code: ""
+          - name: "El Carmen de Atrato"
+            code: ""
+          - name: "El Litoral del San Juan"
+            code: ""
+          - name: "Istmina"
+            code: ""
+          - name: "Juradó"
+            code: ""
+          - name: "Lloró"
+            code: ""
+          - name: "Medio Atrato"
+            code: ""
+          - name: "Medio Baudó"
+            code: ""
+          - name: "Medio San Juan"
+            code: ""
+          - name: "Nóvita"
+            code: ""
+          - name: "Nuquí"
+            code: ""
+          - name: "Quibdó"
+            code: ""
+          - name: "Río Iro"
+            code: ""
+          - name: "Río Quito"
+            code: ""
+          - name: "Riosucio"
+            code: ""
+          - name: "San José del Palmar"
+            code: ""
+          - name: "Sipí"
+            code: ""
+          - name: "Tadó"
+            code: ""
+          - name: "Unguía"
+            code: ""
+          - name: "Unión Panamericana"
+            code: ""
+      - code: "011"
+        name: "Cauca"
+        cities:
+          - name: "Almaguer"
+            code: ""
+          - name: "Argelia"
+            code: ""
+          - name: "Balboa"
+            code: ""
+          - name: "Bolívar"
+            code: ""
+          - name: "Buenos Aires"
+            code: ""
+          - name: "Cajibío"
+            code: ""
+          - name: "Caldono"
+            code: ""
+          - name: "Caloto"
+            code: ""
+          - name: "Corinto"
+            code: ""
+          - name: "El Tambo"
+            code: ""
+          - name: "Florencia"
+            code: ""
+          - name: "Guachené"
+            code: ""
+          - name: "Guapi"
+            code: ""
+          - name: "Inzá"
+            code: ""
+          - name: "Jambaló"
+            code: ""
+          - name: "La Sierra"
+            code: ""
+          - name: "La Vega"
+            code: ""
+          - name: "López"
+            code: ""
+          - name: "Mercaderes"
+            code: ""
+          - name: "Miranda"
+            code: ""
+          - name: "Morales"
+            code: ""
+          - name: "Padilla"
+            code: ""
+          - name: "Páez"
+            code: ""
+          - name: "Patía"
+            code: ""
+          - name: "Piamonte"
+            code: ""
+          - name: "Piendamó"
+            code: ""
+          - name: "Popayán"
+            code: ""
+          - name: "Puerto Tejada"
+            code: ""
+          - name: "Puracé"
+            code: ""
+          - name: "Rosas"
+            code: ""
+          - name: "San Sebastián"
+            code: ""
+          - name: "Santa Rosa"
+            code: ""
+          - name: "Santander de Quilichao"
+            code: ""
+          - name: "Silvia"
+            code: ""
+          - name: "Sotara"
+            code: ""
+          - name: "Suárez"
+            code: ""
+          - name: "Sucre"
+            code: ""
+          - name: "Timbío"
+            code: ""
+          - name: "Timbiquí"
+            code: ""
+          - name: "Toribio"
+            code: ""
+          - name: "Totoró"
+            code: ""
+          - name: "Villa Rica"
+            code: ""
+      - code: "022"
+        name: "Nariño"
+        cities:
+          - name: "Albán"
+            code: ""
+          - name: "Aldana"
+            code: ""
+          - name: "Ancuyá"
+            code: ""
+          - name: "Arboleda"
+            code: ""
+          - name: "Barbacoas"
+            code: ""
+          - name: "Belén"
+            code: ""
+          - name: "Buesaco"
+            code: ""
+          - name: "Chachagüí"
+            code: ""
+          - name: "Colón"
+            code: ""
+          - name: "Consaca"
+            code: ""
+          - name: "Contadero"
+            code: ""
+          - name: "Córdoba"
+            code: ""
+          - name: "Cuaspud"
+            code: ""
+          - name: "Cumbal"
+            code: ""
+          - name: "Cumbitara"
+            code: ""
+          - name: "El Charco"
+            code: ""
+          - name: "El Peñol"
+            code: ""
+          - name: "El Rosario"
+            code: ""
+          - name: "El Tablón de Gómez"
+            code: ""
+          - name: "El Tambo"
+            code: ""
+          - name: "Francisco Pizarro"
+            code: ""
+          - name: "Funes"
+            code: ""
+          - name: "Guachucal"
+            code: ""
+          - name: "Guaitarilla"
+            code: ""
+          - name: "Gualmatán"
+            code: ""
+          - name: "Iles"
+            code: ""
+          - name: "Imués"
+            code: ""
+          - name: "Ipiales"
+            code: ""
+          - name: "La Cruz"
+            code: ""
+          - name: "La Florida"
+            code: ""
+          - name: "La Llanada"
+            code: ""
+          - name: "La Tola"
+            code: ""
+          - name: "La Unión"
+            code: ""
+          - name: "Leiva"
+            code: ""
+          - name: "Linares"
+            code: ""
+          - name: "Los Andes"
+            code: ""
+          - name: "Magüí"
+            code: ""
+          - name: "Mallama"
+            code: ""
+          - name: "Mosquera"
+            code: ""
+          - name: "Nariño"
+            code: ""
+          - name: "Olaya Herrera"
+            code: ""
+          - name: "Ospina"
+            code: ""
+          - name: "Pasto"
+            code: ""
+          - name: "Policarpa"
+            code: ""
+          - name: "Potosí"
+            code: ""
+          - name: "Providencia"
+            code: ""
+          - name: "Puerres"
+            code: ""
+          - name: "Pupiales"
+            code: ""
+          - name: "Ricaurte"
+            code: ""
+          - name: "Roberto Payán"
+            code: ""
+          - name: "Samaniego"
+            code: ""
+          - name: "San Andrés de Tumaco"
+            code: ""
+          - name: "San Bernardo"
+            code: ""
+          - name: "San Lorenzo"
+            code: ""
+          - name: "San Pablo"
+            code: ""
+          - name: "San Pedro de Cartago"
+            code: ""
+          - name: "Sandoná"
+            code: ""
+          - name: "Santa Bárbara"
+            code: ""
+          - name: "Santacruz"
+            code: ""
+          - name: "Sapuyes"
+            code: ""
+          - name: "Taminango"
+            code: ""
+          - name: "Tangua"
+            code: ""
+          - name: "Túquerres"
+            code: ""
+          - name: "Yacuanquer"
+            code: ""
+  - name: "Región Caribe"
+    code: ""
+    provinces:
+      - code: "005"
+        name: "Atlántico"
+        cities:
+          - name: "Baranoa"
+            code: ""
+          - name: "Barranquilla"
+            code: ""
+          - name: "Campo de La Cruz"
+            code: ""
+          - name: "Candelaria"
+            code: ""
+          - name: "Galapa"
+            code: ""
+          - name: "Juan de Acosta"
+            code: ""
+          - name: "Luruaco"
+            code: ""
+          - name: "Malambo"
+            code: ""
+          - name: "Manatí"
+            code: ""
+          - name: "Palmar de Varela"
+            code: ""
+          - name: "Piojó"
+            code: ""
+          - name: "Polonuevo"
+            code: ""
+          - name: "Ponedera"
+            code: ""
+          - name: "Puerto Colombia"
+            code: ""
+          - name: "Repelón"
+            code: ""
+          - name: "Sabanagrande"
+            code: ""
+          - name: "Sabanalarga"
+            code: ""
+          - name: "Santa Lucía"
+            code: ""
+          - name: "Santo Tomás"
+            code: ""
+          - name: "Soledad"
+            code: ""
+          - name: "Suan"
+            code: ""
+          - name: "Tubará"
+            code: ""
+          - name: "Usiacurí"
+            code: ""
+      - code: "006"
+        name: "Bolívar"
+        cities:
+          - name: "Achí"
+            code: ""
+          - name: "Altos del Rosario"
+            code: ""
+          - name: "Arenal"
+            code: ""
+          - name: "Arjona"
+            code: ""
+          - name: "Arroyohondo"
+            code: ""
+          - name: "Barranco de Loba"
+            code: ""
+          - name: "Calamar"
+            code: ""
+          - name: "Cantagallo"
+            code: ""
+          - name: "Cartagena"
+            code: ""
+          - name: "Cicuco"
+            code: ""
+          - name: "Clemencia"
+            code: ""
+          - name: "Córdoba"
+            code: ""
+          - name: "El Carmen de Bolívar"
+            code: ""
+          - name: "El Guamo"
+            code: ""
+          - name: "El Peñón"
+            code: ""
+          - name: "Hatillo de Loba"
+            code: ""
+          - name: "Magangué"
+            code: ""
+          - name: "Mahates"
+            code: ""
+          - name: "Margarita"
+            code: ""
+          - name: "María la Baja"
+            code: ""
+          - name: "Mompós"
+            code: ""
+          - name: "Montecristo"
+            code: ""
+          - name: "Morales"
+            code: ""
+          - name: "Norosí"
+            code: ""
+          - name: "Pinillos"
+            code: ""
+          - name: "Regidor"
+            code: ""
+          - name: "Río Viejo"
+            code: ""
+          - name: "San Cristóbal"
+            code: ""
+          - name: "San Estanislao"
+            code: ""
+          - name: "San Fernando"
+            code: ""
+          - name: "San Jacinto"
+            code: ""
+          - name: "San Jacinto del Cauca"
+            code: ""
+          - name: "San Juan Nepomuceno"
+            code: ""
+          - name: "San Martín de Loba"
+            code: ""
+          - name: "San Pablo de Borbur"
+            code: ""
+          - name: "Santa Catalina"
+            code: ""
+          - name: "Santa Rosa"
+            code: ""
+          - name: "Santa Rosa del Sur"
+            code: ""
+          - name: "Simití"
+            code: ""
+          - name: "Soplaviento"
+            code: ""
+          - name: "Talaigua Nuevo"
+            code: ""
+          - name: "Tiquisio"
+            code: ""
+          - name: "Turbaco"
+            code: ""
+          - name: "Turbaná"
+            code: ""
+          - name: "Villanueva"
+            code: ""
+          - name: "Zambrano"
+            code: ""
+      - code: "012"
+        name: "Cesar"
+        cities:
+          - name: "Aguachica"
+            code: ""
+          - name: "Agustín Codazzi"
+            code: ""
+          - name: "Astrea"
+            code: ""
+          - name: "Becerril"
+            code: ""
+          - name: "Bosconia"
+            code: ""
+          - name: "Chimichagua"
+            code: ""
+          - name: "Chiriguaná"
+            code: ""
+          - name: "Curumaní"
+            code: ""
+          - name: "El Copey"
+            code: ""
+          - name: "El Paso"
+            code: ""
+          - name: "Gamarra"
+            code: ""
+          - name: "González"
+            code: ""
+          - name: "La Gloria"
+            code: ""
+          - name: "La Jagua de Ibirico"
+            code: ""
+          - name: "La Paz"
+            code: ""
+          - name: "Manaure"
+            code: ""
+          - name: "Pailitas"
+            code: ""
+          - name: "Pelaya"
+            code: ""
+          - name: "Pueblo Bello"
+            code: ""
+          - name: "Río de Oro"
+            code: ""
+          - name: "San Alberto"
+            code: ""
+          - name: "San Diego"
+            code: ""
+          - name: "San Martín"
+            code: ""
+          - name: "Tamalameque"
+            code: ""
+          - name: "Valledupar"
+            code: ""
+      - code: "014"
+        name: "Córdoba"
+        cities:
+          - name: ""
+            code: ""
+          - name: "Ayapel"
+            code: ""
+          - name: "Buenavista"
+            code: ""
+          - name: "Canalete"
+            code: ""
+          - name: "Cereté"
+            code: ""
+          - name: "Chimá"
+            code: ""
+          - name: "Chinú"
+            code: ""
+          - name: "Ciénaga de Oro"
+            code: ""
+          - name: "Cotorra"
+            code: ""
+          - name: "La Apartada"
+            code: ""
+          - name: "Lorica"
+            code: ""
+          - name: "Los Córdobas"
+            code: ""
+          - name: "Momil"
+            code: ""
+          - name: "Montelíbano"
+            code: ""
+          - name: "Montería"
+            code: ""
+          - name: "Moñitos"
+            code: ""
+          - name: "Planeta Rica"
+            code: ""
+          - name: "Pueblo Nuevo"
+            code: ""
+          - name: "Puerto Escondido"
+            code: ""
+          - name: "Puerto Libertador"
+            code: ""
+          - name: "Purísima"
+            code: ""
+          - name: "Sahagún"
+            code: ""
+          - name: "San Andrés Sotavento"
+            code: ""
+          - name: "San Antero"
+            code: ""
+          - name: "San Bernardo del Viento"
+            code: ""
+          - name: "San Carlos"
+            code: ""
+          - name: "San José de Uré"
+            code: ""
+          - name: "San Pelayo"
+            code: ""
+          - name: "Tierralta"
+            code: ""
+          - name: "Tuchín"
+            code: ""
+          - name: "Valencia"
+            code: ""
+      - code: "019"
+        name: "La Guajira"
+        cities:
+          - name: "Albania"
+            code: ""
+          - name: "Barrancas"
+            code: ""
+          - name: "Dibula"
+            code: ""
+          - name: "Distracción"
+            code: ""
+          - name: "El Molino"
+            code: ""
+          - name: "Fonseca"
+            code: ""
+          - name: "Hatonuevo"
+            code: ""
+          - name: "La Jagua del Pilar"
+            code: ""
+          - name: "Maicao"
+            code: ""
+          - name: "Manaure"
+            code: ""
+          - name: "Riohacha"
+            code: ""
+          - name: "San Juan del Cesar"
+            code: ""
+          - name: "Uribia"
+            code: ""
+          - name: "Urumita"
+            code: ""
+          - name: "Villanueva"
+            code: ""
+      - code: "020"
+        name: "Magdalena"
+        cities:
+          - name: "Algarrobo"
+            code: ""
+          - name: "Aracataca"
+            code: ""
+          - name: "Ariguaní"
+            code: ""
+          - name: "Cerro San Antonio"
+            code: ""
+          - name: "Chivolo"
+            code: ""
+          - name: "Ciénaga"
+            code: ""
+          - name: "Concordia"
+            code: ""
+          - name: "El Banco"
+            code: ""
+          - name: "El Piñon"
+            code: ""
+          - name: "El Retén"
+            code: ""
+          - name: "Fundación"
+            code: ""
+          - name: "Guamal"
+            code: ""
+          - name: "Nueva Granada"
+            code: ""
+          - name: "Pedraza"
+            code: ""
+          - name: "Pijiño del Carmen"
+            code: ""
+          - name: "Pivijay"
+            code: ""
+          - name: "Plato"
+            code: ""
+          - name: "Pueblo Viejo"
+            code: ""
+          - name: "Remolino"
+            code: ""
+          - name: "Sabanas de San Angel"
+            code: ""
+          - name: "Salamina"
+            code: ""
+          - name: "San Sebastián de Buenavista"
+            code: ""
+          - name: "San Zenón"
+            code: ""
+          - name: "Santa Ana"
+            code: ""
+          - name: "Santa Bárbara de Pinto"
+            code: ""
+          - name: "Santa Marta"
+            code: ""
+          - name: "Sitionuevo"
+            code: ""
+          - name: "Tenerife"
+            code: ""
+          - name: "Zapayán"
+            code: ""
+          - name: "Zona Bananera"
+            code: ""
+      - code: "029"
+        name: "Sucre"
+        cities:
+          - name: "Buenavista"
+            code: ""
+          - name: "Caimito"
+            code: ""
+          - name: "Chalán"
+            code: ""
+          - name: "Coloso"
+            code: ""
+          - name: "Corozal"
+            code: ""
+          - name: "Coveñas"
+            code: ""
+          - name: "El Roble"
+            code: ""
+          - name: "Galeras"
+            code: ""
+          - name: "Guaranda"
+            code: ""
+          - name: "La Unión"
+            code: ""
+          - name: "Los Palmitos"
+            code: ""
+          - name: "Majagual"
+            code: ""
+          - name: "Morroa"
+            code: ""
+          - name: "Ovejas"
+            code: ""
+          - name: "Palmito"
+            code: ""
+          - name: "Sampués"
+            code: ""
+          - name: "San Benito Abad"
+            code: ""
+          - name: "San Juan de Betulia"
+            code: ""
+          - name: "San Luis de Sincé"
+            code: ""
+          - name: "San Marcos"
+            code: ""
+          - name: "San Onofre"
+            code: ""
+          - name: "San Pedro"
+            code: ""
+          - name: "Santiago de Tolú"
+            code: ""
+          - name: "Sincelejo"
+            code: ""
+          - name: "Sucre"
+            code: ""
+          - name: "Tolú Viejo"
+            code: ""
+      - code: "027"
+        name: "San Andrés y Providencia"
+        cities:
+          - name: "Providencia"
+            code: ""
+          - name: "San Andrés"
+            code: ""
+      - code: "032"
+        name: "Vaupes"
+        cities:
+          - name: "Carurú"
+            code: ""
+          - name: "Mitú"
+            code: ""
+          - name: "Pacoa"
+            code: ""
+          - name: "Papunahua"
+            code: ""
+          - name: "Taraira"
+            code: ""
+          - name: "Yavaraté"
+            code: ""
+  - name: "Región de la Orinoquía"
+    code: ""
+    provinces:
+      - code: "004"
+        name: "Arauca"
+        cities:
+          - name: "Arauca"
+            code: ""
+          - name: "Arauquita"
+            code: ""
+          - name: "Cravo Norte"
+            code: ""
+          - name: "Fortul"
+            code: ""
+          - name: "Puerto Rondón"
+            code: ""
+          - name: "Saravena"
+            code: ""
+          - name: "Tame"
+            code: ""
+      - code: "010"
+        name: "Casanare"
+        cities:
+          - name: "Aguazul"
+            code: ""
+          - name: "Chámeza"
+            code: ""
+          - name: "Hato Corozal"
+            code: ""
+          - name: "La Salina"
+            code: ""
+          - name: "Maní"
+            code: ""
+          - name: "Monterrey"
+            code: ""
+          - name: "Nunchía"
+            code: ""
+          - name: "Orocué"
+            code: ""
+          - name: "Paz de Ariporo"
+            code: ""
+          - name: "Pore"
+            code: ""
+          - name: "Recetor"
+            code: ""
+          - name: "Sabanalarga"
+            code: ""
+          - name: "Sácama"
+            code: ""
+          - name: "San Luis de Gaceno"
+            code: ""
+          - name: "Támara"
+            code: ""
+          - name: "Tauramena"
+            code: ""
+          - name: "Trinidad"
+            code: ""
+          - name: "Villanueva"
+            code: ""
+          - name: "Yopal"
+            code: ""
+      - code: "021"
+        name: "Meta"
+        cities:
+          - name: "Acacias"
+            code: ""
+          - name: "Barranca de Upía"
+            code: ""
+          - name: "Cabuyaro"
+            code: ""
+          - name: "Castilla la Nueva"
+            code: ""
+          - name: "Cubarral"
+            code: ""
+          - name: "Cumaral"
+            code: ""
+          - name: "El Calvario"
+            code: ""
+          - name: "El Castillo"
+            code: ""
+          - name: "El Dorado"
+            code: ""
+          - name: "Fuente de Oro"
+            code: ""
+          - name: "Granada"
+            code: ""
+          - name: "Guamal"
+            code: ""
+          - name: "La Macarena"
+            code: ""
+          - name: "Lejanías"
+            code: ""
+          - name: "Mapiripán"
+            code: ""
+          - name: "Mesetas"
+            code: ""
+          - name: "Puerto Concordia"
+            code: ""
+          - name: "Puerto Gaitán"
+            code: ""
+          - name: "Puerto Lleras"
+            code: ""
+          - name: "Puerto López"
+            code: ""
+          - name: "Puerto Rico"
+            code: ""
+          - name: "Restrepo"
+            code: ""
+          - name: "San Carlos de Guaroa"
+            code: ""
+          - name: "San Juan de Arama"
+            code: ""
+          - name: "San Juanito"
+            code: ""
+          - name: "San Martín"
+            code: ""
+          - name: "Uribe"
+            code: ""
+          - name: "Villavicencio"
+            code: ""
+          - name: "Vista Hermosa"
+            code: ""
+      - code: "033"
+        name: "Vichada"
+        cities:
+          - name: ""
+            code: ""
+          - name: "Cumaribo"
+            code: ""
+          - name: "La Primavera"
+            code: ""
+          - name: "Puerto Carreño"
+            code: ""
+          - name: "Santa Rosalía"
+            code: ""
