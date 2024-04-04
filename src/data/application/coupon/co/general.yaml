@@ -246,7 +246,7 @@ data:
       expand_form: true
       sync_local: false # Only if payment_gateway.enabled is false
       payment_gateway:
-        enabled: true
+        enabled: false
         third_party: 2
   overrides:
     environment:
