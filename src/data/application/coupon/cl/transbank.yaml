@@ -5,7 +5,7 @@ data:
   content:
     header:
       picture: "general.png"
-      title: "Unite a Greenpeace y sé parte del equipo que protege el medio ambiente (Transbank)"
+      title: "Unite a Greenpeace y sé parte del equipo que protege el medio ambiente"
       logo:
         show: true
         color: white
@@ -77,13 +77,14 @@ data:
                   expression: ^(\d{1,3}(?:\.\d{1,3}){2}-[\dkK])$
         registration:
           area_code:
-            placeholder: 'Ej. 9'
-            validator:
-              expression: ^[9]{1}$
+            default: '56'
+            disabled: true
           phone_number:
-            placeholder: 'Ej. XXXXXXX'
+            placeholder: '9XXXXXXXX'
+            default: '9'
             validator:
-              expression: ^[0-9]{8}$
+              expression: ^9[0-9]{4}[0-9]{4}$
+            help_text: "Solo números y anteponer el 9."
           birthDate:
             show: true
           genre:

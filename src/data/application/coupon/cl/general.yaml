@@ -77,13 +77,14 @@ data:
                   expression: ^(\d{1,3}(?:\.\d{1,3}){2}-[\dkK])$
         registration:
           area_code:
-            placeholder: 'Ej. 9'
-            validator:
-              expression: ^[9]{1}$
+            default: '56'
+            disabled: true
           phone_number:
-            placeholder: 'Ej. XXXXXXX'
+            placeholder: '9XXXXXXXX'
+            default: '9'
             validator:
-              expression: ^[0-9]{8}$
+              expression: ^9[0-9]{4}[0-9]{4}$
+            help_text: "Solo números y anteponer el 9."
           birthDate:
             show: true
           genre:
@@ -95,9 +96,13 @@ data:
               show: true
               disabled: true
             province:
+              label: 'Región'
               show: true
+              required: true
             city:
+              label: 'Comuna'
               show: true
+              required: true
             address:
               show: true
               required: true
