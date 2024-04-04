@@ -95,9 +95,15 @@ data:
               show: true
               disabled: true
             province:
+              label: 'Región'
               show: true
+              required: true
             city:
+              label: 'Comuna'
               show: true
+              required: true
+            # zone:
+            #   show: true
             address:
               show: true
               required: true

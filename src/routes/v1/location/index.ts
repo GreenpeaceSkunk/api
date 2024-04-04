@@ -35,18 +35,13 @@ router.get('/world/countries/:country', [requestWrapper(async (req: Request, res
   if(result) {
     res
       .status(200)
-      .json(result.data.map(({ code, data, name }: {name: string; code: string; data: Array<string>}) => {
-        return {
-          name,
-          code,
-          slug: name.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, ""),
-          cities: data,
-        }
-      }));
+      .json(result);
   } else {
     res
       .status(404)
-      .json({});
+      .json({
+        message: `The places from ${req.params.country} are not found.`
+      });
   }
 })]);
 
