@@ -5,7 +5,7 @@ data:
   content:
     header:
       picture: "general.png"
-      title: "Unite a Greenpeace y sé parte del equipo que protege el medio ambiente"
+      title: "Únete a Greenpeace y sé parte del equipo que protege el medio ambiente"
       logo:
         show: true
         color: white
@@ -78,6 +78,9 @@ data:
         registration:
           area_code:
             default: 56
+            validator:
+              expression: ^[0-9]{2}$
+            required: true
             disabled: true
           phone_number:
             placeholder: 9XXXXXXXX
