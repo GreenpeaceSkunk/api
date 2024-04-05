@@ -149,13 +149,13 @@ data:
     tracking:
       default:
         salesforce:
-          campaign_id: "7015c0000024Fq4"
+          campaign_id: 7017X000000MqXx
         google:
           analytics:
-            tracking_id: "UA-175817761-1"
+            tracking_id: UA-175817761-1
             enabled: true
           tag_manager:
-            id: "GTM-TZB6GQ3"
+            id: GTM-TZB6GQ3
             enabled: true
         facebook:
           pixel_id: 713455948697688
@@ -181,6 +181,9 @@ data:
       test:
       production:
         settings:
+          tracking:
+            salesforce:
+              campaign_id: 7015c00000248sX
           services:
             forma:
               form_id: 23
