@@ -29,7 +29,7 @@ data:
         button_text: "¡Súmate ahora!"
     thank_you:
       title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
-      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos contigo."
     modal_form:
         title: "Hazte donante"
         text: "Solo contigo - Somos Greenpeace"

@@ -10,26 +10,26 @@ data:
         show: true
         color: white
     home:
-      title: "Todos nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar campañas para seguir defendiendo el planeta."
-      text: "<p>No recibimos aportes de empresas, partidos políticos ni gobiernos. Somos 100% independientes.</p><p>Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
-      highlighted_text: "¡Sumate ahora, con vos somos más!"
-      button_text: "Sumate!"
+      title: "Estás a un paso de convertirte en activista por el medioambiente."
+      text: "<p>En Greenpeace NO aceptamos dinero de empresas, partidos políticos ni gobiernos.</p><p>Nuestra libertad e independencia siempre está presente.</p><p>El aporte económico mensual que realizan nuestros donantes se convierte en acción por la protección y defensa de los bosques, océanos, mares, playas y todos los ecosistemas.</p><p>Ayúdanos a respetar y cuidar a la Naturaleza 💚</p><p>Buscamos soluciones y generamos cambios, cada donación SÍ hace la diferencia.</p>"
+      highlighted_text: "Para transformar la realidad necesitamos todo el apoyo posible. El primer paso, está a sólo un click, la decisión es tuya."
+      button_text: "Dona ahora"
     form:
       general:
         coupon_regular_label_text: "Autorizo el débito automático mensual de:"
-        coupon_regular_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
+        coupon_regular_label_text_2: "<i>Acepto que se realicen eventuales actualizaciones al monto de mi donación que permitan mantener el valor de los aportes.</i>"
         coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
       registration:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
+        title: "Hazte donante"
+        text: "Solo contigo - Somos Greenpeace"
         button_text: "Continuar"
       checkout:
-        title: "DONÁ AHORA"
-        text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
-        button_text: "Doná"
+        title: "Solo contigo - Somos Greenpeace"
+        text: "Hazte donante"
+        button_text: "¡Súmate ahora!"
     thank_you:
       title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
-      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos contigo."
       button_cta:
         text: thank_you_button_cta_text
         link: "https://www.greenpeace.org.ar"
