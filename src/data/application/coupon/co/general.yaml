@@ -105,7 +105,7 @@ data:
           phone_number:
             placeholder: 'Ej. XXXXXXX'
             validator:
-              expression: ^[0-9]{9}$
+              expression: ^[0-9]{7}$
           birthDate:
             show: true
           genre:
@@ -142,14 +142,14 @@ data:
                     expression: ^[0-9]{16}$
                   card_security_code:
                     expression: ^[0-9]{3}$
-              - text: "Visa débito"
-                slug: "visa_debit"
-                value: 7
-                validator:
-                  card_number:
-                    expression: ^[0-9]{16}$
-                  card_security_code:
-                    expression: ^[0-9]{3}$
+              # - text: "Visa débito"
+              #   slug: "visa_debit"
+              #   value: 7
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{16}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3}$
               - text: "Mastercard"
                 slug: "mastercard"
                 value: 3
@@ -158,14 +158,14 @@ data:
                     expression: ^[0-9]{16}$
                   card_security_code:
                     expression: ^[0-9]{3}$
-              - text: "Mastercard débito"
-                slug: "mastercard_debit"
-                value: 8
-                validator:
-                  card_number:
-                    expression: ^[0-9]{16}$
-                  card_security_code:
-                    expression: ^[0-9]{3}$
+              # - text: "Mastercard débito"
+              #   slug: "mastercard_debit"
+              #   value: 8
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{16}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3}$
               - text: "Amex"
                 slug: "amex"
                 value: 4
@@ -174,22 +174,22 @@ data:
                     expression: ^[0-9]{15}$
                   card_security_code:
                     expression: ^[0-9]{4}$
-              - text: "Codensa"
-                slug: "codensa"
-                value: 5
-                validator:
-                  card_number:
-                    expression: ^[0-9]{16}$
-                  card_security_code:
-                    expression: ^[0-9]{3,4}$
-              - text: "Diners"
-                slug: "diners"
-                value: 6
-                validator:
-                  card_number:
-                    expression: ^[0-9]{14,15}$
-                  card_security_code:
-                    expression: ^[0-9]{3,4}$
+              # - text: "Codensa"
+              #   slug: "codensa"
+              #   value: 5
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{16}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
+              # - text: "Diners"
+              #   slug: "diners"
+              #   value: 6
+              #   validator:
+              #     card_number:
+              #       expression: ^[0-9]{14,15}$
+              #     card_security_code:
+              #       expression: ^[0-9]{3,4}$
           bank_account_types:
             values:
               - text: 'Cuentas de ahorro'
