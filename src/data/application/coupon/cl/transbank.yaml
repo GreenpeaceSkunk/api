@@ -32,7 +32,7 @@ data:
       text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos contigo."
       button_cta:
         text: thank_you_button_cta_text
-        link: "https://www.greenpeace.org.ar"
+        link: "https://www.greenpeace.org/chile"
     modal_form:
       title: modal_form_title
       text: modal_form_text
