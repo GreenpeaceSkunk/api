@@ -92,11 +92,11 @@ data:
                 placeholder: ""
                 validator:
                   expression: ^[0-9]{8,10}$
-              - type: "NIT"
-                value: "Número de Identificación Tributaria"
-                placeholder: ""
-                validator:
-                  expression: ^[0-9]{8,10}$
+              # - type: "NIT"
+              #   value: "Número de Identificación Tributaria"
+              #   placeholder: ""
+              #   validator:
+              #     expression: ^[0-9]{8,10}$
         registration:
           area_code:
             placeholder: 'Ej. XXX'
