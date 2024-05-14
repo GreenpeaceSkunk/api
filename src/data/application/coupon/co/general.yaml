@@ -100,6 +100,7 @@ data:
         registration:
           area_code:
             placeholder: 'Ej. XXX'
+            default: '012'
             validator:
               expression: ^[0-9]{3}$
           phone_number:
@@ -114,21 +115,23 @@ data:
             show: true 
           location:
             address:
-              show: true
+              show: false
               required: true
               validator:
                 expression: ^[A-Za-z0-9\s\-]*$
             addressNumber:
-              show: true
+              show: false
               required: true
             country:
-              show: true
+              show: false
               disabled: true
+            province:
+              show: false
+              label: 'Departamento'
+              default: '001'
             city:
               show: true # Enabled only if `province` is enabled
-            province:
-              show: true
-              label: 'Departamento'
+              default: 'Bogotá D.C.'
             zipCode:
               show: false
         checkout:

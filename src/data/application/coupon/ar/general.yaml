@@ -104,17 +104,21 @@ data:
           is_card_holder:
             show: false
           location:
-            country:
-              show: false
-              disabled: true
-            province:
-              label: 'Provincia' # Overrides the default `label`
-              show: false
-            city: # Is enabled only if `province` is enabled
-              label: 'Ciudad' # Overrides the default `label`
-              show: false
             address:
               show: false
+              required: false
+            addressNumber:
+              show: false
+              required: false
+            country:
+              show: false
+              disabled: false
+            province:
+              show: false
+              default: ''
+            city:
+              show: false # Enabled only if `province` is enabled
+              default: ''
             zipCode:
               show: false
         checkout:

@@ -96,21 +96,23 @@ data:
             show: true 
           location:
             country:
-              show: true
+              show: false
               disabled: true
             province:
               label: Región
-              show: true
+              show: false
               required: true
+              default: '49'
             city:
               label: Comuna
-              show: true
+              show: false
               required: true
+              default: '13101'
             address:
-              show: true
+              show: false
               required: true
             addressNumber:
-              show: true
+              show: false
               required: true
             zipCode:
               show: false
