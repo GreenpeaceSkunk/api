@@ -35,7 +35,20 @@ export const getCouponByName = async (req: Request): Promise<any> => {
         ...data.content,
         header: {
           ...data.content.header,
-          picture: `${country}/${data.content.header.picture}`,
+
+          // This should be updated reviewed when all coupons include banner's structure
+          ...(data.content.header.banner) ?
+          {
+            banner: {
+              ...data.content.header.banner,
+              type: (data.content.header.banner.url.slice(data.content.header.banner.url.length - 3) === 'mp4')
+                ? 'video'
+                : 'image',
+              url: `${country}/${data.content.header.banner.url}`,
+            },
+          } : {
+            picture: `${country}/${data.content.header.picture}`,
+          }
         },
       },
       settings: {
