@@ -1,0 +1,257 @@
+data:
+  name: "ballena"
+  site_title: "Asociate a Greenpeace Argentina"
+  country: "Argentina"
+  content:
+    header:
+      banner:
+        url: "ballena.mp4"
+        background_color: "transparent"
+      title: ""
+      logo:
+        show: true
+        color: "transparent" # #6aca25
+      size:
+        height:
+          small: 270
+          medium: 300
+          large: 500
+          xlarge: 700
+    home:
+      title: "El 100% de nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras causas para seguir protegiendo nuestro mar y defendiendo el planeta."
+      text: "<p>Para preservar nuestra independencia NO recibimos ni aceptamos aportes de empresas, partidos políticos ni gobiernos.</p><p>Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
+      highlighted_text: "¡Sumate!, ¡el momento para el planeta es ahora!"
+      button_text: "¡Sumate!"
+    form:
+      general:
+        coupon_regular_label_text: "Autorizo el débito automático mensual de:"
+        coupon_regular_label_text_2: "<i>Tu donación se reajustará cada año según IPC. Si tienes dudas, comunícate con nosotros.</i>"
+        coupon_oneoff_label_text: "Autorizo el pago por única vez de:"
+      registration:
+        title: "DONÁ AHORA"
+        text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
+        button_text: "Continuar"
+      checkout:
+        title: "DONÁ AHORA"
+        text: "Te enviaremos información sobre nuestras acciones y cómo podés participar."
+        button_text: "Doná"
+    thank_you:
+      title: "¡GRACIAS POR APOYAR NUESTRA CAUSA!"
+      text: "Estaremos procesando tu donación y ante cualquier novedad nos comunicaremos con vos."
+    modal_form:
+      title: "DONÁ AHORA"
+      text: "Sumate y conocé nuestras causas"
+      button_text: "¡Sumate!"
+    social_media:
+      text: "¡Seamos muchos más los que ayudamos al planeta!"
+      profiles:
+        facebook:
+          url: "https://www.facebook.com/GreenpeaceArg"
+          show: true
+        instagram:
+          url: "https://www.instagram.com/greenpeacearg/"
+          show: true
+        twitter:
+          url: "https://twitter.com/GreenpeaceArg"
+          show: true
+    social_share:
+      facebook:
+        text: "¡Vivir una vida sustentable es posible si cada persona hace su pequeño esfuerzo! 🌱 Unite vos también a la sustentabilidad con Greenpeace 👇"
+      twitter:
+        text: "El camino hacia la sustentabilidad es responsabilidad compartida. Sumate vos también para hacer la diferencia desde acá 👇"
+      whatsapp:
+        text: "¡Hola! Me uní al consumo responsable con la campaña de Sustentabilidad de Greenpeace. ¡Unite vos también! Mirá 👇"
+      email:
+        subject: "Colaborá vos también con el medio ambiente"
+        body: "¡Hola! Hoy hice mi aporte para cuidar el planeta con Greenpeace. Mientras más seamos, mejor. Colaborá vos también desde acá:"
+  settings:
+    general:
+      amounts:
+        values: [ 2000, 4000, 6000 ]
+        default: 2000
+        min_other_amount: 2000
+        currency: "$"
+      form_fields:
+        shared:
+          identification_types:
+            values:
+              - type: "dni"
+                value: "DNI"
+                placeholder: ""
+                validator: # https://stackoverflow.com/questions/11143702/how-to-pass-a-regular-expression-as-a-function-parameter
+                  expression: ^[0-9]{7,9}$
+              - type: "cedula_identidad"
+                value: "Cédula de identidad"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9A-Z]{6,10}$
+              - type: "lc"
+                value: "Libreta Cívica"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9A-Z]{6,10}$
+              - type: "le"
+                value: "Libreta de enrolamiento"
+                placeholder: ""
+                validator:
+                  expression: ^[0-9A-Z]{6,10}$
+        registration:
+          area_code:
+            placeholder: 'Ej. XX'
+            validator:
+              expression: ^[0-9]{2,4}$
+          phone_number:
+            placeholder: 'Ej. XXXXXXXX'
+            helpText: 'Solo números sin el 15.'
+            validator:
+              expression: ^[0-9]{8,9}$
+          birthDate:
+            show: false
+          genre:
+            show: false
+          is_card_holder:
+            show: false
+          location:
+            address:
+              show: false
+              required: false
+            addressNumber:
+              show: false
+              required: false
+            country:
+              show: false
+              disabled: false
+            province:
+              show: false
+              default: ''
+            city:
+              show: false # Enabled only if `province` is enabled
+              default: ''
+            zipCode:
+              show: false
+        checkout:
+          card_types:
+            values:
+              - text: "Visa"
+                slug: "visa"
+                value: 2
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Visa débito"
+                slug: "visa_debit"
+                value: 4
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Mastercard"
+                slug: "mastercard"
+                value: 3
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Amex"
+                slug: "amex"
+                value: 5
+                validator:
+                  card_number:
+                    expression: ^[0-9]{15}$
+                  card_security_code:
+                    expression: ^[0-9]{4}$
+              - text: "Cabal"
+                slug: "cabal"
+                value: 6
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Cabal débito"
+                slug: "debcabal"
+                value: 6
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "CMR"
+                slug: "cmr"
+                value: 7
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Cencosud"
+                slug: "cencosud"
+                value: 7
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Naranja"
+                slug: "naranja"
+                value: 8
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+              - text: "Diners"
+                slug: "diners"
+                value: 10
+                validator:
+                  card_number:
+                    expression: ^[0-9]{16}$
+                  card_security_code:
+                    expression: ^[0-9]{3}$
+    tracking:
+      default:
+        salesforce:
+          campaign_id: "7015c0000024Fq4"
+        google:
+          analytics:
+            tracking_id: "UA-175817761-1"
+            enabled: true
+          tag_manager:
+            id: "GTM-TZB6GQ3"
+            enabled: true
+        facebook:
+          pixel_id: 713455948697688
+          enabled: false
+        hubspot:
+          id: 20432059
+          enabled: false
+    services:
+      default:
+        forma:
+          form_id: 110
+  features:
+    default:
+      use_design_version: 1
+      expand_form: false
+      sync_local: true # Only if payment_gateway.enabled is false
+      payment_gateway:
+        enabled: false
+        third_party: 0
+  overrides:
+    environment:
+      development:
+      test:
+      production:
+        settings:
+          services:
+            forma:
+              form_id: 114
+        features:
+          sync_local: false
+          payment_gateway:
+            enabled: true
+            third_party: 1
