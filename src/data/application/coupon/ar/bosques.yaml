@@ -6,17 +6,11 @@ data:
     header:
       banner:
         url: "bosques.mp4"
-        background_color: "transparent"
+        background_color: "white"
       title: ""
       logo:
-        show: true
-        color: "transparent" # #6aca25
-      size:
-        height:
-          small: 270
-          medium: 300
-          large: 500
-          xlarge: 700
+        show: false
+        color: "#6aca25"
     home:
       title: "El 100% de nuestros recursos provienen de donaciones particulares de personas como vos, que deciden apoyar nuestras causas para seguir protegiendo nuestros bosques y defendiendo el planeta."
       text: "<p>No recibimos aportes de empresas, partidos políticos ni gobiernos. Somos 100% independientes.</p><p>Juntos podremos continuar nuestro trabajo con libertad de acción.</p>"
