@@ -4,11 +4,13 @@ data:
   country: "Colombia"
   content:
     header:
+      banner:
+        url: "tortuga.mp4"
+        background_color: "white"
       title: ""
-      picture: "tortuga.mp4"
       logo:
         show: false
-        color: white
+        color: "#6aca25"
     home:
       title: "Tu donación marca la diferencia. Haz tu aporte para defender el planeta."
       text: "<p>El aporte económico mensual que realizan nuestros donantes se convierte en acción por la protección y defensa de los bosques, océanos, mares, playas y todos los ecosistemas.</p><p>En Greenpeace NO aceptamos dinero de empresas, partidos políticos ni gobiernos. Nuestra independencia nunca está en juego.</p><p>Ayúdanos a respetar y cuidar a la Naturaleza 💚</p><p>Buscamos soluciones y generamos cambios, cada donación SÍ hace la diferencia.</p>"
