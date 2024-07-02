@@ -5,7 +5,7 @@
   "author": "https://github.com/dantovbein",
   "license": "ISC",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "bugs": {
     "url": "https://github.com/GreenpeaceSkunk/api/issues"
@@ -43,6 +43,7 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "pm2": "^5.1.2",
+    "transbank-sdk": "^5.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "yaml": "^1.10.2"
