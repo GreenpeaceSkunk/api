@@ -34,7 +34,8 @@
   },
   "homepage": "https://github.com/GreenpeaceSkunk/api#readme",
   "dependencies": {
-    "@hubspot/api-client": "^5.0.0",
+    "@hubspot/api-client": "^11.1.0",
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -49,6 +50,7 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/cors": "^2.8.9",
     "@types/express": "^4.17.13",
     "@types/mongoose": "^5.10.3",
