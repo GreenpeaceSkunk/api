@@ -3,10 +3,6 @@ import transbankRoutes from './transbank';
 
 const router = Router();
 
-<<<<<<< Updated upstream
-router.use('/tranbsbank', transbankRoutes);
-=======
 router.use('/transbank', transbankRoutes);
->>>>>>> Stashed changes
 
 export default router;
