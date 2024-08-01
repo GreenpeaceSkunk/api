@@ -14,12 +14,15 @@ export const requestWrapper: RequestMiddlewareType = (fn: (...args: any[]) => vo
     const fnReturn = await fn(req, res, next);
     return fnReturn;
   } catch(error: any) {
+    console.log(error.message)
     const status = 500;
     res
       .status(500)
       .json({
         status,
-        errorMessage: 'API Internal Server Error',
+        error: true,
+        errorMessage: (error && error.message) ? error.message : 'API Internal Server Error',
+        message: (error && error.message) ? error.message : 'API Internal Server Error',
       } as IRequestError);
   }
 }

@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   api:
@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: base
+      target: development
     volumes:
       - ./src:/home/app/api/src
       - ./nodemon.json:/home/app/api/nodemon.json
@@ -16,15 +16,5 @@ services:
     ports:
       - '5003:5003'
     environment:
-      - PORT=5003
+      - SERVER_PORT=5003
     command: npm run server:start:development
-    # depends_on:
-    #   - mongo
-  # mongo:
-  #   container_name: greenpeace_greenlab_mongo
-  #   image: mongo:4
-  #   restart: always
-  #   volumes:
-  #     - ./shared_volume/db/:/data/db/
-  #   ports:
-  #     - "27016:27017"

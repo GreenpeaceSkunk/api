@@ -10,8 +10,7 @@ RUN npm run types
 
 COPY . .
 
-FROM base as test
-
+FROM base as staging
 # Used in the package json file
 ENV NODE_PATH=./build
 CMD [ "npm", "run", "server:start:test" ]

@@ -2,8 +2,10 @@ import express, { Request, Response, NextFunction } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
+import connectDatabase from './database/connection';
 
 const app: express.Application = express();
+
 app.use(cors());
 app.use(morgan('dev'));
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -23,5 +25,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('public')); 
 app.use('/images', express.static('images'));
+
+connectDatabase();
 
 export default app;

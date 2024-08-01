@@ -93,7 +93,7 @@ data:
           genre:
             show: false
           is_card_holder:
-            show: true 
+            show: true
           location:
             country:
               show: false
@@ -102,12 +102,10 @@ data:
               label: Región
               show: false
               required: true
-              default: '49'
             city:
               label: Comuna
               show: false
               required: true
-              default: '13101'
             address:
               show: false
               required: true

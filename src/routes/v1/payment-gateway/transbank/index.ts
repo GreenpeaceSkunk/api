@@ -1,4 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
+<<<<<<< Updated upstream
 import { refererWrapper, requestWrapper } from '../../../../middlewares';
 import { create } from './conroller';
 
@@ -23,5 +24,22 @@ router.get('/create', [refererWrapper, requestWrapper(async (req: Request, res: 
   //     .json({ errorMessage: 'Error when posting new record into ForMa' });
   // }
 })]);
+=======
+import { requestWrapper } from '../../../../middlewares';
+import { create, confirm } from './controller';
+
+const router = Router();
+
+router.post('/create', [
+  requestWrapper(
+    create,
+  ),
+]);
+
+// router.post('/confirm', [requestWrapper(async (req: Request, res: Response, next: NextFunction) => {
+//   res.json(await confirm(req.body));
+// })]);
+router.post('/confirm', [requestWrapper(confirm)]);
+>>>>>>> Stashed changes
 
 export default router;

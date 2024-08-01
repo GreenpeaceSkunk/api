@@ -1,5 +1,13 @@
-import { Document } from 'mongoose';
 import {ObjectID} from 'mongodb';
+import {
+  IUserDocument,
+  IDonationDocument,
+  ITransactionDocument,
+} from './shared';
+import {
+  InscriptionFinishBodyType,
+  InscriptionFinishResponseType,
+} from './transbank';
 
 export interface IRequestError {
   statusText?: string;
@@ -8,17 +16,14 @@ export interface IRequestError {
   errorMessage: string;
 }
 
-/**
- * User Document
- */
-export interface IUser {
-  id: string;
-  fullName: string;
-  email: string;
-  birthday: string;
-  userAgent?: string;
-}
-
-export interface IUserDocument extends IUser, Document {}
-
 export type DomainType = 'ar' | 'cl' | 'co';
+
+export type {
+  InscriptionFinishBodyType,
+  InscriptionFinishResponseType,
+  // ITransbankUserDocument,
+  // ITransbankTransactionDocument,
+  IUserDocument,
+  IDonationDocument,
+  ITransactionDocument,
+}

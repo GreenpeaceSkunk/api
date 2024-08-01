@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   api:
@@ -16,14 +16,4 @@ services:
     ports:
       - '5001:5001'
     environment:
-      - PORT=5001
-    # depends_on:
-    #   - mongo
-  # mongo:
-  #   container_name: greenpeace_greenlab_mongo
-  #   image: mongo:4
-  #   restart: always
-  #   volumes:
-  #     - ./shared_volume/db/:/data/db/
-  #   ports:
-  #     - "27016:27017"
+      - SERVER_PORT=5001

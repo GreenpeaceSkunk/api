@@ -19,7 +19,13 @@ export const getCountryByReferer = (referer = ''): DomainType | any => {
       {
         domain: 'salvalasleyesambientales.org',
         country: 'ar',
-      }
+      },
+      {
+        domain: 'http://localhost:3001/',
+        // country: 'ar',
+        country: 'cl',
+        // country: 'co',
+      },
     ];
 
     const validTopLevelDomain = validDomains.find((value: DomainUrlType) => {
